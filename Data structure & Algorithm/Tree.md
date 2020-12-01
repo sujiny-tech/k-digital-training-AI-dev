@@ -78,8 +78,104 @@
     + 순회 (Traversal)
         1. 깊이 우선 순회(depth first traversal)
            + 중위 순회(in-order traversal) : 왼쪽 서브트리 순회 -> 노드 x 방문 -> 오른쪽 서브트리 순회
+              + 노드 클래스에서 중위 순회(inorder) 메서드는 다음과 같다.
+              ```python
+              class Node:
+                  def inorder(self):
+                      traversal=[]
+                      if self.left:
+                          traversal+=self.left.inorder()
+                      traversal.append(self.data)
+                      if self.right:
+                          traversal+=self.right.inorder()
+                      retrun traversal
+              ```
+              + 이진 트리 클래스에서 중위 순회(inorder) 메서드는 다음과 같다.
+              ```python
+              class BinaryTree:
+                  def inorder(self):
+                      traversal=[]
+                      if self.root:
+                          return self.root.inorder()
+                      else:
+                          return []
+              ```
+           
            + 전위 순회(pre-order traversal) : 노드 x 방문 -> 왼쪽 서브트리 순회 -> 오른쪽 서브트리 순회
+              + 연습 문제 1에서 구현하기로...
            + 후위 순회(post-order traversal) : 왼쪽 서브트리 순회 -> 오른쪽 서브트리 순회 -> 노드 x
-            
-        2. 넓이 우선 순회
+              + 연습 문제 1에서 구현하기로...
+              
+        #### 연습문제 1. 이진트리의 depth() 연산 구현
+        ```python
+        class Node:
+           ...
+           def depth(self):
+               l_d=self.left.depth() if self.left else 0
+               r_d=self.right.depth() if self.left else 0
+               retrun max(l_d, r_d)+1
+           ...
+       class BinaryTree:
+           ...
+           def depth(self):
+               if self.root:
+                   return self.root.depth()
+               else:
+                   return 0
+        ```
+        
+        #### 연습문제 2. 전위 순회
+        ```python
+        class Node:
+            def preorder(self):
+                traversal=[]
+                #노드 x 방문
+                traversal.append(self.data) 
+                #왼쪽 서브트리 순회
+                if self.left:
+                    traversal+=self.left.preorder()
+                #오른쪽 서브트리 순회
+                if self.right:
+                    traversal+=self.right.preorder()
+                return traversal
+         
+        class BinaryTree:
+            def preorder(self):
+                 traversal=[]
+                 if self.root:
+                     return self.root.preorder()
+                 else:
+                     return []
+        ```
+        
+        #### 연습문제 3. 후위 순회
+        ```python
+        class Node:
+            def postorder(self):
+                traversal=[]
+                #왼쪽 서브트리 순회
+                if self.left:
+                    traversal+=self.left.postorder()
+                #오른쪽 서브트리 순회
+                if self.right:
+                    traversal+=self.right.postorder()
+                #노드 x 방문
+                traversal.append(self.data) 
+                return traversal
+         
+        class BinaryTree:
+            def postorder(self):
+                 traversal=[]
+                 if self.root:
+                     return self.root.postorder()
+                 else:
+                     return []
+        ```
+        ----------------------------------------------
+        2. 넓이 우선 순회(BFS; Breadth First Traversal)
+           + 수준(level)이 낮은 노드를 우선으로 방문
+           + 같은 수준의 노드에서는 부모노드의 방문 순서에 따라 방문, 왼쪽노드를 오른쪽노드보다 먼저 방문
+           + 한 노드를 방문할 때, 나중에 방문할 노드들을 순서대로 기록해야함
+             > 큐(Queue) 이용 !
+        
     
