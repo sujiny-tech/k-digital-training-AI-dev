@@ -77,9 +77,9 @@
        
     + 순회 (Traversal)
         1. 깊이 우선 순회(depth first traversal)
-            + 중위 순회(in-order traversal) : 왼쪽 서브트리 순회 -> 노드 x 방문 -> 오른쪽 서브트리 순회
-            + 전위 순회(pre-order traversal) : 노드 x 방문 -> 왼쪽 서브트리 순회 -> 오른쪽 서브트리 순회
-            + 후위 순회(post-order traversal) : 왼쪽 서브트리 순회 -> 오른쪽 서브트리 순회 -> 노드 x
+           + 중위 순회(in-order traversal) : 왼쪽 서브트리 순회 -> 노드 x 방문 -> 오른쪽 서브트리 순회
+           + 전위 순회(pre-order traversal) : 노드 x 방문 -> 왼쪽 서브트리 순회 -> 오른쪽 서브트리 순회
+           + 후위 순회(post-order traversal) : 왼쪽 서브트리 순회 -> 오른쪽 서브트리 순회 -> 노드 x
             
         2. 넓이 우선 순회
     
