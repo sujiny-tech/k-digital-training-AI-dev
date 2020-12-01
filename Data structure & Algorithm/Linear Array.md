@@ -13,8 +13,10 @@
 1. 원소 삽입하기 .insert()
 2. 원소 삭제하기 .del()
 --------
-### 연습 문제 1. 정렬된 리스트에서 원소 삽입
-<pre><code>def solution(L, x):
+#### 연습 문제 1. 정렬된 리스트에서 원소 삽입
+
+```python
+def solution(L, x):
     index=0
     for i in range(len(L)):
         if L[i]>=x:
@@ -27,11 +29,14 @@
             L.aapend(x)
         else:
             L.insert(0, x)
-        
-     return L</code></pre>
+     return L
+```
+--------
 
 ### 연습 문제 2. 리스트에서 원소 찾아내기
-<pre><code>def solution(L, x):
+
+```python
+def solution(L, x):
     answer = []
     for i in range(len(L)):
         if L[i]==x:
@@ -39,4 +44,5 @@
     if answer==[]:
         return [-1]
     else:
-        return answer</code></pre>
+        return answer
+```
