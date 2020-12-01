@@ -199,3 +199,62 @@ self.data.head.next.data
 def solution(x):
     return 0
 ```
+---------------------------------------------
+
+# 큐의 활용
++ 자료를 생성하는 작업과 그 자료를 이용하는 작업이 비동기적으로 일어나는 경우, 연결하기 위해 사용
++ 자료를 생성(이용)하는 작업이 여러 곳에서 일어나는 경우
++ 자료를 처리해서 새로운 자료를 생성하고, 나중에 그 자료를 또 처리해야하는 작업의 경우
+
+# 환형 큐 (Circular Queue)
++ 정해진 개수의 저장 공간을 빙 돌려가며 이용 (큐 길이를 기억하고 있어야 저장공간 확인가능)
+
+## 환형 큐의 연산의 정의
+1. size() : 현재 큐에 들어있는 데이터의 원소 수를 구함
+2. isEmpty() : 현재 큐가 비어 있는지를 판단
+3. isFull() : 큐에 데이터 원소가 꽉 차 있는지를 판단 ##
+3. enqueue(x) : 데이터 원소 x를 큐에 추가
+4. dequeue() : 큐의 맨 앞에 저장된 데이터 원소 반환/제거
+5. peek() : 큐의 맨 앞에 저장된 데이터 원소를 반환 (제거x)
+
+#### 연습문제 2. 배열로 구현한 환형 큐
+```python
+class ArrayQueue:
+    def __init__(self, n):
+        self.maxCount=n
+        self.data=[None]*n
+        self.count=0
+        self.front=-1
+        self.rear=-1
+    
+    #rear, front를 증가하는데 최대원소수를 넘을수있으므로 처리해줘야함.
+    def size(self):
+        return self.count
+    
+    def isEmpty(self):
+        return self.count==0
+        
+    def isFull(self):
+        return self.count==self.maxCount
+    
+    def enqueue(self, item):
+        if self.isFull():
+            raise IndexError("Queue full")
+            
+        self.rear=(self.rear+1)%self.maxCount
+        self.data[self.rear]=x
+        self.count+=1
+    
+    def dequeue(self):
+        if self.isEmpty():
+            raise IndexError("Queue empty")
+        self.front=(self.front+1)%self.maxCount
+        x=self.data[self.front]
+        self.count-=1
+        return x
+    
+    def peek(self):
+        if self.isEmpty():
+            raise IndexError("Queue empty")
+        return self.data[(self.front+1)%self.maxCount]
+```
