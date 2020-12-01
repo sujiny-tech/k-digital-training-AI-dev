@@ -72,9 +72,15 @@ def solution(S):
                 if opStack.isEmpty():
                     opStack.push(s)
                 else:
-                    if prec[s]<=prec[opStack.peek()]:
-                        answer+=opStack.pop()
+                    ##이부분에 대해서 수정함.(기존에 반복수행하지 않음)
+                    while opStack.size():
+                        #우선순위 비교: 맨 위값보다 우선순위 낮으면
+                        if prec[s]<=prec[opStack.peek()]:
+                            answer+=opStack.pop()
+                        else:
+                            break
                     opStack.push(s)
+                    
     while not opStack.isEmpty():
         answer+=opStack.pop()
     return answer
