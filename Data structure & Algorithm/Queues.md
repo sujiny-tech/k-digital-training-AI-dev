@@ -258,3 +258,162 @@ class ArrayQueue:
             raise IndexError("Queue empty")
         return self.data[(self.front+1)%self.maxCount]
 ```
+----------------------------------
+# 우선순위 큐 (Priority Queue)
++ 큐가 FIFO 방식을 따르지 않고, 원소들의 우선순위에 따라 큐에서 빠지는 방식
++ 운영체제의 CPU 스케쥴러에 활용됨 (신기하니까 찾아봐야지)
+
+## 우선순위 큐의 구현
+
+두가지 방식 가능
+1. Enqueue 할 때, 우선순위 순서 유지하도록 하는 방법
+2. Dequeue 할 때, 우선순위 높은 것을 선택하는 방법
+> 1번이 조금 더 유리 : 만약 큐에 무작위 순서로 있다고 할때, 모든 데이터의 상태를 살펴봐야함. 1번처럼 우선순위 순대로 나열되어있다면, 적절한 위치를 찾을때 모든 데이터의 상태를 살펴보지 않아도 되므로 1번이 조금 더 유리.
+
+두가지 자료구조 사용가능
+1. 선형 배열 이용
+3. 연결 리스트 이용
+> 시간적으로 연결리스트가 유리. enqueue 할 때, 중간에 데이터 원소를 집어넣을때 상대적으로 선형배열보다 유연함. 그러나 메모리측면(공간적)에서는 선형배열이 더 유리. 그러나 대부분 시간적으로 유리한 것을 선택한다!
+
+#### 연습문제 3. 양방향 연결리스트로 우선순위 큐의 enqueue 메서드 구현하기
+```python
+#이전에 공부했던 부분
+class Node:
+
+    def __init__(self, item):
+        self.data = item
+        self.prev = None
+        self.next = None
+
+#양방향 연결리스트
+class DoublyLinkedList:
+
+    def __init__(self):
+        self.nodeCount = 0
+        self.head = Node(None)
+        self.tail = Node(None)
+        self.head.prev = None
+        self.head.next = self.tail
+        self.tail.prev = self.head
+        self.tail.next = None
+
+
+    def __repr__(self):
+        if self.nodeCount == 0:
+            return 'LinkedList: empty'
+
+        s = ''
+        curr = self.head
+        while curr.next.next:
+            curr = curr.next
+            s += repr(curr.data)
+            if curr.next.next is not None:
+                s += ' -> '
+        return s
+
+
+    def getLength(self):
+        return self.nodeCount
+
+
+    def traverse(self):
+        result = []
+        curr = self.head
+        while curr.next.next:
+            curr = curr.next
+            result.append(curr.data)
+        return result
+
+
+    def reverse(self):
+        result = []
+        curr = self.tail
+        while curr.prev.prev:
+            curr = curr.prev
+            result.append(curr.data)
+        return result
+
+
+    def getAt(self, pos):
+        if pos < 0 or pos > self.nodeCount:
+            return None
+
+        if pos > self.nodeCount // 2:
+            i = 0
+            curr = self.tail
+            while i < self.nodeCount - pos + 1:
+                curr = curr.prev
+                i += 1
+        else:
+            i = 0
+            curr = self.head
+            while i < pos:
+                curr = curr.next
+                i += 1
+
+        return curr
+
+
+    def insertAfter(self, prev, newNode):
+        next = prev.next
+        newNode.prev = prev
+        newNode.next = next
+        prev.next = newNode
+        next.prev = newNode
+        self.nodeCount += 1
+        return True
+
+
+    def insertAt(self, pos, newNode):
+        if pos < 1 or pos > self.nodeCount + 1:
+            return False
+
+        prev = self.getAt(pos - 1)
+        return self.insertAfter(prev, newNode)
+
+
+    def popAfter(self, prev):
+        curr = prev.next
+        next = curr.next
+        prev.next = next
+        next.prev = prev
+        self.nodeCount -= 1
+        return curr.data
+
+
+    def popAt(self, pos):
+        if pos < 1 or pos > self.nodeCount:
+            return None
+
+        prev = self.getAt(pos - 1)
+        return self.popAfter(prev)
+
+
+    def concat(self, L):
+        self.tail.prev.next = L.head.next
+        L.head.next.prev = self.tail.prev
+        self.tail = L.tail
+
+        self.nodeCount += L.nodeCount
+        
+#여기서부터
+class PriorityQueue:
+    def __init__(self, x):
+        self.queue=DoublyLinkedList()
+    
+    #양방향 연결 리스트에서의 getAt()메서드 이용 x
+    #getAt() : pos까지 칸을 하나하나씩 카운트하면서 찾았었음. (호출될때 매번 처음부터 카운트해야함)
+    def enqueue(self, x):
+        newNode=Node(x)
+        cur=self.queue.head #어디서 시작할건가
+        while cur.next!=self.queue.tail and x<cur.next.data: #끝을 만나기전에, 우선순위(작은수가 우선순위 높음):
+            cur=cur.next
+        self.queue.insertAfter(curr, newNode)
+    
+    def dequeue(self):
+        return self.queue.popAt(self.queue.getLenth())
+    
+    def peek(self):
+        return self.queue.getAt(self.queue.getLength()).data
+        
+```
