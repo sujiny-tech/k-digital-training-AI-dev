@@ -12,8 +12,8 @@
 리스트 길이에 비례해서 시간이 걸리는 연산
 1. 원소 삽입하기 .insert()
 2. 원소 삭제하기 .del()
-
-### 연습 문제 1. 정렬된 리스트에 원소 삽입
+--------
+### 연습 문제 1. 정렬된 리스트에서 원소 삽입
 <pre><code>def solution(L, x):
     index=0
     for i in range(len(L)):
@@ -24,8 +24,19 @@
         L.insert(index, x)
     else:
         if L[-1]<x:
-            L.append(x)
+            L.aapend(x)
         else:
             L.insert(0, x)
-    return L
-}</code></pre>
+        
+     return L</code></pre>
+
+### 연습 문제 2. 리스트에서 원소 찾아내기
+<pre><code>def solution(L, x):
+    answer = []
+    for i in range(len(L)):
+        if L[i]==x:
+            answer.append(i)
+    if answer==[]:
+        return [-1]
+    else:
+        return answer</code></pre>
