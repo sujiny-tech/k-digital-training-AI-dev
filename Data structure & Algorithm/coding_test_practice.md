@@ -183,12 +183,10 @@ def solution(participant, completion):
     > 각각 자리의 수에서 더해지는거나 빠지는거 기껏해야 1번 (구체적으로 말하면 n의 2배에 가까울 수 있음)
     
    + 해당 풀이 코드는 아래와 같다.
+    > 파이썬 리스트에 대한 다른 사람의 블로그 > [파이썬 자료형-리스트편](https://hyeonakim.github.io/python/2018/07/22/python-structure-8/)
    ```python
    def solution(number, k):
-       #파이썬 자료형에 대한 다른 사람의 블로그 > [파이썬 자료형](https://hyeonakim.github.io/python/2018/07/22/python-structure-8/)
-       #리스트는 가변:mutable
-       #문자열(string)은 불변:immutable
-       collect=[] #숫자를 담기 위해
+       collect=[] #숫자를 담고 빼려면, 리스트(mutable)/문자열은 불변(immutable)
        
        #number길이가 n이라 하면, for문 횟수에 따른 알고리즘 복잡도 : O(n)
        for i, num in enumerate(number):
