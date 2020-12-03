@@ -208,4 +208,107 @@ def solution(participant, completion):
        return ''.join(collect)
    ```
 
+------------------------------------------------------------------
 
+## #5. [더 맵게](https://programmers.co.kr/learn/courses/30/lessons/42626)
+1. 문제 해결 방법 (1)
+   + 배열로 풀이하기 > 정렬하기
+   + 정렬된 배열에서 단계별로 최솟값에 2배해서 더해주기
+   + 계산한 값을 올바른 위치에 넣어주기
+   + k를 넘을때까지 반복
+   + 알고리즘의 복잡도 : O(n^2)
+      + 최악의 경우 : n-1회까지 섞어야 하는 경우 (끝까지 섞어야하는 경우)
+      + 각 단계(섞을 때)에서 요구되는 계산량 : 정렬된 리스트(크기 n)에 순서대로 원소삽입 > O(n)
+      
+2. 문제 해결 방법 (2) 힙     
+   + 힙은 완전 이진트리로 구현하는 것이 일반적임, 완전이진트리의 이점(배열을 이용해서 구현가능)을 활용가능
+    > 따라서 공간 효율성이 좋다.
+   + 힙의 응용으로는 힙 정렬(heapsort), 우선 순위 큐(priority queue)
+   + python에서의 힙 라이브러리 > [heapq 모듈 사용법(다른사람의 블로그)](https://www.daleseo.com/python-heapq/)
+      + 파이썬에서 힙은 기본적으로 최소원소를 꺼내는 최소힙(min heap)으로 구현되어있음 !
+      + 최대원소를 꺼내는 최대힙(max heap)은 최소힙의 변형으로 쉽게 구현가능 !
+      + heapq.heapify : 힙으로 만들어주기 > O(nlogn) -> n개의 원소 삽입이므로
+      + heapq.heappush(heap, val) : heap에 val 넣기 > O(logn) -> 값 찾는데에 상수 시간이 걸리나 꺼내고나서도 유지하기 위해!
+      + heapq.heappop(heap) : heap에서 값 꺼내기 > O(logn) ...
+      
+   + 풀이는 다음과 같다. > O(nlogn)
+   ```python
+   import heapq
+   
+   def solution(scoville, k):
+       ans=0
+       heapq.heapify(scoville) #힙 구성
+       
+       #최악의 경우, len(scoville)-1만큼 반복
+       while True:
+           min_=heapq.heappop(scoville) #최촛값 꺼내기
+           
+           #최솟값이 k보다 클경우
+           if min_>=k:
+               break 
+           
+           #남아있지 않을 경우
+           elif len(scoville)==0:
+               ans-=1
+               break
+               
+           min2_=heapq.heappop(scoville) #두번째 최솟값꺼내서
+           new_scoville=min_+(min2_*2) #첫번째 최솟값과 섞어주고
+           heapq.heappush(scoville, new_scoville) #힙에 넣기
+           ans+=1
+           
+       return ans   
+       ```
+   + 이전에 풀었던 나의 코드...!
+   ```python
+   import heapq
+   def solution(scoville, k):
+       ans = 0
+       heap=[]
+       
+       #heapify 한줄과 동일
+       for i in range(len(scoville)):
+           heapq.heappush(heap, scoville[i])
+       
+       while heap[0]<k:
+           #일단 두개에 대해 계산해서 바로 넣음
+           try:
+               heapq.heappush(heap, heapq.heappop(heap)+(heapq.heappop(heap)*2)) #바로바로 계산
+               
+           #인덱스 에러 발생시 -1 반환
+           except IndexError:
+               return -1
+           ans+=1
+
+       return ans
+    ```
+
+------------------------------------------------------------------
+
+## #6. [N으로 표현](https://programmers.co.kr/learn/courses/30/lessons/42895)
+1. 동적계획법(DP; Dynamic Programming)
+   + 메모리를 적절히 사용해서 수행 시간을 비약적으로 증가시키는 방법
+   + 이미 계산된 결과(작은 문제)는 별도의 메모리 영역에 저장하여 다시 계산할 필요가 x
+   + 주어진 최적화 문제를 재귀적인 방식으로 보다 작은 부분문제로 나눠서 이를 하나하나씩 풀어서 이 해를 조합해서 전체 문제의 해답을 구하는 방식
+   + 두가지 접근법(탑다운:메모이제이션, 보텀업)이 있음
+      + 탑다운(메모이제이션)=하향식 : 메모이제이션하면서 재귀적으로 풀어내는 방법
+         + 메모이제이션 : 한번 계산한 결과를 메모리 공간에 메모하는 기법
+            + 같은 문제를 다시 호출하면 메모했던 결과를 그대로 가져옴
+            + 값을 기록해놓는다는 측면에서 캐싱(cashing)이라고도 함
+      + 보텀업=상향식 : 결과 저장하는 리스트를 dp 테이블이라고 하며, 앞에서부터 반복문으로 값을 저장하는 방법
+      
+   + 동적계획법 적용 가능한가?
+      + 최적 부분 구조(optimal substructure)인가?
+       > 큰 문제를 작은 문제로 나눌 수 있으며, 작은 문제의 답을 모아서 큰 문제를 해결할 수 있어야 함
+      + 중복되는 부분 문제(overlapping subproblem)인가?
+       > 동일한 작은 문제를 반복적으로 해결할 수 있어야 함
+       
+   + 동적계획법 적용의 대표적인 예 > 피보나치 수열, Knapsack Problem...
+      + 피보나치 수열의 경우
+         + 점화식 : An=An-1+An-2, if A1=1, A2=1
+         + 중볻되는 부분 문제가 존재
+         
+2. 문제 해결 방법 (동적계획법 적용)
+   + 동적계획법으로 풀어냄으로써 탐색해야하는 범위를 줄일 수 있음
+   
+   
