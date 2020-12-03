@@ -13,3 +13,4 @@
 + [트리(Tree)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Data%20structure%20%26%20Algorithm/Tree.md)
 + [힙(Heap)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Data%20structure%20%26%20Algorithm/heap.md)
 + [코딩 테스트 연습](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Data%20structure%20&%20Algorithm/coding_test_practice.md)
++ [프로그래머스 코딩테스트 문제 풀기](https://github.com/sujiny-tech/k-digital-training-AI-dev/tree/main/Data%20structure%20%26%20Algorithm/Programmers-algorithm-problem)
