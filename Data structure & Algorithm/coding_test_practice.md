@@ -258,7 +258,7 @@ def solution(participant, completion):
            ans+=1
            
        return ans   
-       ```
+   ```
    + 이전에 풀었던 나의 코드...!
    ```python
    import heapq
