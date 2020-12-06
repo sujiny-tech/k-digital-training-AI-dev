@@ -3,6 +3,7 @@
 + python에서는 리스트에 내장된 정렬 함수와 메서도 존재
    1. 파이썬 내장 함수 sorted(list_name, key=lambda x: condition, reverse=boolean)
    2. 리스트 메서드 list.sort(key=lambda x: condition, reverse=boolean)
++ [Tim sort](https://d2.naver.com/helloworld/0315536)
 
 # 탐색(Search)
 + 여러 데이터들을 특정 원소를 찾아내는 작업
