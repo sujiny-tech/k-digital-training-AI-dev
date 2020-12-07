@@ -95,9 +95,9 @@
       
 + 전방소거법(Forward Elimination)의 가치
    + 주어진 선형 시스템을 가장 풀기 쉬운 꼴로 변형해줌
-      + **upper triangular form(상삼각형태)**로 바꿔줌
+      + **upper triangular form(상삼각형태)** 로 바꿔줌
       
-   + 주어진 선형시스템의 **rank(랭크)**를 알려줌 (rank : 미지수 개수)
+   + 주어진 선형시스템의 **rank(랭크)** 를 알려줌 (rank : 미지수 개수)
       
    + 선형시스템이 **해가 있는지(consistent)/없는지(inconsistent)** 알려줌
    
