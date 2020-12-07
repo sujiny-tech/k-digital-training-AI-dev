@@ -1,4 +1,4 @@
-# k-digital-training-AI-dev
+# K-Digital-Training-AI-dev
 > [K-Digital-Training] 인공지능 데브코스 : 2020. 11. 30 ~ ing
 
 ### [1주차] 어서와! 자료구조와 알고리즘은 처음이지?
