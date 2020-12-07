@@ -17,5 +17,5 @@
 
 ## [2주차] 인공지능 수학
 + [jupyter notebook & markdown](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/maths-for-AI/jupyter_notebook.md)
-+ [선형대수](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/maths-for-AI/Linear_system.md)
-+ [선형대수 실습](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/maths-for-AI/linear_system_ex.ipynb)
++ [선형대수(Linear system)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/maths-for-AI/Linear_system.md)
++ [선형대수-실습](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/maths-for-AI/linear_system_ex.ipynb)
