@@ -15,7 +15,7 @@
 + [코딩 테스트 연습](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Data%20structure%20&%20Algorithm/coding_test_practice.md)
 + [프로그래머스 코딩테스트 문제 풀기](https://github.com/sujiny-tech/k-digital-training-AI-dev/tree/main/Data%20structure%20%26%20Algorithm/Programmers-algorithm-problem)
 
-## [2주차] 인공지능 수학
+### [2주차] 인공지능 수학
 + [jupyter notebook & markdown](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/maths-for-AI/jupyter_notebook.md)
 + [선형대수(Linear system)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/maths-for-AI/Linear_system.md)
 + [선형대수-실습](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/maths-for-AI/linear_system_ex.ipynb)
