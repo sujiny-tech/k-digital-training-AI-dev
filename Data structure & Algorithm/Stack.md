@@ -1,6 +1,6 @@
 # 스택(Stack)
 + 자료(data element)를 보관할 수 있는 (선형) 구조
-+ 후입선출(LIFO; Last-In First-Out) 특징을 가지는 선형 자료구조
++ **후입선출**(LIFO; Last-In First-Out) 특징을 가지는 선형 자료구조
 + 예) 하노이의 탑, 쌓여져있는 접시 탑...
 + 스택 언더플로우(stack underflow) : 비어있는 스택에서 데이터 원소를 꺼내려 할때 발생하는 오류
 + 스택 오버플로우(stack overflow) : 꽉 찬 스택에 데이터 원소를 넣으려 할때 발생하는 오류
