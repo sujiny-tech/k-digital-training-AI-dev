@@ -7,7 +7,7 @@
 + [재귀 알고리즘(Recursive algorithm)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Data%20structure%20%26%20Algorithm/Recursive_algorithm.md)
 + [알고리즘 복잡도(Complexity of Algorithm)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Data%20structure%20%26%20Algorithm/Complexity%20of%20Algorithm.md)
 + [연결 리스트 (Linked Lists)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Data%20structure%20%26%20Algorithm/Linked%20Lists.md)
-+ 양방향 연결 리스트 (Doubly Linked Lists)
++ [양방향 연결 리스트 (Doubly Linked Lists)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Data%20structure%20%26%20Algorithm/Doubly%20Linked%20Lists.md)
 + [스택(Stack)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Data%20structure%20%26%20Algorithm/Stack.md)
 + [큐(Queue)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Data%20structure%20%26%20Algorithm/Queues.md)
 + [트리(Tree)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Data%20structure%20%26%20Algorithm/Tree.md)
