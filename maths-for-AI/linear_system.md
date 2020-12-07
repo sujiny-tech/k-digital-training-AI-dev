@@ -20,8 +20,12 @@
          > ex 3) <math>3xy+2z=2</math>   
          
    + Ax=b 꼴 표현(대수적 표현)
-      + image add...! **추가하기!!**
-      
+      + 예를 들어, 식이 3개고 미지수가 3인 선형시스템있다고 하자.  
+         <a href="https://www.codecogs.com/eqnedit.php?latex=E_{1}&space;:&space;3x&plus;5y=2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{1}&space;:&space;3x&plus;5y=2" title="E_{1} : 3x+5y=2" /></a>    
+         <a href="https://www.codecogs.com/eqnedit.php?latex=E_{2}&space;:&space;x-5y=7" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{2}&space;:&space;x-5y=7" title="E_{2} : x-5y=7" /></a>   
+         <a href="https://www.codecogs.com/eqnedit.php?latex=E_{3}&space;:&space;5y&plus;3z=-1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{3}&space;:&space;5y&plus;3z=-1" title="E_{3} : 5y+3z=-1" /></a>         
+      + 이를 Ax=b로 표현하면 다음과 같다.   
+         <a href="https://www.codecogs.com/eqnedit.php?latex=\begin{bmatrix}&space;3&space;&&space;5&space;&&space;0\\&space;1&space;&&space;-5&space;&&space;0\\&space;0&space;&&space;5&space;&&space;3&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\begin{bmatrix}&space;3&space;&&space;5&space;&&space;0\\&space;1&space;&&space;-5&space;&&space;0\\&space;0&space;&&space;5&space;&&space;3&space;\end{bmatrix}" title="\begin{bmatrix} 3 & 5 & 0\\ 1 & -5 & 0\\ 0 & 5 & 3 \end{bmatrix}" /></a> <a href="https://www.codecogs.com/eqnedit.php?latex=\begin{bmatrix}&space;x\\&space;y\\&space;z&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\begin{bmatrix}&space;x\\&space;y\\&space;z&space;\end{bmatrix}" title="\begin{bmatrix} x\\ y\\ z \end{bmatrix}" /></a> <a href="https://www.codecogs.com/eqnedit.php?latex==&space;\begin{bmatrix}&space;2\\&space;4\\&space;-1&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?=&space;\begin{bmatrix}&space;2\\&space;7\\&space;-1&space;\end{bmatrix}" title="= \begin{bmatrix} 2\\ 7\\ -1 \end{bmatrix}" /></a>   
 + m x n 선형시스템의 Ax=b 표현으로 정리하면,
    + 식은 행, 행은 식
    + m : 선형 방정식의 개수
