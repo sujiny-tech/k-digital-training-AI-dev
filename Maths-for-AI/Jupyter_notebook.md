@@ -26,7 +26,7 @@
    + cell tlfgod하기
       + **ctrl/cmd + Enter** : 현재 cell 실행
 
-## mark down 사용법
-+ mark down : 일반 텍스트로 서식이 있는 문서를 작성하는 방법
-+ 이번 과정을 통해 mark down을 처음 사용해봐서 많이 서툴렀는데, 사용법을 보기좋게 정리해둔 사이트가 있었다.
+## Mark Down 사용법
++ Mark Down : 일반 텍스트로 서식이 있는 문서를 작성하는 방법
++ 이번 과정을 통해 Mark Down을 처음 사용해봐서 많이 서툴렀는데, 사용법을 보기좋게 정리해둔 사이트가 있었다.
 + [도움을 받은 링크](https://gist.github.com/ihoneymon/652be052a0727ad59601)
