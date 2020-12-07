@@ -48,27 +48,27 @@
    + <img src="https://latex.codecogs.com/gif.latex?ax=b" title="ax=b" /> (단, <img src="https://latex.codecogs.com/gif.latex?a,&space;b" title="a, b" />는 스칼라)   
    + 이 선형시스템의 해는 3가지의 경우에 따라 존재한다.
       + 해가 하나인 경우(unique solution)
-         + <img src="https://latex.codecogs.com/gif.latex?3x=6" title="3x=6" />   
+         + ex) <img src="https://latex.codecogs.com/gif.latex?3x=6" title="3x=6" />   
       + 해가 없는 경우(no solution)
-         + <img src="https://latex.codecogs.com/gif.latex?0x=6" title="0x=6" />  
+         + ex) <img src="https://latex.codecogs.com/gif.latex?0x=6" title="0x=6" />  
          + **a=0**일 때, **역수(inverse)가 존재하지 않으므로** a가 **특이(singular)** 하다고 한다.
       + 해가 여러개인 경우(infinitely many solutions)
-         + <img src="https://latex.codecogs.com/gif.latex?0x=0" title="0x=0" />   
+         + ex) <img src="https://latex.codecogs.com/gif.latex?0x=0" title="0x=0" />   
    + 해가 있으면, 선형 시스템이 **consistent** 하며
    + 해가 없으면, 선형 시스템이 **inconsistent** 하다.
 
 + 대수적 표현 Ax=b에서의 해는 3가지 경우가 존재한다.
    + 해가 하나인 경우   
-      <img src="https://latex.codecogs.com/gif.latex?\begin{bmatrix}&space;1&space;&&space;3&space;\\&space;-2&space;&&space;1&space;\end{bmatrix}\begin{bmatrix}&space;x_{1}\\&space;x_{2}&space;\end{bmatrix}&space;=&space;\begin{bmatrix}&space;2\\&space;3&space;\end{bmatrix}" title="\begin{bmatrix} 1 & 3 \\ -2 & 1 \end{bmatrix}\begin{bmatrix} x_{1}\\ x_{2} \end{bmatrix} = \begin{bmatrix} 2\\ 3 \end{bmatrix}" />      
-      + 이때, <img src="https://latex.codecogs.com/gif.latex?x_{1}=-1,&space;x_{2}=1" title="x_{1}=-1, x_{2}=1" /> 이다.   
+      ex) <img src="https://latex.codecogs.com/gif.latex?\begin{bmatrix}&space;1&space;&&space;3&space;\\&space;-2&space;&&space;1&space;\end{bmatrix}\begin{bmatrix}&space;x_{1}\\&space;x_{2}&space;\end{bmatrix}&space;=&space;\begin{bmatrix}&space;2\\&space;3&space;\end{bmatrix}" title="\begin{bmatrix} 1 & 3 \\ -2 & 1 \end{bmatrix}\begin{bmatrix} x_{1}\\ x_{2} \end{bmatrix} = \begin{bmatrix} 2\\ 3 \end{bmatrix}" />      
+      > 이때, <img src="https://latex.codecogs.com/gif.latex?x_{1}=-1,&space;x_{2}=1" title="x_{1}=-1, x_{2}=1" /> 이다.   
       
    + 해가 없는 경우   
-      <img src="https://latex.codecogs.com/gif.latex?\begin{bmatrix}&space;1&space;&3&space;\\&space;2&space;&6&space;\end{bmatrix}\begin{bmatrix}&space;x_{1}\\&space;x_{2}&space;\end{bmatrix}=\begin{bmatrix}&space;2\\&space;5&space;\end{bmatrix}" title="\begin{bmatrix} 1 &3 \\ 2 &6 \end{bmatrix}\begin{bmatrix} x_{1}\\ x_{2} \end{bmatrix}=\begin{bmatrix} 2\\ 5 \end{bmatrix}" />
+      ex) <img src="https://latex.codecogs.com/gif.latex?\begin{bmatrix}&space;1&space;&3&space;\\&space;2&space;&6&space;\end{bmatrix}\begin{bmatrix}&space;x_{1}\\&space;x_{2}&space;\end{bmatrix}=\begin{bmatrix}&space;2\\&space;5&space;\end{bmatrix}" title="\begin{bmatrix} 1 &3 \\ 2 &6 \end{bmatrix}\begin{bmatrix} x_{1}\\ x_{2} \end{bmatrix}=\begin{bmatrix} 2\\ 5 \end{bmatrix}" />
       > 이때, 행렬 A는 singular 하며, 역행렬이 존재하지 않음.
       > 두개의 식이 평행함
       
    + 해가 여러개인 경우   
-      <img src="https://latex.codecogs.com/gif.latex?\begin{bmatrix}&space;1&space;&3&space;\\&space;2&space;&6&space;\end{bmatrix}\begin{bmatrix}&space;x_{1}\\&space;x_{2}&space;\end{bmatrix}=\begin{bmatrix}&space;2\\&space;4&space;\end{bmatrix}" title="\begin{bmatrix} 1 &3 \\ 2 &6 \end{bmatrix}\begin{bmatrix} x_{1}\\ x_{2} \end{bmatrix}=\begin{bmatrix} 2\\ 4 \end{bmatrix}" />
+      ex) <img src="https://latex.codecogs.com/gif.latex?\begin{bmatrix}&space;1&space;&3&space;\\&space;2&space;&6&space;\end{bmatrix}\begin{bmatrix}&space;x_{1}\\&space;x_{2}&space;\end{bmatrix}=\begin{bmatrix}&space;2\\&space;4&space;\end{bmatrix}" title="\begin{bmatrix} 1 &3 \\ 2 &6 \end{bmatrix}\begin{bmatrix} x_{1}\\ x_{2} \end{bmatrix}=\begin{bmatrix} 2\\ 4 \end{bmatrix}" />
       > 이때, 행렬 A는 singular 하며, 역행렬이 존재하지 않음.
       > 두개의 식이 완전히 겹침
       
@@ -95,9 +95,9 @@
       
 + 전방소거법(Forward Elimination)의 가치
    + 주어진 선형 시스템을 가장 풀기 쉬운 꼴로 변형해줌
-      + upper triangular form(상삼각형태)로 바꿔줌
+      + **upper triangular form(상삼각형태)**로 바꿔줌
       
-   + 주어진 선형시스템의 rank(랭크)를 알려줌 (rank : 미지수 개수)
+   + 주어진 선형시스템의 **rank(랭크)**를 알려줌 (rank : 미지수 개수)
       
-   + 선형시스템이 해가 있는지(consistent)/없는지(inconsistent) 알려줌
+   + 선형시스템이 **해가 있는지(consistent)/없는지(inconsistent)** 알려줌
    
