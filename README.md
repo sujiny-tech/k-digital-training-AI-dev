@@ -19,3 +19,5 @@
 + [Jupyter notebook & Mark Down](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Jupyter_notebook.md)
 + [선형대수(Linear system)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Linear_system.md)
 + [선형대수-실습](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Linear_system_ex.ipynb)
++ [가우스 소거법](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Gauss%20elimination.md)
++ [LU 분해](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/LU%20decomposition.md)
