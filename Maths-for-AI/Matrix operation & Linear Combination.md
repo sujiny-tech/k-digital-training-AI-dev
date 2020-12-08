@@ -78,7 +78,8 @@
    + T의 요소 p(i,j)가 벡터라면, T는 3-텐서   
    
      <img src="https://latex.codecogs.com/gif.latex?T=\begin{bmatrix}&space;\mathbf{p}_{(1,1)}&space;&&space;\mathbf{p}_{(1,2)}&space;&&space;\mathbf{p}_{(1,3)}&space;&&space;\mathbf{p}_{(1,4)}&space;\\&space;\mathbf{p}_{(2,1)}&space;&&space;\mathbf{p}_{(2,2)}&space;&&space;\mathbf{p}_{(2,3)}&space;&&space;\mathbf{p}_{(2,4)}\\&space;\mathbf{p}_{(3,1)}&space;&&space;\mathbf{p}_{(3,2)}&space;&&space;\mathbf{p}_{(3,3)}&space;&&space;\mathbf{p}_{(3,4)}\\&space;\mathbf{p}_{(4,1)}&space;&&space;\mathbf{p}_{(4,2)}&space;&&space;\mathbf{p}_{(4,3)}&space;&&space;\mathbf{p}_{(4,4)}&space;\end{bmatrix}" title="T=\begin{bmatrix} \mathbf{p}_{(1,1)} & \mathbf{p}_{(1,2)} & \mathbf{p}_{(1,3)} & \mathbf{p}_{(1,4)} \\ \mathbf{p}_{(2,1)} & \mathbf{p}_{(2,2)} & \mathbf{p}_{(2,3)} & \mathbf{p}_{(2,4)}\\ \mathbf{p}_{(3,1)} & \mathbf{p}_{(3,2)} & \mathbf{p}_{(3,3)} & \mathbf{p}_{(3,4)}\\ \mathbf{p}_{(4,1)} & \mathbf{p}_{(4,2)} & \mathbf{p}_{(4,3)} & \mathbf{p}_{(4,4)} \end{bmatrix}" />    
-      > 3-텐서의 대표적인 예로는 컬러영상으로 3-벡터이면 RGB 영상, 4-벡터이면 RGBA 영상   
+     
+    > 3-텐서의 대표적인 예로는 컬러영상으로 3-벡터이면 RGB 영상, 4-벡터이면 RGBA 영상   
       
 ---------------------------------------------------------------------------------
 ## **분할행렬(Partitioned Matrix)** 
