@@ -21,3 +21,6 @@
 + [선형대수-실습](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Linear_system_ex.ipynb)
 + [가우스 소거법(Gauss elimination)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Gauss%20elimination.md)
 + [LU 분해(LU decomposition)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/LU%20decomposition.md)
++ [행렬연산과 선형조합(Matrix operation & Linear Combination)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Matrix%20operation%20%26%20Linear%20Combination.md)
++ [좌표계 변환(Change of Basis)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Change%20of%20Basis.md)
++ [선형 변환(Linear Transformation)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Linear%20Transformation.md)
