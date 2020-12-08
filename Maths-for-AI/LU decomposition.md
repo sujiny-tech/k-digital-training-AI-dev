@@ -10,7 +10,7 @@
    + 특이값 분해(SVD, Singular Value Decomposition)
 
    
-# [LU 분해(LU decomposition)](https://ko.wikipedia.org/wiki/LU_%EB%B6%84%ED%95%B4)   
+# LU 분해(LU decomposition)   
 + **LU 분해** : 주어진 행렬을 하/상 삼각행렬(Lower triangular/Upper triangular matrx)로 나누는 것
    + Ax=b 문제를 LU분해를 하면,   
       
@@ -32,3 +32,4 @@
    + <img src="https://latex.codecogs.com/gif.latex?b" title="b" /> **가 자주 업데이트 되는 경우**
       > 이런 경우에는 행렬 <img src="https://latex.codecogs.com/gif.latex?A" title="A" />를 <img src="https://latex.codecogs.com/gif.latex?PLU" title="PLU" />로 미리 분해해두면 <img src="https://latex.codecogs.com/gif.latex?A^{-1}" title="A^{-1}" />가 업데이트될 때마다 선형시스템의 해를 실시간으로 구할 수 있어서
       
+✔ [LU 분해-위키백과](https://ko.wikipedia.org/wiki/LU_%EB%B6%84%ED%95%B4)
