@@ -1,7 +1,7 @@
 # 벡터
-+ n-벡터 : 크기와 방향을 가진 물리량
+> n-벡터 : 크기와 방향을 가진 물리량
 
-- - - - - - - - - - - - - - - - - -
+
 ### 벡터의 표현
    + 좌표계 없이 표현
       + 벡터 v : 화살표로 표현
@@ -63,10 +63,32 @@
       + 투영 벡터와 보완 벡터는 서로 직교함.   
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-# 직교 행렬(Orthogonal Matrix)
+# 직교행렬(Orthogonal Matrix)
 
-+ 직교행렬(orthogonal matrix) : 주어진 행렬의 모든 열벡터가 서로 직교하는 행렬, 이는 직교좌표계를 의미   
-+ 정규직교행렬(orthonormal matrix) : 주어진 행렬이 직교행렬이고, 모든 열벡터의 크기가 1인 행렬, 이는 정규직교좌표계를 의미   
++ **직교행렬(orthogonal matrix)** : 주어진 행렬의 모든 열벡터가 서로 직교하는 행렬, 이는 직교좌표계를 의미   
+
+   > <img src="https://latex.codecogs.com/gif.latex?\begin{bmatrix}&space;2&space;&&space;2&space;&&space;-4\\&space;2&space;&&space;1&space;&&space;7\\&space;6&space;&&space;-1&space;&&space;1&space;\end{bmatrix}" title="\begin{bmatrix} 2 & 2 & -4\\ 2 & 1 & 7\\ 6 & -1 & 1 \end{bmatrix}" />   
+   
+   + 각 열벡터끼리 내적이 0
+   
++ **정규직교행렬(orthonormal matrix)** : 주어진 행렬이 직교행렬이고, 모든 열벡터의 크기가 1인 행렬, 이는 정규직교좌표계를 의미   
+
+   > <img src="https://latex.codecogs.com/gif.latex?\begin{bmatrix}&space;\frac{1}{\sqrt{11}}&space;&&space;\frac{2}{\sqrt{6}}&space;&&space;\frac{-4}{\sqrt{66}}\\&space;\frac{1}{\sqrt{11}}&space;&&space;\frac{1}{\sqrt{6}}&space;&&space;\frac{7}{\sqrt{66}}\\&space;\frac{3}{\sqrt{11}}&space;&&space;\frac{-1}{\sqrt{6}}&space;&&space;\frac{-1}{\sqrt{66}}&space;\end{bmatrix}" title="\begin{bmatrix} \frac{1}{\sqrt{11}} & \frac{2}{\sqrt{6}} & \frac{-4}{\sqrt{66}}\\ \frac{1}{\sqrt{11}} & \frac{1}{\sqrt{6}} & \frac{7}{\sqrt{66}}\\ \frac{3}{\sqrt{11}} & \frac{-1}{\sqrt{6}} & \frac{-1}{\sqrt{66}} \end{bmatrix}" />   
+   
+   + 길이가 1인 직교 행렬   
+     
+     
+### 직교행렬을 이용한 선형시스템
+   + Ax=b에서 행렬 A가 직교행렬이면, 해 x는 역행렬 <img src="https://latex.codecogs.com/gif.latex?A^{-1}" title="A^{-1}" />의 계산없이 구할 수 있음
+      + x의 i번째 요소는 투영으로 계산 가능   
+         > 벡터 b를 행렬 A의 각 열벡터 <img src="https://latex.codecogs.com/gif.latex?a_{i}" title="a_{i}" />에 투영한 연산 <img src="https://latex.codecogs.com/gif.latex?proj_{a_{i}}\boldsymbol{\mathbf{b}}" title="proj_{a_{i}}\boldsymbol{\mathbf{b}}" />로부터 <img src="https://latex.codecogs.com/gif.latex?x_{i}=\frac{\mathbf{b}\cdot&space;\mathbf{a}}{\left&space;\|&space;a_{i}&space;\right&space;\|^{2}}" title="x_{i}=\frac{\mathbf{b}\cdot \mathbf{a}}{\left \| a_{i} \right \|^{2}}" />임을 계산할 수 있음.   
+         
+      + x의 계산은 병렬처리 가능(x의 i번째 요소와 j번째 요소의 계산은 독립적)
 
 
-
+### 정규직교행렬을 이용한 선형시스템
+   + Ax=b에서 행렬 A가 정규직교행렬이면, 역행렬<img src="https://latex.codecogs.com/gif.latex?A^{-1}" title="A^{-1}" /> 계산없이 해 구할 수 있음
+      + x의 i번째 요소는 내적으로 계산 가능
+         > 벡터 b를 행렬 A의 각 열벡터 <img src="https://latex.codecogs.com/gif.latex?a_{i}" title="a_{i}" />에 투영한 연산 <img src="https://latex.codecogs.com/gif.latex?proj_{a_{i}}\mathbf{b}" title="proj_{a_{i}}\mathbf{b}" />로부터 <img src="https://latex.codecogs.com/gif.latex?x_{i}=\mathbf{b}\cdot&space;\boldsymbol{\mathbf{a_{i}}}" title="x_{i}=\mathbf{b}\cdot \boldsymbol{\mathbf{a_{i}}}" />임을 계산할 수 있음.
+         
+      + x의 계산은 병렬처리 가능(i번째 요소와 j번째 요소 계산은 독립적)
