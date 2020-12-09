@@ -24,3 +24,8 @@
 + [행렬연산과 선형조합(Matrix operation & Linear Combination)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Matrix%20operation%20%26%20Linear%20Combination.md)
 + [좌표계 변환(Change of Basis)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Change%20of%20Basis.md)
 + [선형 변환(Linear Transformation)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Linear%20Transformation.md)
++ [벡터와 직교분해(Vector & Orthogonal Decomposition)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Vector%20%26%20Orthogonal%20decomposition.md)
++ [특이값 분해와 주성분 분석(SVD & PCA)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/SVD%20%26%20PCA.md)
++ [벡터공간과 최소제곱법(Vector space & Least Squares Method)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Vector%20space%20%26%20Least%20Squares%20Method.md)
++ [통계학(Statistics)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Statistics.md)
+
