@@ -1,5 +1,5 @@
 # 벡터
-+ n-벡터는 크기와 방향을 가진 물리량
++ n-벡터 : 크기와 방향을 가진 물리량
 
 - - - - - - - - - - - - - - - - - -
 ### 벡터의 표현
@@ -57,10 +57,10 @@
    
    + **투영(projection) 벡터와 보완(complement) 벡터**   
    
-     <img src="https://user-images.githubusercontent.com/72974863/101563632-f33fdf00-3a0c-11eb-9a96-a2ccf6298bb0.png">   
+     <img src="https://user-images.githubusercontent.com/72974863/101585777-cf3bc800-3a23-11eb-9ce3-03cb73facd9b.png">   
    
    + 두 벡터 u,a가 있을 때, **투영과 보완** 의 개념을 통해 **직교분할 가능 O** 
-      + 투영(projection)벡터와 보완(complement)벡터는 서로 직교함.   
+      + 투영 벡터와 보완 벡터는 서로 직교함.   
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # 직교 행렬(Orthogonal Matrix)
