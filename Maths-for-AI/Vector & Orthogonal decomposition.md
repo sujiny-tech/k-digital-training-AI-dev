@@ -92,3 +92,30 @@
          > 벡터 b를 행렬 A의 각 열벡터 <img src="https://latex.codecogs.com/gif.latex?a_{i}" title="a_{i}" />에 투영한 연산 <img src="https://latex.codecogs.com/gif.latex?proj_{a_{i}}\mathbf{b}" title="proj_{a_{i}}\mathbf{b}" />로부터 <img src="https://latex.codecogs.com/gif.latex?x_{i}=\mathbf{b}\cdot&space;\boldsymbol{\mathbf{a_{i}}}" title="x_{i}=\mathbf{b}\cdot \boldsymbol{\mathbf{a_{i}}}" />임을 계산할 수 있음.
          
       + x의 계산은 병렬처리 가능(i번째 요소와 j번째 요소 계산은 독립적)
+
+- - - - - - - - - - - - -
+### QR 분해(QR decomposition)
+
++ 주어진 행렬 A에서 정규직교행렬 Q 추출 : <img src="https://latex.codecogs.com/gif.latex?A=QR" title="A=QR" />   
+   + 행렬 Q : 행렬 A에서 정규직교행렬을 추출한 행렬
+   + 행렬 R : 행렬 A에서 Q 추출 후 남은 행렬로, 상삼각행렬 형태
+   
++ **QR 분해 장점** 
+   + QR 분해를 통해 Ax=b 문제를 나타내면,   
+   
+    <img src="https://latex.codecogs.com/gif.latex?A\mathbf{x}=\mathbf{b}\Rightarrow&space;(QR)\mathbf{x}=\mathbf{b}\Rightarrow&space;Q(R\mathbf{x})=\mathbf{b}\Rightarrow&space;Q\mathbf{y}=\mathbf{b}" title="A\mathbf{x}=\mathbf{b}\Rightarrow (QR)\mathbf{x}=\mathbf{b}\Rightarrow Q(R\mathbf{x})=\mathbf{b}\Rightarrow Q\mathbf{y}=\mathbf{b}" /> , (단, <img src="https://latex.codecogs.com/gif.latex?R\mathbf{x}=\mathbf{y}" title="R\mathbf{x}=\mathbf{y}" />)   
+    
+    > 내적 구하기 : <img src="https://latex.codecogs.com/gif.latex?\mathbf{y}" title="\mathbf{y}" /> 구하기 (Qy=b에서)   
+    
+    > 후방대치법 : <img src="https://latex.codecogs.com/gif.latex?\mathbf{x}" title="\mathbf{x}" /> 구하기 (Rx=y)   
+
++ QR 분해는 그람-슈미트 과정(Gram-Schmidt process)을 행렬로 코드화한 것
+
++ QR 분해 **활용하는 이유** 
+   + 빠른 계산 : Q를 이용한 계산부분은 병렬처리 가능, R 이용한 계산은 병렬처리 불가능
+   + 벡터 b가 자주 업데이트되는 경우
+   
++ **QR 분해 vs LU 분해** 
+   + LU 분해의 경우, 선형시스템을 풀 때 병렬처리 불가능
+   + QR 분해의 경우, Q 행렬이 꽉찬 형태이므로 메모리 사용량이 많음
+   
