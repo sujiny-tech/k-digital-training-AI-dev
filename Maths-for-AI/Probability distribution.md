@@ -47,6 +47,12 @@
    + 위의 예에서 기대값 <img src="https://latex.codecogs.com/gif.latex?E(X)=0\times&space;0.1&plus;2\times&space;0.3&plus;5\times&space;0.6=3.6" title="E(X)=0\times 0.1+2\times 0.3+5\times 0.6=3.6" />   
    
 + 이산확률변수의 분산   
+   + <img src="https://latex.codecogs.com/gif.latex?\left&space;(&space;X-\mu&space;\right&space;)^{2}" title="\left ( X-\mu \right )^{2}" />의 평균=<img src="https://latex.codecogs.com/gif.latex?Var(X)" title="Var(X)" />   
+   
+   + <img src="https://latex.codecogs.com/gif.latex?\sigma&space;^{2}=E\left&space;[&space;(X-\mu)^{2}&space;\right&space;]=\sum&space;_{x}\left&space;(&space;x-\mu&space;\right&space;)^{2}P(X=x)=E\left&space;(&space;X^{2}&space;\right&space;)-\left&space;\{&space;E\left&space;(&space;X&space;\right&space;)&space;\right&space;\}^2" title="\sigma ^{2}=E\left [ (X-\mu)^{2} \right ]=\sum _{x}\left ( x-\mu \right )^{2}P(X=x)=E\left ( X^{2} \right )-\left \{ E\left ( X \right ) \right \}^2" />     
+   
+     > 중간에 제곱부분 풀어서 써보면 마지막 수식이 나옴.   
+   
    + 실험을 할 때마다 확률변수의 값이 달라지는데, 그 변동의 정도인 분산을 계산할 수 있음   
       
       > <img src="https://latex.codecogs.com/gif.latex?\sigma&space;^{2}=\frac{1}{N}\sum_{i=1}^{N}\left&space;(&space;x_{i}-\mu&space;\right&space;)^{2}" title="\sigma ^{2}=\frac{1}{N}\sum_{i=1}^{N}\left ( x_{i}-\mu \right )^{2}" />   
@@ -59,10 +65,42 @@
          
          > <img src="https://latex.codecogs.com/gif.latex?=3.24" title="=3.24" />   
          
-         
-## 연속확률변수         
-+ 
-         
++ 이산확률분포의 표준편차  
+   + 분산의 양의 제곱근 <img src="https://latex.codecogs.com/gif.latex?\sqrt{\sigma&space;^{2}}=\sigma" title="\sqrt{\sigma ^{2}}=\sigma" />, <img src="https://latex.codecogs.com/gif.latex?SD(X)" title="SD(X)" />라고 표현   
+  
+- - - - - - - -
+## 결합확률 분포(Joint probability distribution)
++ 두 개 이상의 확률 변수가 동시에 취하는 값들에 대해 확률을 대응시켜주는 관계
+  > 두 개 이상의 사건이 동시에 일어날 확률
+     
++ 이를 통해 각 확률변수의 확률분포를 도출 가능 => 주변확률분포(marginal probability distribution)
+   
+- - - - - - - -
+## 공분산(Covariance) 
++ 두 개 이상의 확률변수가 어떤 관계를 갖고 있는지(결합확률을 분석하기 위해)   
+      + <img src="https://latex.codecogs.com/gif.latex?\left&space;(&space;X-\mu_{X}&space;\right&space;)\left&space;(&space;Y-\mu_{Y}&space;\right&space;)" title="\left ( X-\mu_{X} \right )\left ( Y-\mu_{Y} \right )" />의 평균   
       
+      + <img src="https://latex.codecogs.com/gif.latex?Cov(X,Y)=E\left&space;[&space;(X-\mu_{X})(Y-\mu_{Y})&space;\right&space;]=E(XY)-\mu_{X}\mu_{Y}" title="Cov(X,Y)=E\left [ (X-\mu_{X})(Y-\mu_{Y}) \right ]=E(XY)-\mu_{X}\mu_{Y}" /><img src="https://latex.codecogs.com/gif.latex?=E[XY]-E[X]E[Y]" title="=E[XY]-E[X]E[Y]" />    
       
+         > 0에 가까우면 서로 관계 X, 양수나 음수가 나오면 관계 O   
+         
+      + 예) 고등학년 1학년 학생들
+         + 확률변수 X : 키
+         + 확률변수 Y : 몸무게
+         + 확률변수 Z : 수학성적
+         + <img src="https://latex.codecogs.com/gif.latex?\left&space;(&space;X-\mu_{X}&space;\right&space;)\left&space;(&space;Y-\mu_{Y}&space;\right&space;)" title="\left ( X-\mu_{X} \right )\left ( Y-\mu_{Y} \right )" /> : 양수일 가능성 높음    
+         
+         + <img src="https://latex.codecogs.com/gif.latex?\left&space;(&space;X-\mu_{X}&space;\right&space;)\left&space;(&space;Z-\mu_{Z}&space;\right&space;)" title="\left ( X-\mu_{X} \right )\left ( Z-\mu_{Z} \right )" /> : 양수, 음수가 될 가능성 반반   
+         
+           > 위의 두 값이 확률변수이므로 평균과 분산 계산 가능
+         
+- - - - - - - -
+## 상관계수(Correlation coefficient)
++ 공분산은 각 확률 변수의 절대적인 크기에 영향을 받기 때문에, 단위에 관한 영향을 없앨 필요가 있음   
+   
+   <img src="https://latex.codecogs.com/gif.latex?\rho&space;=Corr(X,Y)=\frac{Cov(X,Y)}{\sigma&space;_{X}\sigma&space;_{Y}}" title="\rho =Corr(X,Y)=\frac{Cov(X,Y)}{\sigma _{X}\sigma _{Y}}" />   
+   
+   + -1에서 1사이의 값을 가짐
+   + -1인 경우 반비례관계이고 1인 경우 비례 관계
+   + 0 이면 연관성 X (공분산에서도 마찬가지)   
       
