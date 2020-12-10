@@ -27,5 +27,7 @@
 + [벡터와 직교분해(Vector & Orthogonal Decomposition)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Vector%20%26%20Orthogonal%20decomposition.md)
 + [특이값 분해와 주성분 분석(SVD & PCA)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/SVD%20%26%20PCA.md)
 + [벡터공간과 최소제곱법(Vector space & Least Squares Method)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Vector%20space%20%26%20Least%20Squares%20Method.md)
-+ [통계학(Statistics)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Statistics.md)
-
++ [통계학(Statistics) - 기본개념](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Statistics.md)
++ [확률(Probability)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Probability.md)
++ [확률분포(Probability distribution)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Probability%20distribution.md)
++ [몇가지 확률분포](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Several%20probability%20distributions.md)
