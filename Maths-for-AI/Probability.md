@@ -22,7 +22,8 @@
 + 예제) 확률의 계산
    + 검은공 3개, 흰공 4개 중 2개의 공을 무작위로 뽑을 때, 둘다 흰공이 나올 확률?
       + 1~7번까지 7개의 공
-      + 1~3은 검은공/4~7은 흰공
+      + 1~3 : 검은공
+      + 4~7 : 흰공
       + 표본공간={(1,2), (1,3), ..., (6,7)} => 7C2 = 21 
       + 흰공 2개인 사건={(4,5), (4,6), (4,7), (5,6), (5,7), (6,7)} => 4C2 = 6 
       + 확률=6/21=2/7
@@ -92,3 +93,53 @@
       
          <img src="https://latex.codecogs.com/gif.latex?P(A\cap&space;B)=P(A)P(B)=\frac{1}{4}" title="P(A\cap B)=P(A)P(B)=\frac{1}{4}" />   
    
+## 여사건
++ 사건 A의 여사건 : 사건 A가 일어나지 않을 사건 <img src="https://latex.codecogs.com/gif.latex?A^{C}" title="A^{C}" />   
+   + 어떤 사건과 그의 여사건은 서로 배반   
+   
+      + <img src="https://latex.codecogs.com/gif.latex?P(A\cup&space;A^{C})=P(A)&plus;P(A^{C})=1" title="P(A\cup A^{C})=P(A)+P(A^{C})=1" />   
+      
+      + <img src="https://latex.codecogs.com/gif.latex?P(A)=1-P(A^{C})" title="P(A)=1-P(A^{C})" />   
+      
++ 확률의 분할법칙
+   + 사건 B : <img src="https://latex.codecogs.com/gif.latex?B=\left&space;(&space;A\cap&space;B\right&space;)\cap\left&space;(&space;A^{C}\cap&space;B&space;\right&space;)" title="B=\left ( A\cap B\right )\cap\left ( A^{C}\cap B \right )" />   
+   + <img src="https://latex.codecogs.com/gif.latex?P(B)=P\left&space;[\left&space;(&space;A\cap&space;B\right&space;)&space;\cup&space;\left&space;(&space;A^{C}\cap&space;B\right&space;)&space;\right&space;]=P(A\cap&space;B)&plus;P(A^{C}\cap&space;B)" title="P(B)=P\left [\left ( A\cap B\right ) \cup \left ( A^{C}\cap B\right ) \right ]=P(A\cap B)+P(A^{C}\cap B)" />   
+   
+     > <img src="https://latex.codecogs.com/gif.latex?\left&space;(&space;A\cap&space;B\right&space;)" title="\left ( A\cap B\right )" />와 <img src="https://latex.codecogs.com/gif.latex?\left&space;(&space;A^{C}\cap&space;B\right&space;)" title="\left ( A^{C}\cap B\right )" />는 서로 배반이므로...   
+    
+   + <img src="https://latex.codecogs.com/gif.latex?P(B)=P(A\cap&space;B)&plus;P(A^{C}\cap&space;B)=P(B|A)P(A)&plus;P(B|A^{C})P(A^{C})" title="P(B)=P(A\cap B)+P(A^{C}\cap B)=P(B|A)P(A)+P(B|A^{C})P(A^{C})" />   
+   
+   + 예) 어떤 사파리에서 70%가 사자, 나머지는 호랑이. 사자의 60%가 2살이상이고 호랑이의 40%정도가 2살이상, 전체 동물 중 2살 이상인 동물의 비율은?
+      + 사건 A = 동물이 사자인 사건
+      + 사건 B = 동물이 2살 이상인 사건
+      + <img src="https://latex.codecogs.com/gif.latex?P(B)=P(B|A)P(A)&plus;P(B|A^{C})P(A^{C})=0.6\times&space;0.7&plus;0.4\times&space;0.3=0.54" title="P(B)=P(B|A)P(A)+P(B|A^{C})P(A^{C})=0.6\times 0.7+0.4\times 0.3=0.54" />   
+  
++ 베이즈 정리✨
+   + 사건 <img src="https://latex.codecogs.com/gif.latex?B_{1},&space;B_{2},&space;...,&space;B_{k}" title="B_{1}, B_{2}, ..., B_{k}" />가 표본 공간 S의 분할되었을 때, 사건 A가 일어났을때 사건 <img src="https://latex.codecogs.com/gif.latex?B_{i}" title="B_{i}" />가 일어날 확률   
+   
+      > <img src="https://latex.codecogs.com/gif.latex?P(B_{i}|A)=\frac{P(B_{i}\cap&space;A)}{P(A)}=\frac{P(B_{i}\cap&space;A)}{\sum_{j=1}^{k}P(B_{j}\cap&space;A)}=\frac{P(B_{i})P(A|B_{i})}{\sum_{j=1}^{k}P(B_{j})P(A|B_{j})}" title="P(B_{i}|A)=\frac{P(B_{i}\cap A)}{P(A)}=\frac{P(B_{i}\cap A)}{\sum_{j=1}^{k}P(B_{j}\cap A)}=\frac{P(B_{i})P(A|B_{i})}{\sum_{j=1}^{k}P(B_{j})P(A|B_{j})}" />   
+   
+   + 바로 위의 예에서 동물 한마리를 랜덤하게 뽑았는데 이 동물이 2살이상이었음. 이 동물이 사자일 확률은?
+   + 즉, P(A|B)는?   
+   
+   + <img src="https://latex.codecogs.com/gif.latex?P(A|B)=\frac{P(A\cap&space;B)}{P(B)}=\frac{P(B|A)P(A)}{P(B|A)P(A)&plus;P(B|A^{C})P(A^{C})}" title="P(A|B)=\frac{P(A\cap B)}{P(B)}=\frac{P(B|A)P(A)}{P(B|A)P(A)+P(B|A^{C})P(A^{C})}" />   
+   
+      > <img src="https://latex.codecogs.com/gif.latex?=\frac{0.6\times&space;0.7}{0.6\times&space;0.7&plus;0.4\times&space;0.3}=0.78" title="=\frac{0.6\times 0.7}{0.6\times 0.7+0.4\times 0.3}=0.78" />   
+      
+      > 어떤 정보를 추가적으로 얻어졌다면, 이를 통해 더 정확하게 확률을 계산할 수 있음
+      
+   + 처음의 확률 = 사전 확률(prior probability)
+   + 수정된 확률 = 사후 확률(posterior probatility)   
+   
+      > <img src="https://latex.codecogs.com/gif.latex?P(A|B)=\frac{P(A\cap&space;B)}{P(B)}=\frac{P(B|A)P(A)}{P(B|A)P(A)&plus;P(B|A^{C})P(A^{C})}" title="P(A|B)=\frac{P(A\cap B)}{P(B)}=\frac{P(B|A)P(A)}{P(B|A)P(A)+P(B|A^{C})P(A^{C})}" />   
+      
+   + 예) 검은색과 흰색 셔츠를 갖고 있는데, 매일 아침 3/4 정도는 검은색셔츠를 입고, 1/4정도는 흰색셔츠를 입는다. 검은색 셔츠를 입으면 3/4정도 넥타이를 매고, 흰색셔츠를 입으면 1/2정도 넥타이를 맨다고 하자. 어느날 이 사람이 넥타이를 맸다면, 이 사람이 검은색 셔츠를 입었을 확률을 구하시오.
+      + 검은색 셔츠를 입는 사건 A의 확률 = 3/4
+      + 넥타이를 맨 사건 B
+      + 검은색 셔츠를 입고 넥타이를 맨 경우의 확률 : P(B|A)=3/4
+      + 흰색셔츠를 입고 넥타이를 맨 경우의 확률 : P(B|A의 여사건)=1/2
+      + 구하고자 하는 확률 = P(A|B) ❗   
+      
+         > <img src="https://latex.codecogs.com/gif.latex?P(A|B)=\frac{\left&space;(&space;3/4&space;\right&space;)\times&space;\left&space;(&space;3/4&space;\right&space;)}{\left&space;(&space;3/4&space;\right&space;)\times&space;\left&space;(&space;3/4&space;\right&space;)&space;&plus;\left&space;(&space;1/2&space;\right&space;)\times&space;\left&space;(&space;1/4&space;\right&space;)}=\frac{9}{11}" title="P(A|B)=\frac{\left ( 3/4 \right )\times \left ( 3/4 \right )}{\left ( 3/4 \right )\times \left ( 3/4 \right ) +\left ( 1/2 \right )\times \left ( 1/4 \right )}=\frac{9}{11}" />   
+         
+    
