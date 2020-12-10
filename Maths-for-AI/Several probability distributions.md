@@ -1,4 +1,4 @@
-# 몇 가지 자주 사용되는 확률분포
+# 몇 가지 확률분포
 
 ## 이항분포(Binomial distribution)
 + 베르누이 시행(Bernoulli trial)
