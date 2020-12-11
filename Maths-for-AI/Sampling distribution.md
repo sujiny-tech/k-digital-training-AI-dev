@@ -9,7 +9,7 @@
 + 표본 추출 방법   
    + 단순랜덤추출법(random sampling)
    + 난수표 사용
-   + 랜덤넘버 생성기 사용
+   + 랜덤넘버 생성기 사용 
       ```python
       >>> import random
       >>> [random.randint(1,1000) for i in range(10)]
