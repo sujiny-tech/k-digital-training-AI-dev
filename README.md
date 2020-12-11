@@ -31,3 +31,7 @@
 + [확률(Probability)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Probability.md)
 + [확률분포(Probability distribution)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Probability%20distribution.md)
 + [몇가지 확률분포](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Several%20probability%20distributions.md)
++ [표본 분포(Sampling distribution)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Sampling%20distribution.md)
++ [추정(Estimation)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Estimation.md)
++ [검정(Test)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Test.md)
++ [교차 엔트로피(Cross Entropy)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Cross%20Entropy.md)
