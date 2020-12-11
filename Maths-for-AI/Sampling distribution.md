@@ -42,5 +42,28 @@
 ## 중심극한정리(central limit theorem)✨
 + 모집단이 어떤 분포인지 모르고 **n이 충분히 큰** 경우(30이상), **근사적** 으로 **정규분포** 를 따른다.
 
-
-...ing
++ 예) 0~10사이의 수를 n번 뽑는 실험을 10000번 수행할 때
+   + 균일하게 뽑힌다고 할 때([균등분포](https://ko.wikipedia.org/wiki/%EC%97%B0%EC%86%8D%EA%B7%A0%EB%93%B1%EB%B6%84%ED%8F%AC)를 따른다고 할 때)   
+   
+      + n=3인 경우   
+      
+         ![n_3](https://user-images.githubusercontent.com/72974863/101865868-c5000200-3bba-11eb-875c-a9d01db432f2.png)   
+         
+         
+      + n=30인 경우   
+         
+         ![n_30](https://user-images.githubusercontent.com/72974863/101865895-d47f4b00-3bba-11eb-8500-71c5096006fa.png)   
+         
+ 
+   + 지수분포를 따른다고 할 때
+      > lambda=3 : 1시간동안 1/3번 사건이 발생할 때(1회 발생할때까지 걸리는 시간이 보통 3시간)
+   
+      + n=3인 경우   
+         
+         ![n_3(지수)](https://user-images.githubusercontent.com/72974863/101865913-df39e000-3bba-11eb-8514-e10e836022a2.png)   
+         
+      + n=30인 경우   
+         
+         ![n_30(지수)](https://user-images.githubusercontent.com/72974863/101865933-e7921b00-3bba-11eb-8878-2ff301c086e2.png)   
+         
+      
