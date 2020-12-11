@@ -31,12 +31,12 @@
       
       + n=10일 때,   
       
-       <img src="https://user-images.githubusercontent.com/72974863/101849476-16989480-3b9b-11eb-88d0-9a5ad7d85a42.png" width="60%" height="60%">   
+       <img src="https://user-images.githubusercontent.com/72974863/101849476-16989480-3b9b-11eb-88d0-9a5ad7d85a42.png">  
        
             
       + 평균 10, 분산 3, n=10일 때,   
       
-       <img src="https://user-images.githubusercontent.com/72974863/101849625-6e370000-3b9b-11eb-8178-274383ad6198.png" width="60%" height="60%">   
+       <img src="https://user-images.githubusercontent.com/72974863/101849625-6e370000-3b9b-11eb-8178-274383ad6198.png">   
 
 
 ## 중심극한정리(central limit theorem)✨
