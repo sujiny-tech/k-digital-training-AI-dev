@@ -1,6 +1,6 @@
 # 교차 엔트로피(Cross Entropy)
 
-+ 자기정보(Self-information) <img src="https://latex.codecogs.com/gif.latex?i(A)" title="i(A)" />   
++ 자기정보(Self-information)   
 
    <img src="https://latex.codecogs.com/gif.latex?i(A)=log_{b}\left&space;(&space;\frac{1}{P(A)}&space;\right&space;)=-log_{b}P(A)" title="i(A)=log_{b}\left ( \frac{1}{P(A)} \right )=-log_{b}P(A)" />   
    
@@ -51,11 +51,10 @@
    
 
 ## 교차 엔트로피(Cross Entropy)
-+ 학습에 필요한 손실함수로 쓰임
++ 학습에 필요한 **손실함수** 로 쓰임
 
 + 잘못된 확률분포를 사용하게 되면, 실제 최적의 비트수를 사용하지 못하게 됨
-   + 두 개의 확률분포와 각각의 사건이 주어져있을때, 이를 이용해서 교차 엔트로피 정의는 다음과 같다.
-      + 
+   
 + 집합 S상에서 확률분포 P에 대한 확률분포 Q의 교차 엔트로피 <img src="https://latex.codecogs.com/gif.latex?H(P,Q)" title="H(P,Q)" />   
 + 확률분포 P에서 각 사건의 자기정보의 평균   
 
@@ -90,7 +89,7 @@
           
           <img src="https://latex.codecogs.com/gif.latex?H(P,Q)=-\sum_{x\in&space;X}P(x)log_{2}Q(x)=-1&space;\times&space;log_{2}0.2=2.32" title="H(P,Q)=-\sum_{x\in X}P(x)log_{2}Q(x)=-1 \times log_{2}0.2=2.32" />   
           
-   + 따라서 교차엔트로피 값이 0에 가까울수록 잘 예측 
+   + 따라서 교차엔트로피 값이 **0에 가까울수록** 잘 예측 
     
    
 + A1, A2, A3, A4 사건에 대한 예측 확률값이 [0.7, 0.1, 0.1, 0.1]이며, 정답이 A1인 경우에 대한 교차엔트로피 값 계산    
