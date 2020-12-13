@@ -7,12 +7,12 @@
       <img src="https://latex.codecogs.com/gif.latex?H_{0}:\mu&space;=&space;\mu_{0}" title="H_{0}:\mu = \mu_{0}" />   
           
    + 대립가설 (새로운 주장, 실제 입증하고 싶은 가설)   
-      + 뭘 검정할건지, 대립가설 채택을 위해 통계적 증거 확보해야함, 증거없으면 귀무가설 채택
+      > 뭘 검정할건지, 대립가설 채택을 위해 통계적 증거 확보해야함, 증거없으면 귀무가설 채택   
    
       <img src="https://latex.codecogs.com/gif.latex?H_{1}:\mu&space;>&space;\mu_{0}" title="H_{1}:\mu > \mu_{0}" />    
       
       
-+ 검정의 단계
++ 검정의 단계✨
    + 귀무가설, 대립가설 설정
    + 유의 수준(alpha) 설정
    + 검정통계량 계산
