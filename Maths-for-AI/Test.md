@@ -40,9 +40,12 @@
    
    + 유의수준 = 0.05
    + 검정통계량 (표본의 평균/표준편차) = (10.43, 1.11)
-     + 표준화 시키면 다음과 같다.
+     + 표준화 시키면 다음과 같다.   
+     
         <img src="https://latex.codecogs.com/gif.latex?Z=\frac{\bar{X-\mu}}{s/\sqrt{n}}=\frac{10.43-10.5}{1.11\sqrt{30}}=-0.351" title="Z=\frac{\bar{X-\mu}}{s/\sqrt{n}}=\frac{10.43-10.5}{1.11\sqrt{30}}=-0.351" />   
-   + 유의성 판정
+        
+   + 유의성 판정   
+   
       + <img src="https://latex.codecogs.com/gif.latex?z_{\alpha/2}=z_{0.025}=1.96>\left&space;|&space;-0.351&space;\right&space;|" title="z_{\alpha/2}=z_{0.025}=1.96>\left | -0.351 \right |" />   
       
       + 즉, <img src="https://latex.codecogs.com/gif.latex?z_{\alpha/2}>|Z|" title="z_{\alpha/2}>|Z|" /> 이므로 귀무가설 기각 X
