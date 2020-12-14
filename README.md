@@ -35,3 +35,6 @@
 + [추정(Estimation)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Estimation.md)
 + [검정(Test)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Test.md)
 + [교차 엔트로피(Cross Entropy)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Cross%20Entropy.md)
+
+### [3주차] Python 기반 데이터 처리(Numpy, Pandas, Matplotlib)
++ [Numpy로 연산하기](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Data-Processing-with-Python/Numpy.ipynb)
