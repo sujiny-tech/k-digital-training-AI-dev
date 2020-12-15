@@ -92,9 +92,9 @@
 
     ✔ git branch -M main
 
-- 원격 저장소 지정
+- 원격 저장소 별칭 지정(추가)
 
-    ✔ git remote add <별칭> <원격저장소 주소>
+    ✔ git remote add <remote_repository_name> <remote_repository_address>
 
     <img src="https://user-images.githubusercontent.com/72974863/102103959-f9044d00-3e70-11eb-98fe-1078dc4dda28.png">
 
@@ -104,13 +104,17 @@
 
     <img src="https://user-images.githubusercontent.com/72974863/102104007-07eaff80-3e71-11eb-8a17-f6b1b12d51b6.png">
 
+- 지정된 원격 저장소 별칭/주소 확인
+
+    ✔ git remote -v
+    
 - 원격 저장소에 branch push하기
 
     ✔ git push <remote_repository_name> <branch_name>
     
 - git 원격 저장소에서 로컬 저장소로 복사해오기
 
-    ✔ git clone <repository_address> <directory_name>
+    ✔ git clone <remote_repository_address> <directory_name>
 
     <img src="https://user-images.githubusercontent.com/72974863/102103881-df630580-3e70-11eb-828e-7137ec5fde6a.png">
 
