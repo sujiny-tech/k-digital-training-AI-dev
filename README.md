@@ -37,4 +37,6 @@
 + [교차 엔트로피(Cross Entropy)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Cross%20Entropy.md)
 
 ### [3주차] Python 기반 데이터 처리(Numpy, Pandas, Matplotlib)
-+ [Numpy로 연산하기](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Data-Processing-with-Python/Numpy.ipynb)
++ [Git 기록하기](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Data-Processing-with-Python/Git.md)
++ [Python으로 데이터 다루기 I - Numpy](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Data-Processing-with-Python/Numpy.ipynb)
++ [Python으로 데이터 다루기 II - Pandas](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Data-Processing-with-Python/Pandas.ipynb)
