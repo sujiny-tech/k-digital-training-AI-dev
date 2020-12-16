@@ -40,3 +40,4 @@
 + [Git 기록하기](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Data-Processing-with-Python/Git.md)
 + [Python으로 데이터 다루기 I - Numpy](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Data-Processing-with-Python/Numpy.ipynb)
 + [Python으로 데이터 다루기 II - Pandas](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Data-Processing-with-Python/Pandas.ipynb)
++ [Python으로 시각화하기 - Matplotlib](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Data-Processing-with-Python/Matplotlib%20%26%20Seaborn.ipynb)
