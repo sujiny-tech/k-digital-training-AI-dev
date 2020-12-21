@@ -70,7 +70,7 @@
    + URL : 특정 서버의 한 리소스에 대해 구체적인 위치
    + URN : 리소스가 어디에 위치해 있든 찾을 수 있는 방식   
    
-      <img src="https://user-images.githubusercontent.com/72974863/102746040-c8587200-43a0-11eb-8a58-1ad62ba266e1.png" width="40%" height="40%">
+      <img src="https://user-images.githubusercontent.com/72974863/102746040-c8587200-43a0-11eb-8a58-1ad62ba266e1.png" width="30%" height="30%">
       
 + 구성
    + 자원(Resurce) : URI
