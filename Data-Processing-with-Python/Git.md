@@ -118,3 +118,32 @@
 
     <img src="https://user-images.githubusercontent.com/72974863/102103881-df630580-3e70-11eb-828e-7137ec5fde6a.png">
 
+- - - - - - - - -
+
+## Fork한 repository 업데이트 
+- 먼저 fork한 원격 저장소(원본 저장소) 추가
+
+    ✔ git remote add upstream <fork한 원본 저장소 주소>
+       
+    <img src="https://user-images.githubusercontent.com/72974863/102783926-ff4d7880-43de-11eb-8e7f-1b0db172dfcf.png">
+   
+       
+- 원본 저장소(upstream)의 최신 내용 가져오기
+
+    ✔ git fetch upstream
+       
+    <img src="https://user-images.githubusercontent.com/72974863/102784175-59e6d480-43df-11eb-971b-229745c0b3ee.png">
+
+- 원본 저장소와 로컬 저장소(내가 가져온 저장소) 병합
+   
+    ✔ git merge <병합하고 싶은 branch>   
+    
+     - 원하는 branch에 병합      
+       
+       <img src="https://user-images.githubusercontent.com/72974863/102787300-35412b80-43e4-11eb-89b8-1cd96fd46ab4.png">  
+          
+- 변경할 파일이 있거나, 추가할 파일 있으면 진행 후 commit 남기기(git add/git commit -m)
+
+- fork해서 가져온 내 원격 저장소(origin)에 반영해주기(push)
+   
+    ✔ git push origin <병합하고 싶은 branch>   
