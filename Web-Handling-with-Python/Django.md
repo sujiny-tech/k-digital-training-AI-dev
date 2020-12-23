@@ -23,12 +23,10 @@
 ## django의 MVT Pattern (Model, View, Template)    
 ✔ 개발에서의 **design pattern** ? 
    > 개발의 패턴, 코드의 모듈화를 이용해 각 코드가 독립적으로 동작해서 유기적으로 원하는 목표를 달성하게 해주는 구조   
+   + 일반적으로 **MVC Pattern (Model, View, Controller)** 이 많이 활용되었음.   
+      + ```MVC Pattern``` : 데이터(model), 사용자 인터페이스(view), 데이터 처리 로직(controller)으로 나누어 한 요소가 다른 요소들에게 영향을 주지 않도록 설계하는 방식   
    
- 
-+ 일반적으로 **MVC Pattern (Model, View, Controller)** 이 많이 활용되었음.
-   + ```MVC Pattern``` : 데이터(model), 사용자 인터페이스(view), 데이터 처리 로직(controller)으로 나누어 한 요소가 다른 요소들에게 영향을 주지 않도록 설계하는 방식
-   
-+ django는 이러한 방식을 바탕으로 **django만의 특색있는 pattern** 을 만들었음.
+   + django는 이러한 방식을 바탕으로 **django만의 특색있는 pattern** 을 만들었음.
    
 ### **Model** 
 + 데이터베이스에 저장되는 **데이터**
@@ -90,8 +88,10 @@
 
 + Template 만들기(사용자가 보는 화면)
    + <app_name> 폴더 안에 template 폴더 생성 후 내부에 html 파일 생성
-      + ```<html_name>.html``` : html 소스 작성 템플릿 언어 작성 
-         + [html 문법](https://ko.wikipedia.org/wiki/HTML_%EC%9A%94%EC%86%8C) & [정리잘한 다름사람의 블로그 참고하기](https://ikkison.tistory.com/43)
-         + [Template 문법](https://django-doc-test-kor.readthedocs.io/en/old_master/topics/templates.html) : 위의 Template 언어링크와 동일
+      + ```<html_name>.html``` : html 소스 작성 템플릿 언어 작성   
+      
+         ✨ [html 문법](https://ko.wikipedia.org/wiki/HTML_%EC%9A%94%EC%86%8C) & [정리 잘 다른사람의 블로그 참고하기](https://ikkison.tistory.com/43)   
+         
+         ✨ [Template 문법](https://django-doc-test-kor.readthedocs.io/en/old_master/topics/templates.html) : 위의 Template 언어링크와 동일
       
       
