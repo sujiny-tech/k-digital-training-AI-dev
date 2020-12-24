@@ -42,3 +42,8 @@
 + [Python으로 데이터 다루기 II - Pandas](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Data-Processing-with-Python/Pandas.ipynb)
 + [Python으로 시각화하기 - Matplotlib](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Data-Processing-with-Python/Matplotlib%20%26%20Seaborn.ipynb)
 + [탐색적 데이터 분석(EDA)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Data-Processing-with-Python/EDA.ipynb)
+
+### [4주차] Python으로 웹 다루기
++ [Flask - Web Application](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Web-Handling-with-Python/Flask.md)
++ [클라우드(Cloud Computing)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Web-Handling-with-Python/Cloud%20Computing.md) & [머신러닝 모델 Serving API](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Web-Handling-with-Python/API%20to%20serve%20ML%20model.md)
++ [Django - Web Application](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Web-Handling-with-Python/Django.md)
