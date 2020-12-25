@@ -95,3 +95,7 @@
          ✨ [Template 문법](https://django-doc-test-kor.readthedocs.io/en/old_master/topics/templates.html) : 위의 Template 언어링크와 동일
       
       
+- - - - - - - - - - - - -       
+## django으로 동적 웹페이지 만들기
+
+... ing
