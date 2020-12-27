@@ -90,12 +90,22 @@
    + <app_name> 폴더 안에 template 폴더 생성 후 내부에 html 파일 생성
       + ```<html_name>.html``` : html 소스 작성 템플릿 언어 작성   
       
-         ✨ [html 문법](https://ko.wikipedia.org/wiki/HTML_%EC%9A%94%EC%86%8C) & [정리 잘 다른사람의 블로그 참고하기](https://ikkison.tistory.com/43)   
+         ✨ [html 문법](https://ko.wikipedia.org/wiki/HTML_%EC%9A%94%EC%86%8C) & [정리 잘한 다른사람의 블로그 참고하기](https://ikkison.tistory.com/43)   
          
          ✨ [Template 문법](https://django-doc-test-kor.readthedocs.io/en/old_master/topics/templates.html) : 위의 Template 언어링크와 동일
       
       
-- - - - - - - - - - - - -       
-## django으로 동적 웹페이지 만들기
+- - - - - - - - - - - - -
+### django 프로젝트의 큰 틀 💫  
 
-... ing
+0) 기본 프로젝트 생성 및 장고 설치, 장고 프로젝트 생성
+1) 설정(데이터베이스, S3)
+2) 데이터베이스 초기화
+3) 관리자 계정 만들기   
+      
+4. 앱 만들기
+5. 모델 설계(데이터베이스)   
+   
+6) 뷰 만들기(기능, 계산)
+7) 템플릿 만들기(화면에 표시될 내용/양식)
+8) URL 만들기 (CRUD)   
