@@ -1,7 +1,13 @@
 # K-Digital-Training-AI-dev
 > [K-Digital-Training] 인공지능 데브코스 : 2020. 11. 30 ~ ing
 
-### [1주차] 어서와! 자료구조와 알고리즘은 처음이지?
+### [1주차] 어서와! 자료구조와 알고리즘은 처음이지?   
+
+<details>
+<summary>자세히</summary>   
+<div markdown="1">   
+   
+   
 + [선형 배열 (Linear Array)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Data%20structure%20%26%20Algorithm/Linear%20Array.md)
 + [정렬(Sort), 탐색(Search)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Data%20structure%20%26%20Algorithm/Sort_Search.md)
 + [재귀 알고리즘(Recursive algorithm)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Data%20structure%20%26%20Algorithm/Recursive_algorithm.md)
@@ -15,7 +21,16 @@
 + [코딩 테스트 연습](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Data%20structure%20&%20Algorithm/coding_test_practice.md)
 + [프로그래머스 코딩테스트 문제 풀기](https://github.com/sujiny-tech/k-digital-training-AI-dev/tree/main/Data%20structure%20%26%20Algorithm/Programmers-algorithm-problem)
 
-### [2주차] 인공지능 수학
+</div>
+</details>
+
+### [2주차] 인공지능 수학   
+
+<details>
+<summary>자세히</summary>   
+<div markdown="1">   
+   
+   
 + [Jupyter notebook & Mark Down](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Jupyter_notebook.md)
 + [선형대수(Linear system)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Linear_system.md)
 + [선형대수-실습](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Linear_system_ex.ipynb)
@@ -36,12 +51,26 @@
 + [검정(Test)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Test.md)
 + [교차 엔트로피(Cross Entropy)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Cross%20Entropy.md)
 
-### [3주차] Python 기반 데이터 처리(Numpy, Pandas, Matplotlib)
+</div>
+</details>
+
+
+### [3주차] Python 기반 데이터 처리(Numpy, Pandas, Matplotlib)   
+
+<details>
+<summary>자세히</summary>   
+<div markdown="1">   
+    
+    
 + [Git 기록하기](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Data-Processing-with-Python/Git.md)
 + [Python으로 데이터 다루기 I - Numpy](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Data-Processing-with-Python/Numpy.ipynb)
 + [Python으로 데이터 다루기 II - Pandas](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Data-Processing-with-Python/Pandas.ipynb)
 + [Python으로 시각화하기 - Matplotlib](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Data-Processing-with-Python/Matplotlib%20%26%20Seaborn.ipynb)
 + [탐색적 데이터 분석(EDA)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Data-Processing-with-Python/EDA.ipynb)
+
+</div>
+</details>
+
 
 ### [4주차] Python으로 웹 다루기
 + [Flask - Web Application](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Web-Handling-with-Python/Flask.md)
