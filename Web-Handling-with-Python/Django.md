@@ -97,8 +97,31 @@
               ...
               <app_name>
       ]
-      ```
-
+      ```   
+      
++ 모델 선언 및 활성화
+   + 모델 선언 - app_name/models.py에 모델 객체 선언 (이러이러한 필드를 갖는 데이터베이스를 만들겠다~)
+      + 모델의 필드 타입
+         + 문자열 : CharField (max_length 입력해줘야함)
+         + 숫자 : IntegerField, SmallIntegerField
+         + 논리형 : BooleanField 
+         + 시간/날짜 : DataField...   
+         
+      + django는 기본적으로 Primary Key 생성함 (id)
+         + 데이터가 추가될 때마다 자동으로 증가   
+         
+   + 모델 활성화
+      + 모델의 변경사항 파악
+         ```python
+         python manage.py makemigrations <app_name>
+         ```   
+         > migration : django가 모델의 변경사항과 데이터베이스 스키마를 저장하는 방법을 의미
+         
+      + 자동으로 migration 실행, 데이터베이스 스키마 관리
+         ```python
+         python manage.py migrate <app_name>
+         ```
+   
 + Template 만들기(사용자가 보는 화면)
    + <app_name> 폴더 안에 template 폴더 생성 후 내부에 html 파일 생성
       + ```<html_name>.html``` : html 소스 작성 템플릿 언어 작성   
@@ -107,7 +130,8 @@
          
          ✨ [Template 문법](https://django-doc-test-kor.readthedocs.io/en/old_master/topics/templates.html) : 위의 Template 언어링크와 동일
       
-      
++ view를 통해 모델(데이터베이스) or URL과 템플릿(html) 연결해주기
+
 - - - - - - - - - - - - -
 ### django 프로젝트의 큰 틀 💫  
 
