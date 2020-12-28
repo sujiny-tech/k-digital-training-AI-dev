@@ -55,13 +55,26 @@
    + 해당 directory의 파일들
       + ```__init__.py``` : 해당 directory가 python 모듈로써 인식되게 하는 역할
       + ```asji.py```, ```wsgi.py``` : 이후 서버에서 실제로 django 프로젝트를 가동할 때 다루게 될 부분
-      + ```settings.py``` : 전반적인 django 프로젝트의 설정사항을 반영하는 파일(secret_key, debug, allowe_host...)
-      + ```urls.py``` : url을 관리하는 부분 
+      + ```settings.py``` : 전반적인 django 프로젝트의 설정사항을 반영하는 파일(secret_key, debug, database...)
+      + ```urls.py``` : url을 관리하는 부분 (django로 작성된 사이트의 목차) 
+      + ```wsgi.py``` : 프로젝트를 서비스하기 위한 WSGI 호환 웹 서버의 진입점
    
 + 생성된 project안의 manage.py를 이용해 서버 가동
    ```python
    python manage.py runserver
    ```
+   + 기본적으로 내부 IP의 8000번 포트로 개발 서버를 띄움.
+   + 포트 바꾸기
+      ```python
+      python manage.py runserver 8080  #8080로 변경
+      ```
+   + 외부접속 허용
+      ```python
+      python manage.py runserver 0.0.0.0:8000
+      ```
+      + 외부에서는 서버를 띄운 컴퓨터에 할당된 IP+포트번호를 통해 접속 가능
+      + 공유기를 연결하여 사용하는 경우, 공유기에서 외부 접속을 막고 있기 때문에 **포트포워딩** 필요함
+         + [관련 내용 - 정리잘한 다른사람의 블로그 참고하기 ✨](https://compunication.tistory.com/5)
 
 + 생성된 프로젝트 폴더로 이동 후 app 생성
    ```python
@@ -109,3 +122,4 @@
 6) 뷰 만들기(기능, 계산)
 7) 템플릿 만들기(화면에 표시될 내용/양식)
 8) URL 만들기 (CRUD)   
+
