@@ -156,3 +156,11 @@
       + **인터넷 사용기록삭제(브라우저 캐시 삭제)** 
       + 다른 css로 인식하게 만들기 : 링크코드 뒤에 ?after 등 아무 문자열 추가
    + [도움받은 다른 사람의 블로그 ✨](https://meaownworld.tistory.com/89)
+
++ django **favicon 설정하고 싶을 때** 
+   + ```favicon``` : Favorites + Icon의 합성어로 **홈페이지 제목 영역에 표시되는 작은 아이콘** 
+   + 설정 방법 👍 : link 태그를 통해 설정
+      + head 내부에 ```<link rel="icon" type="image/png" href="아이콘으로 쓰고 싶은 이미지 경로">```
+      + png 파일을 사용할 때, type="image/png"로 설정
+      + ico(아이콘)파일을 사용할때는 type="image/x-icon"으로 설정
+      
