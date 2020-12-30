@@ -149,22 +149,40 @@
 - - - - - - - - - - - - - -
 
 ## Django 관련 이슈 및 해결방안 😂
-+ django 프로젝트에 부트스트랩 적용 시 **css 및 font 등 적용이 안될 때**  
+
+
+
+<details>
+<summary>django 프로젝트에 부트스트랩 적용 시 css 및 font 등 적용이 안될 때 ❗ </summary>   
+<div markdown="1">   
+   
    + 부트스트랩(bootstrap) : 동적 웹사이트를 위한 CSS 프레임워크 중 한 종류
    + **css 파일 링크 문제** : 이전에 사용한 css를 브라우저가 캐시에 보관해놓고 사용해서 링크된 css 변화점을 기억하지 못함
    + 해결 방법 👍
       + **인터넷 사용기록삭제(브라우저 캐시 삭제)** 
       + 다른 css로 인식하게 만들기 : 링크코드 뒤에 ?after 등 아무 문자열 추가
    + [도움받은 다른 사람의 블로그 ✨](https://meaownworld.tistory.com/89)
-
-+ django **favicon 설정하고 싶을 때** 
+   
+</div>
+</details>
+ 
+<details>
+<summary>django favicon 설정하고 싶을 때 ❗ </summary>   
+<div markdown="1">   
+   
    + ```favicon``` : Favorites + Icon의 합성어로 **홈페이지 제목 영역에 표시되는 작은 아이콘** 
    + 설정 방법 👍 : link 태그를 통해 설정
       + head 내부에 ```<link rel="icon" type="image/png" href="아이콘으로 쓰고 싶은 이미지 경로">```
       + png 파일을 사용할 때, type="image/png"로 설정
       + ico(아이콘)파일을 사용할때는 type="image/x-icon"으로 설정
-      
-+ django **계정 비밀번호 까먹었을 때** 
+   
+</div>
+</details> 
+
+<details>
+<summary>django 계정 비밀번호 까먹었을 때 ❗ </summary>   
+<div markdown="1">   
+   
    + 해결 방법 👍
       + 방법 1 : ```python manage.py changepassword <user_ID>```
       + 방법 2 : ID도 모를 경우, shell에서 변경
@@ -178,8 +196,14 @@
          >>> exit()
          ```
    + [도움받은 다른 사람의 블로그 ✨](https://kitle.xyz/post/58/)
+   
+</div>
+</details> 
 
-+ django **데이터베이스 초기화** 시키고 싶을 때
+<details>
+<summary>django 데이터베이스 초기화시키고 싶을 때 ❗ </summary>   
+<div markdown="1">   
+   
    + 해결 방법 👍
       + 1. migrations 파일 삭제 (migrations dir안 init.py 모듈 제외한 모든 파일 삭제)
          + ```find . -path "*/migrations/*.py" -not -name "__init__.py" -delete```
@@ -190,4 +214,8 @@
          + python manage.py createsuperuser #admin 계정 생성
          + python manage.py makemigrations
          + python manange.py migrate
-      
+   
+</div>
+</details> 
+
+
