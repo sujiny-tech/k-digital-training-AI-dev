@@ -164,3 +164,17 @@
       + png 파일을 사용할 때, type="image/png"로 설정
       + ico(아이콘)파일을 사용할때는 type="image/x-icon"으로 설정
       
++ django **계정 비밀번호 까먹었을 때** 
+   + 해결 방법 👍
+      + 방법 1 : ```python manage.py changepassword <user_ID>```
+      + 방법 2 : ID도 모를 경우, shell에서 변경
+         + ```python manage.py shell``` 실행
+         ```python
+         >>> from django.contrib.auth.modesl import User
+         >>> User.objects.filter(is_superuser=True) #superuser ID 확인하기
+         >>> super_id=User.objects.get(username="ID")
+         >>> super_id.set_password("변경할 비밀번호")
+         >>> super_id.save()
+         >>> exit()
+         ```
+   + [도움받은 다른 사람의 블로그 ✨](https://kitle.xyz/post/58/)
