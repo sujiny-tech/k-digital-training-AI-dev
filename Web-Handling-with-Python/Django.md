@@ -178,3 +178,16 @@
          >>> exit()
          ```
    + [도움받은 다른 사람의 블로그 ✨](https://kitle.xyz/post/58/)
+
++ django **데이터베이스 초기화** 시키고 싶을 때
+   + 해결 방법 👍
+      + 1. migrations 파일 삭제 (migrations dir안 init.py 모듈 제외한 모든 파일 삭제)
+         + ```find . -path "*/migrations/*.py" -not -name "__init__.py" -delete```
+         + ```find . -path "*/migrations/*.pyc"  -delete```
+      + 2. 데이터베이스 제거
+         + db.sqlit3파일 삭제(다른 db엔진 사용시 해당 데이터베이스 삭제)
+      + 3. 새 스키마 생성
+         + python manage.py createsuperuser #admin 계정 생성
+         + python manage.py makemigrations
+         + python manange.py migrate
+      
