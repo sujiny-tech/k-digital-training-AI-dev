@@ -239,7 +239,6 @@
    + .col-sm-* : 768px이하에서 세로로 표시
    + .col-md-* : 992px이하에서 세로로 표시
    + .col-lg-* : 1200px이하 에서 세로로 표시
-   
    + [도움받은 다른 사람의 블로그 ✨](https://unikys.tistory.com/371)
    
 </div>
