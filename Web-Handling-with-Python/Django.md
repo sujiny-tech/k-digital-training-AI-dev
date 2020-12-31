@@ -218,4 +218,29 @@
 </div>
 </details> 
 
+<details>
+<summary>django csv 파일 bulk_creat을 통해 모델(데이터) 추가하기 ❗ </summary>   
+<div markdown="1">
+   
+   + ```bulk_creat``` : 다량의 데이터를 한번에 데이터베이스에 넣기
+   + django project 최상위 경로로 bulk.py를 생성 (이를 통해 모델 추가)
+   + 기본 설정 수행(django 내부 설정, 모델 인식 및 환경설정)
+   + csv 파일을 읽고 받아와서 모델의 instances 추가시켜주기
+   + [도움받은 다른 사람의 블로그 ✨](https://juneyr.dev/2018-02-19/make-bulk-update-from-csv-django)
 
+</div>
+</details> 
+
+<details>
+<summary>django table class 종류 ❗ </summary>   
+<div markdown="1">
+   
+   + .col-xs-* : 항상 가로로 배치
+   + .col-sm-* : 768px이하에서 세로로 표시
+   + .col-md-* : 992px이하에서 세로로 표시
+   + .col-lg-* : 1200px이하 에서 세로로 표시
+   
+   + [도움받은 다른 사람의 블로그 ✨](https://unikys.tistory.com/371)
+   
+</div>
+</details> 
