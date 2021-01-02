@@ -245,7 +245,7 @@
 </details> 
 
 <details>
-<summary>django 프로젝트 AWS EC2 서버배포하기 ❗ </summary>   
+<summary>django 프로젝트 AWS EC2 배포하기 ❗ </summary>   
 <div markdown="1">
    
    + [도움받은 다른 사람의 블로그 ✨](https://nerogarret.tistory.com/46?category=800142)
