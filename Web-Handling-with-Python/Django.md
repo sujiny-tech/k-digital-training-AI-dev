@@ -253,3 +253,13 @@
 </div>
 </details> 
 
+<details>
+<summary>AWS EC2로 django 프로젝트 배포시 uwsgi 설치 실패할때 ❗ </summary>   
+<div markdown="1">
+   
+   + [도움받은 곳 ✨](https://github.com/unbit/uwsgi/issues/1770)
+   + uwsgi: error while loading shared libraries : libpcre.so.1 : ... 에러 발생
+      + 심볼릭 링크를 걸어 해결한다 : [도움을 받은 곳✨](https://whitelife.tistory.com/193)
+   
+</div>
+</details> 
