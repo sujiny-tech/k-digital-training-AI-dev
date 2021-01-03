@@ -249,6 +249,7 @@
 <div markdown="1">
    
    + [도움받은 다른 사람의 블로그 ✨](https://nerogarret.tistory.com/46?category=800142)
+   + [AWS EC2 서버 기본 세팅에 관한 블로그 ✨](https://nerogarret.tistory.com/45?category=800142)
    
 </div>
 </details> 
