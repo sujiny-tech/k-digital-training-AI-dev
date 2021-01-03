@@ -254,12 +254,34 @@
 </details> 
 
 <details>
-<summary>AWS EC2로 django 프로젝트 배포시 uwsgi 설치 실패할때 ❗ </summary>   
+<summary>AWS EC2로 django 프로젝트 배포시 uwsgi 설치 실패할 때 ❗ </summary>   
 <div markdown="1">
    
-   + [도움받은 곳 ✨](https://github.com/unbit/uwsgi/issues/1770)
-   + uwsgi: error while loading shared libraries : libpcre.so.1 : ... 에러 발생
+   + pip install uwsgi failed...
+      + [도움받은 곳 ✨](https://github.com/unbit/uwsgi/issues/1770)
+   + uwsgi: error while loading shared libraries : libpcre.so.1 : ...
       + 심볼릭 링크를 걸어 해결한다 : [도움을 받은 곳✨](https://whitelife.tistory.com/193)
+   
+</div>
+</details> 
+
+<details>
+<summary>vi 명령어 익숙해지기 ❗ </summary>   
+<div markdown="1">
+   
+   + ```ESC``` : 명령어 모드 변환
+   + 입력 모드 : i, a
+   + 왼쪽/오른쪽으로 이동 : h / l
+   + 위/아래로 이동 : k / j
+   + 현재줄 복사 : yy
+   + n번째 줄 복사 : nyy
+   + undo(실행취소) : u
+   + 줄의 맨 앞/뒤 : o / $
+   + 파일의 끝으로 이동 : G
+   + 변경사항을 저장하지 않고 종료 :q!
+   + 저장 : w
+   + 저장 후 종료 : wq
+   + [Vi 명령어 잘 정리된 곳✨](https://blockdmask.tistory.com/25) 
    
 </div>
 </details> 
