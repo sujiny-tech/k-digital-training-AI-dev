@@ -76,3 +76,9 @@
 + [Flask - Web Application](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Web-Handling-with-Python/Flask.md)
 + [클라우드(Cloud Computing)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Web-Handling-with-Python/Cloud%20Computing.md) & [머신러닝 모델 Serving API](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Web-Handling-with-Python/API%20to%20serve%20ML%20model.md)
 + [Django - Web Application](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Web-Handling-with-Python/Django.md)
+
+### [5주차] 머신러닝 기초
++ 
+
+
+
