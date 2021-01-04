@@ -35,7 +35,23 @@
   
 + **과소적합(Under-fitting)** : 학습 대상(훈련 데이터셋)을 충분히 학습하지 못함, 훈련 데이터셋과 시험 데이터셋 모두 성능 저하
    + 모델링을 너무 간단하게 해서 성능이 제대로 나오지 않음
+   + 해결 방안 
+      + 파라미터가 더 많은 복잡한 모델 선택
+      + 모델의 제약 줄이기 (하이퍼파라미터 값 줄이기)
+      + over-fitting 되기 전의 시점까지 충분히 학습
+   
 + **과대적합(Over-fitting)** : 학습 대상(훈련 데이터셋)에 너무 맞춰져있어서 시험 대상(시험 데이터셋)의 성능 저하 
    + 너무 상세하고 복잡한 모델링을 해서 훈련 데이터셋에만 과도하게 정확히 동작함
    + [모델 복잡도](https://ko.d2l.ai/chapter_deep-learning-basics/underfit-overfit.html)
+   + 해결 방안 
+      + 더 많은 훈련데이터 수집
+      + 정규화(Regularization) : 규제(제약조건), dropout 등 다양한 방법 적용
+         + 규제 : 모델에 제약을 가하는 것 (하이퍼파라미터 적절하게 선택)
+      + 훈련 데이터 오류 수정 및 이상치 제거 등
+   
+### 교재 소개
+✨ Pattern Recognition and Machine Learning by Christopher Bishop   
 
+✨ Deep Learning by Ian Goodfellow, Yoshua Bengio and Aaron Courville   
+
+✨ Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow (2nd Edition)   
