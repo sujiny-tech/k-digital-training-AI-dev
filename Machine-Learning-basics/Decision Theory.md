@@ -119,7 +119,7 @@
 
    > <img src="https://latex.codecogs.com/gif.latex?L(t,&space;y(\mathbf{x}))=\left&space;\{&space;y(\mathbf{x}-t)&space;\right&space;\}^{2}" title="L(t, y(\mathbf{x}))=\left \{ y(\mathbf{x}-t) \right \}^{2}" />
 
-   + 손실함수의 기댓값   
+   + 손실함수의 기댓값 (sol 1)  
    
       > <img src="https://latex.codecogs.com/gif.latex?F[y]=E[L]=\int_{R}&space;\int_{\chi&space;}&space;\left&space;\{&space;y(\mathbf{x}-t)&space;\right&space;\}^{2}p(\mathbf{x},&space;t)d\mathbf{x}dt" title="F[y]=E[L]=\int_{R} \int_{\chi } \left \{ y(\mathbf{x}-t) \right \}^{2}p(\mathbf{x}, t)d\mathbf{x}dt" />   
       
@@ -157,9 +157,47 @@
           > <img src="https://latex.codecogs.com/gif.latex?\therefore&space;y(\mathbf{x})=E_{t}[t|\mathbf{x}]" title="\therefore y(\mathbf{x})=E_{t}[t|\mathbf{x}]" />  
              
              
-
+   + 손실함수의 분해를 통한 손실함수 기댓값 (sol 2)  
+   
+      > <img src="https://latex.codecogs.com/gif.latex?\left&space;\{&space;y(\mathbf{x}-t)&space;\right&space;\}^{2}=\left&space;(&space;y(\mathbf{x})-E[t|\mathbf{x}]&plus;E[t|\mathbf{x}]&space;-t&space;\right&space;)^{2}" title="\left \{ y(\mathbf{x}-t) \right \}^{2}=\left ( y(\mathbf{x})-E[t|\mathbf{x}]+E[t|\mathbf{x}] -t \right )^{2}" />   
+      
+      > <img src="https://latex.codecogs.com/gif.latex?=\left&space;\{&space;y(\mathbf{x})-E[t|\mathbf{x}]&space;\right&space;\}^{2}&plus;\left&space;\{2y(\mathbf{x})-E[t|\mathbf{x}]&space;\right&space;\}&space;\left&space;\{&space;E[t|\mathbf{x}]-t&space;\right&space;\}&plus;\left&space;\{&space;E[t|\mathbf{x}]&space;-t&space;\right&space;\}^{2}" title="=\left \{ y(\mathbf{x})-E[t|\mathbf{x}] \right \}^{2}+\left \{2y(\mathbf{x})-E[t|\mathbf{x}] \right \} \left \{ E[t|\mathbf{x}]-t \right \}+\left \{ E[t|\mathbf{x}] -t \right \}^{2}" />   
+      
+      + 교차항은 다음과 같이 사라짐
+      
+         > <img src="https://latex.codecogs.com/gif.latex?2\int\int&space;\left&space;\{&space;y(\mathbf{x})-E[t|\mathbf{x}]&space;\right&space;\}&space;\left&space;\{&space;E[t|\mathbf{x}]-t&space;\right&space;\}&space;p(\mathbf{x},t)d\mathbf{x}dt" title="2\int\int \left \{ y(\mathbf{x})-E[t|\mathbf{x}] \right \} \left \{ E[t|\mathbf{x}]-t \right \} p(\mathbf{x},t)d\mathbf{x}dt" />   
+         
+         > <img src="https://latex.codecogs.com/gif.latex?=2\int\int&space;\left&space;\{&space;y(\mathbf{x})-E[t|\mathbf{x}]&space;\right&space;\}&space;\left&space;\{&space;E[t|\mathbf{x}]-t&space;\right&space;\}&space;p(t|\mathbf{x})p(\mathbf{x})d\mathbf{x}dt" title="=2\int\int \left \{ y(\mathbf{x})-E[t|\mathbf{x}] \right \} \left \{ E[t|\mathbf{x}]-t \right \} p(t|\mathbf{x})p(\mathbf{x})d\mathbf{x}dt" />   
+         
+         > <img src="https://latex.codecogs.com/gif.latex?=2\int&space;\left&space;\{&space;y(\mathbf{x})-E[t|\mathbf{x}]&space;\right&space;\}p(\mathbf{x})\left&space;(&space;\int&space;\left&space;\{&space;E[t|\mathbf{x}]-t&space;\right&space;\}&space;p(t|\mathbf{x})dt&space;\right&space;)d\mathbf{x}" title="=2\int \left \{ y(\mathbf{x})-E[t|\mathbf{x}] \right \}p(\mathbf{x})\left ( \int \left \{ E[t|\mathbf{x}]-t \right \} p(t|\mathbf{x})dt \right )d\mathbf{x}" />   
+         
+         > <img src="https://latex.codecogs.com/gif.latex?=2\int&space;\left&space;\{&space;y(\mathbf{x})-E[t|\mathbf{x}]&space;\right&space;\}p(\mathbf{x})\left&space;(E[t|\mathbf{x}]&space;\int&space;p(t|\mathbf{x})&space;dt&space;-&space;\int&space;t&space;p(t|\mathbf{x})dt&space;\right&space;)d\mathbf{x}" title="=2\int \left \{ y(\mathbf{x})-E[t|\mathbf{x}] \right \}p(\mathbf{x})\left (E[t|\mathbf{x}] \int p(t|\mathbf{x}) dt - \int t p(t|\mathbf{x})dt \right )d\mathbf{x}" />   
+         
+         > <img src="https://latex.codecogs.com/gif.latex?=2\int&space;\left&space;\{&space;y(\mathbf{x})-E[t|\mathbf{x}]&space;\right&space;\}p(\mathbf{x})\left&space;(E[t|\mathbf{x}]-E[t|\mathbf{x}]\right&space;)&space;d\mathbf{x}=0" title="=2\int \left \{ y(\mathbf{x})-E[t|\mathbf{x}] \right \}p(\mathbf{x})\left (E[t|\mathbf{x}]-E[t|\mathbf{x}]\right ) d\mathbf{x}=0" />   
+         
+         > <img src="https://latex.codecogs.com/gif.latex?\therefore&space;E[L]=\int&space;\left&space;\{&space;y(\mathbf{x}-E[t|\mathbf{x}])&space;\right&space;\}^{2}p(\mathbf{x})d\mathbf{x}&plus;\int&space;\textup{var}[t|\mathbf{x}]p(\mathbf{x})d\mathbf{x}" title="\therefore E[L]=\int \left \{ y(\mathbf{x}-E[t|\mathbf{x}]) \right \}^{2}p(\mathbf{x})d\mathbf{x}+\int \textup{var}[t|\mathbf{x}]p(\mathbf{x})d\mathbf{x}" />   
+         
+         + <img src="https://latex.codecogs.com/gif.latex?y(\mathbf{x})=E[t|\mathbf{x}]" title="y(\mathbf{x})=E[t|\mathbf{x}]" /> 일때, 기대손실 최소화 !
+         + 두번째 항은 t의 분산으로 함수 y(x)와 관계 x
    
 
-
-
-
+### 결정문제를 위한 몇가지 방법들  
++ **분류문제**의 경우
+   + **확률모델**에 의존하는 경우   
+   
+      + 생성모델(generative model) : 각 클래스에 대한 분포와 사전확률을 통해 베이즈 정리를 기반으로 사후확률 구함.  
+      
+         + 사후확률이 주어졌기 때문에, 분류를 위한 결정은 쉽게 이뤄짐. 결합분포에서 **데이터 샘플링을 통해 생성 !**   
+         
+      + 식별모델(discriminative model) : 모든 분포를 계산하지 않고, 사후확률만 구함. 위와 동일하게 결정이론 적용 가능
+      
+   + **판별함수**에 의존하는 경우   
+   
+      + 판별함수(discriminant function) : **입력 x를 클래스로 할당** 하는 판별함수를 찾음 (확률값 계산 x) 
+      
++ **회귀문제**의 경우
+   + 결합분포 p(x,t)를 구하는 추론(inference)문제를 푼 다음 조건부확률분포 p(t|x)를 구함, 주변화(marginalize)를 통해 기댓값 <img src="https://latex.codecogs.com/gif.latex?E_{t}[t|x]" title="E_{t}[t|x]" />을 구함.
+   
+   + 혹은 조건부확률분포를 구한다음 주변화(marginalize)를 통해 구할 수 있음
+   + 혹은 y(x)를 직접적으로 구할 수 있음
+      
