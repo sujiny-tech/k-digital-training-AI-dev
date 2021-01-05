@@ -73,12 +73,24 @@
 
 
 ### [4주차] Python으로 웹 다루기
+
+<details>
+<summary>자세히</summary>   
+<div markdown="1">   
+    
 + [Flask - Web Application](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Web-Handling-with-Python/Flask.md)
 + [클라우드(Cloud Computing)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Web-Handling-with-Python/Cloud%20Computing.md) & [머신러닝 모델 Serving API](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Web-Handling-with-Python/API%20to%20serve%20ML%20model.md)
 + [Django - Web Application](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Web-Handling-with-Python/Django.md)
 
-### [5주차] 머신러닝 기초
-+ 
+</div>
+</details>
+
+
+### [5주차] 머신러닝 기초(Machine Learning basics)
+
++ [소개 및 핵심개념](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/Intro.md)
++ [확률론(Probability Theory)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/Probability%20Theory.md)
++ [결정이론(Decision Theory)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/Decision%20Theory.md)
 
 
 
