@@ -52,18 +52,19 @@
     
    > <img src="https://latex.codecogs.com/gif.latex?\mathbf{pred(}x\mathbf{)=argmax}_{k}&space;p(C_{k}|x)" title="\mathbf{pred(}x\mathbf{)=argmax}_{k} p(C_{k}|x)" />   
     
+- - - - - - - - - - - - - - - - - - - - -
 ### 결정이론의 목표(분류의 경우) ✨
-   + 결합확률분포 <img src="https://latex.codecogs.com/gif.latex?p(\mathbf{x},&space;C_{k})" title="p(\mathbf{x}, C_{k})" /> 가 주어졌을 때 최적의 결정영역들 <img src="https://latex.codecogs.com/gif.latex?R_{1},&space;...&space;,&space;R_{K}" title="R_{1}, ... , R_{K}" />를 찾는 것 !
++ 결합확률분포 <img src="https://latex.codecogs.com/gif.latex?p(\mathbf{x},&space;C_{k})" title="p(\mathbf{x}, C_{k})" /> 가 주어졌을 때 최적의 결정영역들 <img src="https://latex.codecogs.com/gif.latex?R_{1},&space;...&space;,&space;R_{K}" title="R_{1}, ... , R_{K}" />를 찾는 것 !
    
-   + <img src="https://latex.codecogs.com/gif.latex?\hat{C}(\mathbf{x})" title="\hat{C}(\mathbf{x})" /> : <img src="https://latex.codecogs.com/gif.latex?\mathbf{x}" title="\mathbf{x}" />가 주어졌을 때 예측값(1, ..., K 중의 값)을 돌려주는 함수
++ <img src="https://latex.codecogs.com/gif.latex?\hat{C}(\mathbf{x})" title="\hat{C}(\mathbf{x})" /> : <img src="https://latex.codecogs.com/gif.latex?\mathbf{x}" title="\mathbf{x}" />가 주어졌을 때 예측값(1, ..., K 중의 값)을 돌려주는 함수
    
-      > <img src="https://latex.codecogs.com/gif.latex?\mathbf{x}&space;\in&space;R_{j}&space;\Leftrightarrow&space;\hat{C}(\mathbf{x})=j" title="\mathbf{x} \in R_{j} \Leftrightarrow \hat{C}(\mathbf{x})=j" />
+   > <img src="https://latex.codecogs.com/gif.latex?\mathbf{x}&space;\in&space;R_{j}&space;\Leftrightarrow&space;\hat{C}(\mathbf{x})=j" title="\mathbf{x} \in R_{j} \Leftrightarrow \hat{C}(\mathbf{x})=j" />
       
-      > 즉, 결합확률분포 <img src="https://latex.codecogs.com/gif.latex?p(\mathbf{x},&space;C_{k})" title="p(\mathbf{x}, C_{k})" /> 가 주어졌을 때 최적의 함수 <img src="https://latex.codecogs.com/gif.latex?\hat{C}(\mathbf{x})" title="\hat{C}(\mathbf{x})" />를 찾는 것 ❗
+   > 즉, 결합확률분포 <img src="https://latex.codecogs.com/gif.latex?p(\mathbf{x},&space;C_{k})" title="p(\mathbf{x}, C_{k})" /> 가 주어졌을 때 최적의 함수 <img src="https://latex.codecogs.com/gif.latex?\hat{C}(\mathbf{x})" title="\hat{C}(\mathbf{x})" />를 찾는 것 ❗
 
-      + **"최적의 함수"** 는 어떤 기준으로 ?  
+   + **"최적의 함수"** 는 어떤 기준으로 ?  
  
-### 기대손실 최소화(Minimizing the Expected loss)
+#### 기대손실 최소화(Minimizing the Expected loss)
 + 모든 결정이 동일한 리스크를 갖는 건 X 
    + 암이 아닌데 암인 것으로 진단 
    + 암인데 암이 아닌 것으로 진단 : 큰 리스크를 가짐
@@ -89,6 +90,76 @@
       
       
    
++ 예제) 의료진단
+   > <img src="https://latex.codecogs.com/gif.latex?C_{k}&space;\in&space;\left&space;\{&space;1,2&space;\right&space;\}&space;\Leftrightarrow&space;\left&space;\{&space;sick,&space;healthy&space;\right&space;\}" title="C_{k} \in \left \{ 1,2 \right \} \Leftrightarrow \left \{ sick, healthy \right \}" />   
    
+   > <img src="https://latex.codecogs.com/gif.latex?L=\begin{bmatrix}&space;0&space;&&space;100&space;\\&space;1&space;&&space;0&space;\end{bmatrix}" title="L=\begin{bmatrix} 0 & 100 \\ 1 & 0 \end{bmatrix}" />   
    
+   + 이 경우, 기대 손실은 다음과 같다.
    
+   > <img src="https://latex.codecogs.com/gif.latex?E[L]=\int&space;_{R_{2}}&space;L_{1,2}&space;p(\mathbf{x},&space;C_{1})d&space;\mathbf{x}&space;&plus;&space;\int&space;_{R_{1}}&space;L_{2,1}&space;p(\mathbf{x},&space;C_{2})d&space;\mathbf{x}" title="E[L]=\int _{R_{2}} L_{1,2} p(\mathbf{x}, C_{1})d \mathbf{x} + \int _{R_{1}} L_{2,1} p(\mathbf{x}, C_{2})d \mathbf{x}" />   
+   
+   > <img src="https://latex.codecogs.com/gif.latex?=\int&space;_{R_{2}}&space;100&space;p(\mathbf{x},&space;C_{1})d&space;\mathbf{x}&space;&plus;&space;\int&space;_{R_{1}}&space;p(\mathbf{x},&space;C_{2})d&space;\mathbf{x}" title="=\int _{R_{2}} 100 p(\mathbf{x}, C_{1})d \mathbf{x} + \int _{R_{1}} p(\mathbf{x}, C_{2})d \mathbf{x}" />   
+   
+   + 위에서 설명한 <img src="https://latex.codecogs.com/gif.latex?\sum_{k=1}^{K}&space;L_{kj}p(C_{k}|\mathbf{x})" title="\sum_{k=1}^{K} L_{kj}p(C_{k}|\mathbf{x})" /> 을 계산해보면
+   
+      > <img src="https://latex.codecogs.com/gif.latex?j=1,&space;\sum_{k=1}^{K}L_{k,1}&space;p(C_{k}|\mathbf{x})=L_{11}p(C_{1}|\mathbf{x})&plus;L_{21}p(C_{2}|\mathbf{x})=p(C_{2}|\mathbf{x})" title="j=1, \sum_{k=1}^{K}L_{k,1} p(C_{k}|\mathbf{x})=L_{11}p(C_{1}|\mathbf{x})+L_{21}p(C_{2}|\mathbf{x})=p(C_{2}|\mathbf{x})" />   
+      
+      > <img src="https://latex.codecogs.com/gif.latex?j=2,&space;\sum_{k=1}^{K}L_{k,2}&space;p(C_{k}|\mathbf{x})=L_{12}p(C_{1}|\mathbf{x})&plus;L_{22}p(C_{2}|\mathbf{x})=100p(C_{1}|\mathbf{x})" title="j=2, \sum_{k=1}^{K}L_{k,2} p(C_{k}|\mathbf{x})=L_{12}p(C_{1}|\mathbf{x})+L_{22}p(C_{2}|\mathbf{x})=100p(C_{1}|\mathbf{x})" />   
+      
+      + 두 결과값을 비교를 통해 판단   
+      
+         + <img src="https://latex.codecogs.com/gif.latex?100p(C_{1}|\mathbf{x})<p(C_{2}|\mathbf{x})" title="100p(C_{1}|\mathbf{x})<p(C_{2}|\mathbf{x})" />라면 건강하다 !
+         
+         + 안전한 진단을 위해서는 손실 행렬을 모델안에 포함시켜서 결정 !
+         
+### 결정이론의 목표(회귀의 경우) ✨
++ 목표값 <img src="https://latex.codecogs.com/gif.latex?t&space;\in&space;R" title="t \in R" />   
++ 손실함수   
+
+   > <img src="https://latex.codecogs.com/gif.latex?L(t,&space;y(\mathbf{x}))=\left&space;\{&space;y(\mathbf{x}-t)&space;\right&space;\}^{2}" title="L(t, y(\mathbf{x}))=\left \{ y(\mathbf{x}-t) \right \}^{2}" />
+
+   + 손실함수의 기댓값   
+   
+      > <img src="https://latex.codecogs.com/gif.latex?F[y]=E[L]=\int_{R}&space;\int_{\chi&space;}&space;\left&space;\{&space;y(\mathbf{x}-t)&space;\right&space;\}^{2}p(\mathbf{x},&space;t)d\mathbf{x}dt" title="F[y]=E[L]=\int_{R} \int_{\chi } \left \{ y(\mathbf{x}-t) \right \}^{2}p(\mathbf{x}, t)d\mathbf{x}dt" />   
+      
+      > <img src="https://latex.codecogs.com/gif.latex?=\int_{\chi}&space;\left&space;(&space;\int_{R}&space;\left&space;\{&space;y(\mathbf{x}-t)&space;\right&space;\}^{2}p(\mathbf{x},&space;t)dt&space;\right&space;)d\mathbf{x}" title="=\int_{\chi} \left ( \int_{R} \left \{ y(\mathbf{x}-t) \right \}^{2}p(\mathbf{x}, t)dt \right )d\mathbf{x}" />   
+      
+      > <img src="https://latex.codecogs.com/gif.latex?=\int_{\chi}&space;\left&space;(&space;\int_{R}&space;\left&space;\{&space;y(\mathbf{x}-t)&space;\right&space;\}^{2}p(t|\mathbf{x})dt&space;\right&space;)p(\mathbf{x})d\mathbf{x}" title="=\int_{\chi} \left ( \int_{R} \left \{ y(\mathbf{x}-t) \right \}^{2}p(t|\mathbf{x})dt \right )p(\mathbf{x})d\mathbf{x}" />   
+      
+   + 손실 함수의 기댓값을 최소화시키는 예측값은?   
+   
+      + 최적의 예측 값은 <img src="https://latex.codecogs.com/gif.latex?y(\mathbf{x})=E_{t}[t|x]" title="y(\mathbf{x})=E_{t}[t|x]" />
+      + 범함수(functional)의 최솟값을 구하는 방법을 통해 구함   
+      
+         + Euler-Lagrange Equation   
+      
+            > <img src="https://latex.codecogs.com/gif.latex?F[y]=\int_{a}^{b}&space;G(x,y(x),&space;y'(x))dx" title="F[y]=\int_{a}^{b} G(x,y(x), y'(x))dx" />   
+            
+            > <img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;F}{\partial&space;y(x)}=\frac{\partial&space;G}{\partial&space;y}-\frac{\mathrm{d}&space;}{\mathrm{d}&space;x}&space;\frac{\partial&space;G}{\partial&space;y'}" title="\frac{\partial F}{\partial y(x)}=\frac{\partial G}{\partial y}-\frac{\mathrm{d} }{\mathrm{d} x} \frac{\partial G}{\partial y'}" />   
+            
+          + Euler-Lagrange Equation을 통해 회귀의 경우  
+            
+             > <img src="https://latex.codecogs.com/gif.latex?F[y]=E[L]=\int&space;\int&space;\left&space;\{&space;y(x)-t&space;\right&space;\}^{2}p(x,t)dxdt=\int&space;\left&space;(&space;\int&space;\left&space;\{&space;y(x)-t&space;\right&space;\}^{2}&space;p(x,t)dt&space;\right&space;)dx" title="F[y]=E[L]=\int \int \left \{ y(x)-t \right \}^{2}p(x,t)dxdt=\int \left ( \int \left \{ y(x)-t \right \}^{2} p(x,t)dt \right )dx" />   
+               
+             > <img src="https://latex.codecogs.com/gif.latex?G=\left&space;(&space;\int_{R}&space;\left&space;\{&space;y(\mathbf{x}-t)&space;\right&space;\}^{2}&space;p(t|\mathbf{x})dt&space;\right&space;)p(\mathbf{x})" title="G=\left ( \int_{R} \left \{ y(\mathbf{x}-t) \right \}^{2} p(t|\mathbf{x})dt \right )p(\mathbf{x})" />
+             
+             > <img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;G}{\partial&space;y}=p(\mathbf{x})\frac{\partial&space;}{\partial&space;y}\left&space;(&space;\int_{R}&space;\left&space;\{&space;y(\mathbf{x}-t)&space;\right&space;\}^{2}&space;p(t|\mathbf{x})dt&space;\right&space;)" title="\frac{\partial G}{\partial y}=p(\mathbf{x})\frac{\partial }{\partial y}\left ( \int_{R} \left \{ y(\mathbf{x}-t) \right \}^{2} p(t|\mathbf{x})dt \right )" />
+             
+             > <img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;G}{\partial&space;y}=0&space;\Rightarrow&space;\frac{\partial&space;}{\partial&space;y}\left&space;(&space;\int_{R}&space;\left&space;\{&space;y(\mathbf{x}-t)&space;\right&space;\}^{2}&space;p(t|\mathbf{x})dt&space;\right&space;)=0" title="\frac{\partial G}{\partial y}=0 \Rightarrow \frac{\partial }{\partial y}\left ( \int_{R} \left \{ y(\mathbf{x}-t) \right \}^{2} p(t|\mathbf{x})dt \right )=0" />
+             
+             > <img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;}{\partial&space;y}\left&space;(&space;\int_{R}&space;\left&space;\{&space;y(\mathbf{x}-t)&space;\right&space;\}^{2}&space;p(t|\mathbf{x})dt&space;\right&space;)=\frac{\partial&space;}{\partial&space;y}\left&space;(&space;y(\mathbf{x})^{2}\int_{R}&space;p(t|\mathbf{x})dt&space;&plus;2y(\mathbf{x})\int_{R}tp(t|\mathbf{x})dt&plus;\int_{R}t^{2}p(t|\mathbf{x})dt&space;\right&space;)" title="\frac{\partial }{\partial y}\left ( \int_{R} \left \{ y(\mathbf{x}-t) \right \}^{2} p(t|\mathbf{x})dt \right )=\frac{\partial }{\partial y}\left ( y(\mathbf{x})^{2}\int_{R} p(t|\mathbf{x})dt +2y(\mathbf{x})\int_{R}tp(t|\mathbf{x})dt+\int_{R}t^{2}p(t|\mathbf{x})dt \right )" />
+             
+             > <img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;}{\partial&space;y}\left&space;(&space;y(\mathbf{x})^{2}&space;&plus;2y(\mathbf{x})E_{t}[t|\mathbf{x}]&plus;\int_{R}t^{2}p(t|\mathbf{x})dt&space;\right&space;)" title="\frac{\partial }{\partial y}\left ( y(\mathbf{x})^{2} +2y(\mathbf{x})E_{t}[t|\mathbf{x}]+\int_{R}t^{2}p(t|\mathbf{x})dt \right )" />   
+             
+             > <img src="https://latex.codecogs.com/gif.latex?2y(\mathbf{x})&space;-2E_{t}[t|\mathbf{x}]" title="2y(\mathbf{x}) -2E_{t}[t|\mathbf{x}]" />   
+             
+             > <img src="https://latex.codecogs.com/gif.latex?\therefore&space;y(\mathbf{x})=E_{t}[t|\mathbf{x}]" title="\therefore y(\mathbf{x})=E_{t}[t|\mathbf{x}]" />  
+             
+             
+
+   
+
+
+
+
