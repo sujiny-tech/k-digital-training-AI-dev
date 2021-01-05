@@ -77,8 +77,17 @@
    
       > <img src="https://latex.codecogs.com/gif.latex?E[L]=\sum_{k}&space;\sum_{j}&space;\int&space;_{R_{j}}&space;L_{k,j}p(\mathbf{x},C_{k})d&space;\mathbf{x}" title="E[L]=\sum_{k} \sum_{j} \int _{R_{j}} L_{k,j}p(\mathbf{x},C_{k})d \mathbf{x}" />   
       
+      > <img src="https://latex.codecogs.com/gif.latex?\int&space;_{\chi}&space;\sum_{k=1}^{K}&space;L_{k\hat{C}(\mathbf{x})}&space;p(\mathbf{x},&space;C_{k})d&space;\mathbf{x}=\int&space;_{\chi}&space;\left&space;(&space;\sum_{k=1}^{K}&space;L_{k\hat{C}&space;(\mathbf{x})}&space;p(&space;C_{k}|\mathbf{x})&space;\right&space;)p(\mathbf{x})d&space;\mathbf{x}" title="\int _{\chi} \sum_{k=1}^{K} L_{k\hat{C}(\mathbf{x})} p(\mathbf{x}, C_{k})d \mathbf{x}=\int _{\chi} \left ( \sum_{k=1}^{K} L_{k\hat{C} (\mathbf{x})} p( C_{k}|\mathbf{x}) \right )p(\mathbf{x})d \mathbf{x}" />   
       
-   
+      + 이는 <img src="https://latex.codecogs.com/gif.latex?\hat{C}(\mathbf{x})" title="\hat{C}(\mathbf{x})" />의 범함수(function)이고, 이를 최소화 시키는 함수 <img src="https://latex.codecogs.com/gif.latex?\hat{C}(\mathbf{x})" title="\hat{C}(\mathbf{x})" />를 찾으면 됨.
+      
+         > <img src="https://latex.codecogs.com/gif.latex?\hat{C}(\mathbf{x})=\mathbf{&space;argmin}_{j}&space;\sum_{k=1}^{K}&space;L_{kj}p(C_{k}|\mathbf{x})" title="\hat{C}(\mathbf{x})=\mathbf{ argmin}_{j} \sum_{k=1}^{K} L_{kj}p(C_{k}|\mathbf{x})" />   
+      
+      + 만약 손실행렬이 0-1 loss인 경우 (주대각선 원소들은 0 나머지 1)
+      
+         > <img src="https://latex.codecogs.com/gif.latex?\hat{C}(\mathbf{x})=\mathbf{&space;argmin}_{j}&space;1&space;-&space;p(C_{k}|\mathbf{x})&space;=&space;\mathbf{&space;argmin}_{j}&space;p(C_{k}|\mathbf{x})" title="\hat{C}(\mathbf{x})=\mathbf{ argmin}_{j} 1 - p(C_{k}|\mathbf{x}) = \mathbf{ argmin}_{j} p(C_{k}|\mathbf{x})" />   
+      
+      
    
    
    
