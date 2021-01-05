@@ -66,7 +66,7 @@
 ### 기대손실 최소화(Minimizing the Expected loss)
 + 모든 결정이 동일한 리스크를 갖는 건 X 
    + 암이 아닌데 암인 것으로 진단 
-   + 암인데 암이 아닌 것으로 진단 : 큰 리스트를 가짐
+   + 암인데 암이 아닌 것으로 진단 : 큰 리스크를 가짐
 
 + 결정에 따른 리스크를 정량화 시켜서 표현 → **손실 행렬(loss matrix)**
    + <img src="https://latex.codecogs.com/gif.latex?L_{k,j}" title="L_{k,j}" /> : <img src="https://latex.codecogs.com/gif.latex?C_{k}" title="C_{k}" />에 속하는 <img src="https://latex.codecogs.com/gif.latex?\mathbf{x}" title="\mathbf{x}" />를 <img src="https://latex.codecogs.com/gif.latex?C_{j}" title="C_{j}" />로 분류할 때 발생하는 손실(비용)
