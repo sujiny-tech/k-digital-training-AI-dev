@@ -152,7 +152,7 @@
              
           > <img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;}{\partial&space;y}\left&space;(&space;y(\mathbf{x})^{2}&space;&plus;2y(\mathbf{x})E_{t}[t|\mathbf{x}]&plus;\int_{R}t^{2}p(t|\mathbf{x})dt&space;\right&space;)" title="\frac{\partial }{\partial y}\left ( y(\mathbf{x})^{2} +2y(\mathbf{x})E_{t}[t|\mathbf{x}]+\int_{R}t^{2}p(t|\mathbf{x})dt \right )" />   
              
-          > <img src="https://latex.codecogs.com/gif.latex?2y(\mathbf{x})&space;-2E_{t}[t|\mathbf{x}]" title="2y(\mathbf{x}) -2E_{t}[t|\mathbf{x}]" />   
+          > <img src="https://latex.codecogs.com/gif.latex?2y(\mathbf{x})&space;-2E_{t}[t|\mathbf{x}]=0" title="2y(\mathbf{x}) -2E_{t}[t|\mathbf{x}]=0" />   
              
           > <img src="https://latex.codecogs.com/gif.latex?\therefore&space;y(\mathbf{x})=E_{t}[t|\mathbf{x}]" title="\therefore y(\mathbf{x})=E_{t}[t|\mathbf{x}]" />  
              
