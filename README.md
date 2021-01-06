@@ -90,7 +90,7 @@
 
 + [소개 및 핵심개념](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/Intro.md)
 + [확률론(Probability Theory)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/Probability%20Theory.md)
-+ [결정이론(Decision Theory)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/Decision%20Theory.md)
-
++ [Decision & Linear_Regression)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/Decision%20Theory.md)
++ [E2E 머신러닝 프로젝트](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/ML_E2E.ipynb)
 
 
