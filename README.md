@@ -32,8 +32,8 @@
    
    
 + [Jupyter notebook & Mark Down](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Jupyter_notebook.md)
-+ [선형대수(Linear system)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Linear_system.md)
-+ [선형대수-실습](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Linear_system_ex.ipynb)
++ [선형계(Linear system)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Linear_system.md)
++ [선형계-실습](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Linear_system_ex.ipynb)
 + [가우스 소거법(Gauss elimination)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Gauss%20elimination.md)
 + [LU 분해(LU decomposition)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/LU%20decomposition.md)
 + [행렬연산과 선형조합(Matrix operation & Linear Combination)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Maths-for-AI/Matrix%20operation%20%26%20Linear%20Combination.md)
@@ -88,10 +88,13 @@
 
 ### [5주차] 머신러닝 기초(Machine Learning basics)
 
+   
 + [소개 및 핵심개념](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/Intro.md)
-+ [확률론(Probability Theory)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/Probability%20Theory.md)
++ [확률이론(Probability Theory)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/Probability%20Theory.md)
 + [결정이론(Decision Theory)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/Decision%20Theory.md)
 + [선형회귀(Linear Regression)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/ML_Basics%20(Linear%20Regression).ipynb)
 + [E2E 머신러닝 프로젝트](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/ML_E2E.ipynb)
++ [선형대수학(Linear Algebra)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/Linear%20Algebra%2C%20Matrix%20Calculus.ipynb)
+
 
 
