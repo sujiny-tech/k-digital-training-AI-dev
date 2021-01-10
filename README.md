@@ -95,6 +95,6 @@
 + [선형회귀(Linear Regression)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/ML_Basics%20(Linear%20Regression).ipynb)
 + [E2E 머신러닝 프로젝트](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/ML_E2E.ipynb)
 + [선형대수학(Linear Algebra)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/Linear%20Algebra%2C%20Matrix%20Calculus.ipynb)
-
++ [확률분포 I (Probability Distributions)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/Probability%20Distributions_I.md)
 
 
