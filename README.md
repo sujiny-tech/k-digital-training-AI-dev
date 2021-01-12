@@ -86,7 +86,7 @@
 </details>
 
 
-### [5주차] 머신러닝 기초(Machine Learning basics)
+### [5~6주차] 머신러닝 기초(Machine Learning basics)
 
    
 + [소개 및 핵심개념](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/Intro.md)
