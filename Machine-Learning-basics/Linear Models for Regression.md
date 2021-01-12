@@ -284,4 +284,4 @@
       > <img src="https://latex.codecogs.com/gif.latex?p(t|{\bf&space;x},&space;{\bf&space;t},&space;\alpha,&space;\beta)&space;=&space;N\left&space;(&space;t|\phi(\mathbf{x})^{T}\mathbf{m}_N,&space;\beta^{-1}&space;&plus;\phi(\mathbf{x})^{T}\mathbf{S}_N\phi(\mathbf{x})&space;\right&space;)" title="p(t|{\bf x}, {\bf t}, \alpha, \beta) = N\left ( t|\phi(\mathbf{x})^{T}\mathbf{m}_N, \beta^{-1} +\phi(\mathbf{x})^{T}\mathbf{S}_N\phi(\mathbf{x}) \right )" />   
     
     
-+ [공부하면서 참고한 사이트 ✨](http://norman3.github.io/prml/docs/chapter03/1.html) 
+[공부하면서 참고한 사이트 ✨](http://norman3.github.io/prml/docs/chapter03/1.html) 
