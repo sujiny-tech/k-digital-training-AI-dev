@@ -97,4 +97,4 @@
 + [선형대수학(Linear Algebra)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/Linear%20Algebra%2C%20Matrix%20Calculus.ipynb)
 + [확률분포 I (Probability Distributions)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/Probability%20Distributions_I.md)
 + [확률분포 II (Probability Distributions)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/Probability%20Distributions_II.md)
-
++ [선형회귀(Linear Models for Regression)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/Linear%20Models%20for%20Regression.md)
