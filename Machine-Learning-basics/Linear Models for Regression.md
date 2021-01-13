@@ -146,7 +146,8 @@
       > <img src="https://latex.codecogs.com/gif.latex?\mathbf{\phi}_{n}=\mathbf{\phi}\left&space;(&space;\mathbf{x}_{n}&space;\right&space;)" title="\mathbf{\phi}_{n}=\mathbf{\phi}\left ( \mathbf{x}_{n} \right )" />으로 표현
    
 + 시간은 많이 걸리더라도, 메모리에 대한 부담은 ↓   
-+ [관련 실습 ✨](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/Linear_Models_for_Reression_example.ipynb)   
+
+[✨관련 실습](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/Linear_Models_for_Reression_example.ipynb)   
 
 
 ## 규제화된 최소제곱법(Regularized Least Squares)
@@ -284,4 +285,4 @@
       > <img src="https://latex.codecogs.com/gif.latex?p(t|{\bf&space;x},&space;{\bf&space;t},&space;\alpha,&space;\beta)&space;=&space;N\left&space;(&space;t|\phi(\mathbf{x})^{T}\mathbf{m}_N,&space;\beta^{-1}&space;&plus;\phi(\mathbf{x})^{T}\mathbf{S}_N\phi(\mathbf{x})&space;\right&space;)" title="p(t|{\bf x}, {\bf t}, \alpha, \beta) = N\left ( t|\phi(\mathbf{x})^{T}\mathbf{m}_N, \beta^{-1} +\phi(\mathbf{x})^{T}\mathbf{S}_N\phi(\mathbf{x}) \right )" />   
     
     
-[공부하면서 참고한 사이트 ✨](http://norman3.github.io/prml/docs/chapter03/1.html) 
+[✨ 공부하면서 참고한 사이트](http://norman3.github.io/prml/docs/chapter03/1.html) 
