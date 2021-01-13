@@ -21,16 +21,12 @@
    + 다항식(polynomial) 기저함수
       
       > <img src="https://latex.codecogs.com/gif.latex?\phi_{j}({x})={x}^{j}" title="\phi_{j}({x})={x}^{j}" />   
-      
-      > <img src="https://user-images.githubusercontent.com/72974863/104307316-6a87f780-5512-11eb-9d2d-1a3c82db97ee.png" width="30%" height="30%">   
-      
+
    
    + 가우시안 기저함수
       
       > <img src="https://latex.codecogs.com/gif.latex?\phi_{j}({x})=\textup{exp}&space;\left&space;\{&space;-\frac{\left&space;(x-\mu&space;\right&space;)^{2}}{2s^{2}}&space;\right&space;\}" title="\phi_{j}({x})=\textup{exp} \left \{ -\frac{\left (x-\mu \right )^{2}}{2s^{2}} \right \}" />   
-      
-      > <img src="https://user-images.githubusercontent.com/72974863/104307472-9b682c80-5512-11eb-852c-7ca024de7ba7.png" width="30%" height="30%">   
-            
+
       
    + 시그모이드(sigmoid) 기저함수
       
@@ -38,8 +34,12 @@
       
       > <img src="https://latex.codecogs.com/gif.latex?\sigma(a)=\frac{1}{1&plus;\textup{exp}(-a)}" title="\sigma(a)=\frac{1}{1+\textup{exp}(-a)}" />   
       
+      > <img src="https://user-images.githubusercontent.com/72974863/104307316-6a87f780-5512-11eb-9d2d-1a3c82db97ee.png" width="30%" height="30%">
+      > <img src="https://user-images.githubusercontent.com/72974863/104307472-9b682c80-5512-11eb-852c-7ca024de7ba7.png" width="30%" height="30%">
       > <img src="https://user-images.githubusercontent.com/72974863/104307493-a0c57700-5512-11eb-84e4-c19a42a8701e.png" width="30%" height="30%">   
-               
+      
+      > 왼쪽부터 다항식 기저함수, 가우시안 기저함수, 시그모이드 기저함수   
+      
    
 ## 최대우도와 최소제곱법(Maximum Likelihood and Least Squares)
 
