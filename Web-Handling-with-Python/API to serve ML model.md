@@ -11,7 +11,7 @@
 + **사전에 정해진 정의** 에 따라 입력이 들어왔을 때 **적절한 출력을 전달** 해야함 ❗❗
 
 ### RESTful API for ML/DL model inference
-+ REST 아키텍처를 따르는 API, [이전 강의 REST API]()
++ REST 아키텍처를 따르는 API, [이전 강의 REST API 설명된 부분](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Web-Handling-with-Python/Flask.md)   
 
 ### Practical process of machine learning
 + 문제 정의, 데이터준비, 모델 학습 및 검증, 모델 배포, 모니터링 등의 과정을 통해 실제 서비스에 기계학습 모델 적용
