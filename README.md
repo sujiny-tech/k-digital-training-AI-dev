@@ -1,5 +1,6 @@
 # K-Digital-Training-AI-dev
-> [K-Digital-Training] 인공지능 데브코스 : 2020. 11. 30 ~ ing
+> [K-Digital-Training] 인공지능 데브코스 : 2020. 11. 30 ~ ing   
+
 
 ### [1주차] 어서와! 자료구조와 알고리즘은 처음이지?   
 
@@ -97,4 +98,5 @@
 + [선형대수학(Linear Algebra)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/Linear%20Algebra%2C%20Matrix%20Calculus.ipynb)
 + [확률분포 I (Probability Distributions)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/Probability%20Distributions_I.md)
 + [확률분포 II (Probability Distributions)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/Probability%20Distributions_II.md)
-+ [선형회귀(Linear Models for Regression)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/Linear%20Models%20for%20Regression.md)
++ [선형 회귀(Linear Regression)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/Linear%20Models%20for%20Regression.md)
++ [선형 분류(Linear Classification)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/Linear%20Models%20for%20Classification.md)
