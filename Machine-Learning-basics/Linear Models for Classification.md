@@ -98,7 +98,7 @@
 - - - - - - - - - - - - - -
 ## 분류를 위한 최소제곱법 (Least squares for classification)   
 
-+ 사실 분류를 위해 최소제곱법 쓰는건 별로 좋지 x
++ **사실 분류를 위해 최소제곱법 쓰는건 별로 좋지 x** ❗
 
 + 클래스를 판별하는 판별식은 다음과 같음   
 
@@ -165,7 +165,106 @@
 
 - - - - - - - - - - -
       
+## 확률적 생성 모델 (Probabilistic Generative Models)
+
++ <img src="https://latex.codecogs.com/gif.latex?p(\mathbf{x}|C_k),&space;p(C_k)" title="p(\mathbf{x}|C_k), p(C_k)" /> 모델링 한 다음 → 클래스의 사후확률 <img src="https://latex.codecogs.com/gif.latex?p(C_k|\mathbf{x})" title="p(C_k|\mathbf{x})" />을 구함 ❗ (using 베이즈 정리)    
+
++ 이전 **판별함수**에서는 **에러함수를 최소화하는 최적의 파라미터를 찾는 것**이 목적이지만, **확률적 모델**은 **데이터 분포를 모델링**하면서 분류 문제를 결과적으로 풀게됨 ❗
+
++ 2-class를 가정하고, x가 클래스 1(C1)에 속할 확률
+
+   > <img src="https://latex.codecogs.com/gif.latex?p(C_1|{\bf&space;x})&space;=&space;\dfrac{p({\bf&space;x}|C_1)p(C_1)}{p({\bf&space;x}|C_1)p(C_1)&plus;p({\bf&space;x}|C_2)p(C_2)}=\dfrac{1}{1&plus;\exp(-a)}&space;=&space;\sigma(a)" title="p(C_1|{\bf x}) = \dfrac{p({\bf x}|C_1)p(C_1)}{p({\bf x}|C_1)p(C_1)+p({\bf x}|C_2)p(C_2)}=\dfrac{1}{1+\exp(-a)} = \sigma(a)" /> (a에 관한 **logistic sigmoid function**)   
+   
+   > <img src="https://latex.codecogs.com/gif.latex?a=\ln{\dfrac{p({\bf&space;x}|C_1)p(C_1)}{p({\bf&space;x}|C_2)p(C_2)}}" title="a=\ln{\dfrac{p({\bf x}|C_1)p(C_1)}{p({\bf x}|C_2)p(C_2)}}" />   
+   
+   
+   + **logistic sigmoid function**
+      
+      > <img src="https://latex.codecogs.com/gif.latex?\sigma(a)=\dfrac{1}{1&plus;\exp(-a)}" title="\sigma(a)=\dfrac{1}{1+\exp(-a)}" />   
+      
+     
+      > <img src="https://user-images.githubusercontent.com/72974863/104664910-bd7ccd00-5713-11eb-82d3-b18e090adb63.png" width="30%" hegiht="30%">   
+   
+      > [sigmoid 함수-위키백과 참고](https://user-images.githubusercontent.com/72974863/104664910-bd7ccd00-5713-11eb-82d3-b18e090adb63.png)
+   
+      + 성질
+         + 대칭 : <img src="https://latex.codecogs.com/gif.latex?\sigma(-a)&space;=&space;1&space;-&space;\sigma(a)" title="\sigma(-a) = 1 - \sigma(a)" />   
+         
+         + 역(inverse) : <img src="https://latex.codecogs.com/gif.latex?a=\ln\left(\dfrac{\sigma}{1-\sigma}\right)" title="a=\ln\left(\dfrac{\sigma}{1-\sigma}\right)" />   
+         
++ **일반 선형 모델(generalized linear model)** - 클래스가 k>2인 경우 (일반화) ❗
+
+   + <img src="https://latex.codecogs.com/gif.latex?p(C_k|{\bf&space;x})&space;=&space;\dfrac{p({\bf&space;x}|C_k)p(C_k)}{\sum_j{p({\bf&space;x}|C_j)p(C_j)}}=\dfrac{\exp(a_k)}{\sum_j{\exp(a_j)}}" title="p(C_k|{\bf x}) = \dfrac{p({\bf x}|C_k)p(C_k)}{\sum_j{p({\bf x}|C_j)p(C_j)}}=\dfrac{\exp(a_k)}{\sum_j{\exp(a_j)}}" /> (a에 관한 **softmax function**)   
+   
+   + <img src="https://latex.codecogs.com/gif.latex?a_k&space;=&space;\ln(p({\bf&space;x}|C_k)p(C_k))" title="a_k = \ln(p({\bf x}|C_k)p(C_k))" />    
+   
+⭐ 2-class : **logistic sigmoid function**를 이용, k-class : **softmax function**를 이용 ❗
+
+- - - - - - - - -
++ 연속적 입력 (continuous inputs)
+   
+   + <img src="https://latex.codecogs.com/gif.latex?p({\bf&space;x}|C_k)" title="p({\bf x}|C_k)" />가 가우시안 분포를 따르고, 모든 클래스에 대해 공분산이 동일하다고 가정하자.
+   
+   + 가정 하에 어떤 클래스가 주어졌다면, 해당 데이터를 output하는 확률은 다음과 같음.
+   
+      > <img src="https://latex.codecogs.com/gif.latex?p({\bf&space;x}|C_k)&space;=&space;\dfrac{1}{(2\pi)^{D/2}|\Sigma|^{1/2}}\exp&space;\left&space;\{&space;-\dfrac{1}{2}({\bf&space;x}-{\bf&space;\mu}_k)^T\Sigma^{-1}({\bf&space;x}-{\bf&space;\mu}_k)&space;\right&space;\}" title="p({\bf x}|C_k) = \dfrac{1}{(2\pi)^{D/2}|\Sigma|^{1/2}}\exp \left \{ -\dfrac{1}{2}({\bf x}-{\bf \mu}_k)^T\Sigma^{-1}({\bf x}-{\bf \mu}_k) \right \}" />   
+      
+   + **2-class**에 대해서,
+   
+      > <img src="https://latex.codecogs.com/gif.latex?p(C_1|{\bf&space;x})=\sigma(a)=\sigma({\bf&space;w}^T{\bf&space;x}&plus;w_0)" title="p(C_1|{\bf x})=\sigma(a)=\sigma({\bf w}^T{\bf x}+w_0)" />   
+      
+      > 이때, w벡터와 w0는 다음과 같음.
+      
+      > <img src="https://latex.codecogs.com/gif.latex?\begin{align*}&space;{\bf&space;w}&space;&=&space;\Sigma^{-1}({\pmb&space;\mu}_1&space;-&space;{\pmb&space;\mu}_2)\\&space;w_0&space;&=&space;-&space;\frac{1}{2}{\pmb&space;\mu}_1^T\Sigma^{-1}{\pmb&space;\mu}_1&space;&plus;&space;\frac{1}{2}{\pmb&space;\mu}_2^T\Sigma^{-1}{\pmb&space;\mu}_2&space;&plus;&space;\ln\frac{p(\mathcal{C}_1)}{p(\mathcal{C}_2)}&space;\end{align*}" title="\begin{align*} {\bf w} &= \Sigma^{-1}({\pmb \mu}_1 - {\pmb \mu}_2)\\ w_0 &= - \frac{1}{2}{\pmb \mu}_1^T\Sigma^{-1}{\pmb \mu}_1 + \frac{1}{2}{\pmb \mu}_2^T\Sigma^{-1}{\pmb \mu}_2 + \ln\frac{p(\mathcal{C}_1)}{p(\mathcal{C}_2)} \end{align*}" />   
+      
+      
+      <details>
+      <summary>a에 대한 전개</summary>   
+      <div markdown="1">  
+   
+      > <img src="https://latex.codecogs.com/gif.latex?\begin{align*}&space;a&space;&=&space;\ln{\dfrac{p({\bf&space;x}|\mathcal{C}_1)p(\mathcal{C}_1)}{p({\bf&space;x}|\mathcal{C}_2)p(\mathcal{C}_2)}}\\&space;&=&space;-\frac{1}{2}({\bf&space;x}-{\pmb&space;\mu}_1)^T\Sigma^{-1}({\bf&space;x}-{\pmb&space;\mu}_1)&plus;\frac{1}{2}({\bf&space;x}-{\pmb&space;\mu}_2)^T\Sigma^{-1}({\bf&space;x}-{\pmb&space;\mu}_2)&plus;\ln\frac{p(\mathcal{C}_1)}{p(\mathcal{C}_2)}\\&space;&=&space;\left\{\left(&space;{\pmb&space;\mu}_1^T&space;-&space;{\pmb&space;\mu}_2^T&space;\right)\Sigma^{-1}\right\}{\bf&space;x}&space;-&space;\frac{1}{2}{\pmb&space;\mu}_1^T\Sigma^{-1}{\pmb&space;\mu}_1&space;&plus;&space;\frac{1}{2}{\pmb&space;\mu}_2^T\Sigma^{-1}{\pmb&space;\mu}_2&space;&plus;&space;\ln\frac{p(\mathcal{C}_1)}{p(\mathcal{C}_2)}&space;\end{align*}" title="\begin{align*} a &= \ln{\dfrac{p({\bf x}|\mathcal{C}_1)p(\mathcal{C}_1)}{p({\bf x}|\mathcal{C}_2)p(\mathcal{C}_2)}}\\ &= -\frac{1}{2}({\bf x}-{\pmb \mu}_1)^T\Sigma^{-1}({\bf x}-{\pmb \mu}_1)+\frac{1}{2}({\bf x}-{\pmb \mu}_2)^T\Sigma^{-1}({\bf x}-{\pmb \mu}_2)+\ln\frac{p(\mathcal{C}_1)}{p(\mathcal{C}_2)}\\ &= \left\{\left( {\pmb \mu}_1^T - {\pmb \mu}_2^T \right)\Sigma^{-1}\right\}{\bf x} - \frac{1}{2}{\pmb \mu}_1^T\Sigma^{-1}{\pmb \mu}_1 + \frac{1}{2}{\pmb \mu}_2^T\Sigma^{-1}{\pmb \mu}_2 + \ln\frac{p(\mathcal{C}_1)}{p(\mathcal{C}_2)} \end{align*}" />   
+      
+      > a를 x에 관한 선형식으로 표현할 수 있음.
       
       
       
-#### [공부하면서 참고한 사이트 ✨️](http://norman3.github.io/prml/docs/chapter04/0)
+      </div>
+      </details>
+      
+   + **k-class**에 대해서는 다음과 같이 확장 가능.
+   
+      + <img src="https://latex.codecogs.com/gif.latex?{\bf&space;w}_k&space;=&space;\Sigma^{-1}{\pmb&space;\mu}_k" title="{\bf w}_k = \Sigma^{-1}{\pmb \mu}_k" />   
+      
+      + <img src="https://latex.codecogs.com/gif.latex?w_{k0}&space;=&space;-\frac{1}{2}{\pmb&space;\mu}_{k}^{T}\Sigma^{-1}{\pmb&space;\mu}_k&space;&plus;&space;\ln&space;p(\mathcal{C}_k)" title="w_{k0} = -\frac{1}{2}{\pmb \mu}_{k}^{T}\Sigma^{-1}{\pmb \mu}_k + \ln p(\mathcal{C}_k)" />   
+      
+- - - - - - - - - - - - - -
+
++ **최대우도해 (Maximum likelihood solution)**
+
+   + 2-class의 경우
+   
+      + 가정
+      
+      + 우도함수
+      
+         <details>
+         <summary>π 구하기</summary>   
+         <div markdown="1"> 
+      
+      
+         </div>
+         </details>
+      
+      
+         <details>
+         <summary> μ 구하기 </summary>   
+         <div markdown="1"> 
+      
+      
+         </div>
+         </details>      
+
+      
+... ing 
+
+#### [✨️ 공부하면서 참고한 사이트](http://norman3.github.io/prml/docs/chapter04/0)
