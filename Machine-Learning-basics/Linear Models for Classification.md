@@ -330,6 +330,11 @@
          </details>  
 
       
+
+## 데이터가 이산일 때 (Discrete features)
+
++ 각 특성 <img src="https://latex.codecogs.com/gif.latex?x_i" title="x_i" />이 0 또는 1, 하나의 값만 가질 수 있는 경우
+
 ... ing 
 
 #### [✨️ 공부하면서 참고한 사이트](http://norman3.github.io/prml/docs/chapter04/0)
