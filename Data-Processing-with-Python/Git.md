@@ -2,11 +2,7 @@
 
 - 분산 버전관리 시스템
 
-    <img src="https://user-images.githubusercontent.com/72974863/102103108-eb9a9300-3e6f-11eb-914f-6faddaa6a3b0.png">
-
-    > KDT-AI-dev 3주차 "참고 : git 이란 무엇인가?"
-
-
+   + [참고-wiki](https://ko.wikipedia.org/wiki/%EA%B9%83_(%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4))
 - - - - - - - -
 
 ## Git 시작하기
