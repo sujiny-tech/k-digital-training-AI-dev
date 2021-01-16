@@ -1,8 +1,10 @@
 ## Git 이란
 
 - 분산 버전관리 시스템
-
-   + [참고-wiki](https://ko.wikipedia.org/wiki/%EA%B9%83_(%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4))
+   
+   <img src="https://user-images.githubusercontent.com/72974863/104795317-89c3a500-57f0-11eb-8280-7faf1f322fa8.png" width="70%" height="70%">   
+   
+   > [참고하기 - wiki ✨](https://ko.wikipedia.org/wiki/%EA%B9%83_(%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4))
 - - - - - - - -
 
 ## Git 시작하기
