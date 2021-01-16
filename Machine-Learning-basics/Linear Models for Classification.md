@@ -243,26 +243,91 @@
 
    + 2-class의 경우
    
-      + 가정
+      + 데이터와 파라미터들
+         + 실제 데이터 <img src="https://latex.codecogs.com/gif.latex?\left&space;\{&space;{\bf&space;x}_n,&space;t_n&space;\right&space;\}" title="\left \{ {\bf x}_n, t_n \right \}" />에 대해 <img src="https://latex.codecogs.com/gif.latex?t_n=1" title="t_n=1" />이면 클래스 1로 분류하고, <img src="https://latex.codecogs.com/gif.latex?t_n=0" title="t_n=0" />은 클래스 2로 분류.
+         
+         + <img src="https://latex.codecogs.com/gif.latex?p(\mathcal{C}_1)=\pi" title="p(\mathcal{C}_1)=\pi" />라 할때, 구하고자하는 파라미터는 <img src="https://latex.codecogs.com/gif.latex?{\pmb&space;\mu}_1,&space;{\pmb&space;\mu}_2,&space;\Sigma,&space;\pi" title="{\pmb \mu}_1, {\pmb \mu}_2, \Sigma, \pi" /> ❗
+        
       
       + 우도함수
-      
+         
+         + 각 클래스에 대해 다음과 같이 표현할수 있음
+         
+            > <img src="https://latex.codecogs.com/gif.latex?p({\bf&space;x}_n,&space;C_1)&space;=&space;p(C_1)p({\bf&space;x}_n|C_1)&space;=&space;\pi&space;N({\bf&space;x}_n;\mu_1,&space;\Sigma)" title="p({\bf x}_n, C_1) = p(C_1)p({\bf x}_n|C_1) = \pi N({\bf x}_n;\mu_1, \Sigma)" />   
+            
+            > p({\bf x}_n, C_2) = p(C_2)p({\bf x}_n|C_2) = (1-\pi) N({\bf x}_n;\mu_2, \Sigma)   
+            
+            > 따라서,
+            
+            > <img src="https://latex.codecogs.com/gif.latex?p({\bf&space;t}|&space;\pi,&space;{\bf&space;\mu}_1,&space;{\bf&space;\mu}2,&space;\Sigma)&space;=&space;\prod_{n=1}^N\left(\pi&space;N({\bf&space;x}_n|{\bf&space;\mu}_1,&space;\Sigma)\right)^{t_n}\left((1-\pi)N({\bf&space;x}_n|{\bf&space;\mu}_2,&space;\Sigma)\right)^{1-t_n}" title="p({\bf t}| \pi, {\bf \mu}_1, {\bf \mu}2, \Sigma) = \prod_{n=1}^N\left(\pi N({\bf x}_n|{\bf \mu}_1, \Sigma)\right)^{t_n}\left((1-\pi)N({\bf x}_n|{\bf \mu}_2, \Sigma)\right)^{1-t_n}" />   
+            
+            
          <details>
          <summary>π 구하기</summary>   
          <div markdown="1"> 
-      
-      
+         
+         + 로그우도함수에서 <img src="https://latex.codecogs.com/gif.latex?\pi" title="\pi" /> 관련항들만 정리하면 다음과 같음.
+            
+            > <img src="https://latex.codecogs.com/gif.latex?\sum_{n=1}^{N}\left\{&space;t_n\ln\pi&space;&plus;&space;(1-t_n)\ln(1-\pi)&space;\right\}" title="\sum_{n=1}^{N}\left\{ t_n\ln\pi + (1-t_n)\ln(1-\pi) \right\}" />   
+            
+            > <img src="https://latex.codecogs.com/gif.latex?\pi" title="\pi" />에 대해 미분 후, 0으로 놓고 계산하면
+            
+            > <img src="https://latex.codecogs.com/gif.latex?\pi&space;=&space;\dfrac{1}{N}\sum_{n=1}^{N}t_n&space;=&space;\dfrac{N_1}{N}&space;=&space;\dfrac{N_1}{N_1&plus;N_2}" title="\pi = \dfrac{1}{N}\sum_{n=1}^{N}t_n = \dfrac{N_1}{N} = \dfrac{N_1}{N_1+N_2}" />   
+            
+            > <img src="https://latex.codecogs.com/gif.latex?N_1,&space;N_2" title="N_1, N_2" />는 각각 클래스 1과 2에 속하는 샘플 수.
+            
+            > <img src="https://latex.codecogs.com/gif.latex?\pi" title="\pi" />는 클래스 1에 속하는 샘플의 비율을 의미 ❗   
+            
          </div>
          </details>
       
       
          <details>
-         <summary> μ 구하기 </summary>   
+         <summary>μ 구하기 </summary>   
          <div markdown="1"> 
-      
-      
+         
+         + <img src="https://latex.codecogs.com/gif.latex?\pi" title="\pi" /> 구할때와 동일하게, 로그우도함수에서 μ 관련항들 정리한후, μ에 대해 미분하여 값을 구함.   
+            
+            > μ 관련항들은 다음과 같음. 
+            
+            > <img src="https://latex.codecogs.com/gif.latex?\sum_{n=1}^{N}t_n\ln&space;\mathcal{N}({\bf&space;x}_n|{\pmb&space;\mu}_1,&space;\Sigma)&space;=&space;-\dfrac{1}{2}\sum_{n=1}^{N}t_n({\bf&space;x}_n-{\pmb&space;\mu}_1)^T\Sigma^{-1}({\bf&space;x}_n-{\pmb&space;\mu}_1)&space;&plus;&space;\mathrm{const}" title="\sum_{n=1}^{N}t_n\ln \mathcal{N}({\bf x}_n|{\pmb \mu}_1, \Sigma) = -\dfrac{1}{2}\sum_{n=1}^{N}t_n({\bf x}_n-{\pmb \mu}_1)^T\Sigma^{-1}({\bf x}_n-{\pmb \mu}_1) + \mathrm{const}" />
+             
+            > <img src="https://latex.codecogs.com/gif.latex?{\pmb&space;\mu}_1" title="{\pmb \mu}_1" />에 관해 미분 후, 0으로 놓고 정리하면
+            
+            > <img src="https://latex.codecogs.com/gif.latex?{\pmb&space;\mu}_1=\dfrac{1}{N_1}\sum_{n=1}^{N}t_n{\bf&space;x}_n" title="{\pmb \mu}_1=\dfrac{1}{N_1}\sum_{n=1}^{N}t_n{\bf x}_n" />   
+            
+            > <img src="https://latex.codecogs.com/gif.latex?{\pmb&space;\mu}_2" title="{\pmb \mu}_2" />에 관해 미분 후, 0으로 놓고 정리하면
+            
+            > <img src="https://latex.codecogs.com/gif.latex?{\pmb&space;\mu}_2=\dfrac{1}{N_2}\sum_{n=1}^{N}(1-t_n){\bf&space;x}_n" title="{\pmb \mu}_2=\dfrac{1}{N_2}\sum_{n=1}^{N}(1-t_n){\bf x}_n" />   
+            
+            
          </div>
-         </details>      
+         </details>    
+         
+         
+         <details>
+         <summary>∑ 구하기 </summary>   
+         <div markdown="1"> 
+         
+         + 이 부분은 제일 복잡한 부분...  
+         
+         + 여기도 동일하게 로그우도함수로부터 공분산 ∑ 미분하여 구함.
+            
+            > <img src="https://latex.codecogs.com/gif.latex?\begin{align*}&space;&-\dfrac{1}{2}\sum_{n=1}^{N}t_n\ln&space;|\Sigma|&space;-\dfrac{1}{2}\sum_{n=1}^{N}t_n({\bf&space;x}_n-{\pmb&space;\mu}_1)^T\Sigma^{-1}({\bf&space;x}_n-{\pmb&space;\mu}_1)\\&space;&-\dfrac{1}{2}\sum_{n=1}^{N}(1-t_n)\ln&space;|\Sigma|&space;-\dfrac{1}{2}\sum_{n=1}^{N}(1-t_n)({\bf&space;x}_n-{\pmb&space;\mu}_2)^T\Sigma^{-1}({\bf&space;x}_n-{\pmb&space;\mu}_2)\\&space;&=&space;-\dfrac{N}{2}\ln&space;|\Sigma|&space;-&space;\dfrac{N}{2}\mathrm{tr}\left(\Sigma^{-1}{\bf&space;S}\right)&space;\end{align*}" title="\begin{align*} &-\dfrac{1}{2}\sum_{n=1}^{N}t_n\ln |\Sigma| -\dfrac{1}{2}\sum_{n=1}^{N}t_n({\bf x}_n-{\pmb \mu}_1)^T\Sigma^{-1}({\bf x}_n-{\pmb \mu}_1)\\ &-\dfrac{1}{2}\sum_{n=1}^{N}(1-t_n)\ln |\Sigma| -\dfrac{1}{2}\sum_{n=1}^{N}(1-t_n)({\bf x}_n-{\pmb \mu}_2)^T\Sigma^{-1}({\bf x}_n-{\pmb \mu}_2)\\ &= -\dfrac{N}{2}\ln |\Sigma| - \dfrac{N}{2}\mathrm{tr}\left(\Sigma^{-1}{\bf S}\right) \end{align*}" />   
+            
+            > 여기서 S는 다음과 같음. (using 이전 강의에서 배웠던 가우시안 분포의 최대우도-확률분포II)
+            
+            > <img src="https://latex.codecogs.com/gif.latex?{\bf&space;S}&space;=\dfrac{N_1}{N}{\bf&space;S}_1&plus;\dfrac{N_2}{N}{\bf&space;S}_2" title="{\bf S} =\dfrac{N_1}{N}{\bf S}_1+\dfrac{N_2}{N}{\bf S}_2" />   
+            
+            > <img src="https://latex.codecogs.com/gif.latex?{\bf&space;S}_1&space;=&space;\dfrac{1}{N_1}\sum_{n&space;\in&space;C_1}&space;({\bf&space;x}_n-{\pmb&space;\mu}_1)({\bf&space;x}_n-{\pmb&space;\mu}_1)^T" title="{\bf S}_1 = \dfrac{1}{N_1}\sum_{n \in C_1} ({\bf x}_n-{\pmb \mu}_1)({\bf x}_n-{\pmb \mu}_1)^T" />   
+            
+            > <img src="https://latex.codecogs.com/gif.latex?{\bf&space;S}_2&space;=&space;\dfrac{1}{N_2}\sum_{n&space;\in&space;C_2}&space;({\bf&space;x}_n-{\pmb&space;\mu}_2)({\bf&space;x}_n-{\pmb&space;\mu}_2)^T" title="{\bf S}_2 = \dfrac{1}{N_2}\sum_{n \in C_2} ({\bf x}_n-{\pmb \mu}_2)({\bf x}_n-{\pmb \mu}_2)^T" />   
+            
+            > 가우시안 분포의 최대우도를 구하는 방법을 사용하면 ∑=S   
+         
+         
+         </div>
+         </details>  
 
       
 ... ing 
