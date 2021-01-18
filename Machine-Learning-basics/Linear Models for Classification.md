@@ -352,61 +352,78 @@
 
 + x가 주어졌을 때, 클래스의 확률을 x에 관한 함수로 가정하고, 파라미터를 바로 구하는 모델
 
-+ **로지스틱 회귀(Logistic regression)**
++ **로지스틱 회귀(Logistic regression)** : 대표적인 방법 ✨
 
-   + 2-class의 경우
-   
-      + 클래스 C1의 사후 확률 = 특성벡터 <img src="https://latex.codecogs.com/gif.latex?\phi" title="\phi" />의 선형함수가 logistic sigmoid 를 통과 함수   
+   + 클래스 C1의 사후 확률 = 특성벡터 <img src="https://latex.codecogs.com/gif.latex?\phi" title="\phi" />의 선형함수가 logistic sigmoid 를 통과 함수   
          
-         > <img src="https://latex.codecogs.com/gif.latex?p(C_1|\phi)=y(\phi)=\sigma({\bf&space;w}^T\phi)" title="p(C_1|\phi)=y(\phi)=\sigma({\bf w}^T\phi)" />   
+      > <img src="https://latex.codecogs.com/gif.latex?p(C_1|\phi)=y(\phi)=\sigma({\bf&space;w}^T\phi)" title="p(C_1|\phi)=y(\phi)=\sigma({\bf w}^T\phi)" />   
       
-         > 이때, 입력함수 x대신 비선형 기저함수 <img src="https://latex.codecogs.com/gif.latex?\phi(\mathbf{x})" title="\phi(\mathbf{x})" /> 사용함.
+      > 이때, 입력함수 x대신 비선형 기저함수 <img src="https://latex.codecogs.com/gif.latex?\phi(\mathbf{x})" title="\phi(\mathbf{x})" /> 사용함.
       
-         > 위 식의 logistic sigmoid 함수 : <img src="https://latex.codecogs.com/gif.latex?\sigma(a)=\dfrac{1}{1&plus;\exp(-a)}" title="\sigma(a)=\dfrac{1}{1+\exp(-a)}" />   
+      > 위 식의 logistic sigmoid 함수 : <img src="https://latex.codecogs.com/gif.latex?\sigma(a)=\dfrac{1}{1&plus;\exp(-a)}" title="\sigma(a)=\dfrac{1}{1+\exp(-a)}" />   
          
-      + 클래스 C2의 사후 확률은 다음과 같음.   
+   + 클래스 C2의 사후 확률은 다음과 같음.   
       
-         > <img src="https://latex.codecogs.com/gif.latex?p(\mathcal{C}_2|\phi)&space;=&space;1&space;-&space;p(\mathcal{C}_1|\phi)" title="p(\mathcal{C}_2|\phi) = 1 - p(\mathcal{C}_1|\phi)" />   
+      > <img src="https://latex.codecogs.com/gif.latex?p(\mathcal{C}_2|\phi)&space;=&space;1&space;-&space;p(\mathcal{C}_1|\phi)" title="p(\mathcal{C}_2|\phi) = 1 - p(\mathcal{C}_1|\phi)" />   
          
-      + <img src="https://latex.codecogs.com/gif.latex?\phi" title="\phi" />가 M차원 일 때, 구해야할 파라미터 w의 개수는 M
-         > 샌성모델의 경우에는, M(M+5)/2+1개의 파라미터 구해야함
+   + <img src="https://latex.codecogs.com/gif.latex?\phi" title="\phi" />가 M차원 일 때, 구해야할 파라미터 w의 개수는 M
+      > 셍성모델의 경우에는, M(M+5)/2+1개의 파라미터 구해야함
          
-         > 이에 반면, 로지스틱 회귀는 훨씬더 작은 M의 linear한 개수의 파라미터만 구해도 됨.   
+      > 이에 반면, 로지스틱 회귀는 훨씬더 작은 M의 linear한 개수의 파라미터만 구해도 됨.   
       
-+ 최대우도해
+   + 최대우도해
 
-   + 데이터 셋 : <img src="https://latex.codecogs.com/gif.latex?\{\phi_n,&space;t_n\},&space;\textup{&space;for&space;}n=1,\ldots,N" title="\{\phi_n, t_n\}, \textup{ for }n=1,\ldots,N" />   
+      + 데이터 셋 : <img src="https://latex.codecogs.com/gif.latex?\{\phi_n,&space;t_n\},&space;\textup{&space;for&space;}n=1,\ldots,N" title="\{\phi_n, t_n\}, \textup{ for }n=1,\ldots,N" />   
    
-   + <img src="https://latex.codecogs.com/gif.latex?t_n&space;\in&space;\{0,&space;1\}" title="t_n \in \{0, 1\}" />   
+      + <img src="https://latex.codecogs.com/gif.latex?t_n&space;\in&space;\{0,&space;1\}" title="t_n \in \{0, 1\}" />   
    
-   + <img src="https://latex.codecogs.com/gif.latex?{\bf&space;t}&space;=&space;(t_1,\ldots,t_N)^T" title="{\bf t} = (t_1,\ldots,t_N)^T" />   
+      + <img src="https://latex.codecogs.com/gif.latex?{\bf&space;t}&space;=&space;(t_1,\ldots,t_N)^T" title="{\bf t} = (t_1,\ldots,t_N)^T" />   
    
-   + <img src="https://latex.codecogs.com/gif.latex?\phi_n&space;=&space;\phi({\bf&space;x}_n)" title="\phi_n = \phi({\bf x}_n)" />   
+      + <img src="https://latex.codecogs.com/gif.latex?\phi_n&space;=&space;\phi({\bf&space;x}_n)" title="\phi_n = \phi({\bf x}_n)" />   
    
-   + <img src="https://latex.codecogs.com/gif.latex?y_n&space;=&space;p(\mathcal{C}_1|\phi_n)&space;=&space;\sigma({\bf&space;w}^T\phi_n)&space;\" title="y_n = p(\mathcal{C}_1|\phi_n) = \sigma({\bf w}^T\phi_n) \" />   
+      + <img src="https://latex.codecogs.com/gif.latex?y_n&space;=&space;p(\mathcal{C}_1|\phi_n)&space;=&space;\sigma({\bf&space;w}^T\phi_n)&space;\" title="y_n = p(\mathcal{C}_1|\phi_n) = \sigma({\bf w}^T\phi_n) \" />   
    
-   + 우도함수
-      > <img src="https://latex.codecogs.com/gif.latex?p({\bf&space;t}|{\bf&space;w})&space;=&space;\prod_{n=1}^{N}y_n^{t_n}(1-y_n)^{1-t_n}" title="p({\bf t}|{\bf w}) = \prod_{n=1}^{N}y_n^{t_n}(1-y_n)^{1-t_n}" />   
+      + 우도함수
+         > <img src="https://latex.codecogs.com/gif.latex?p({\bf&space;t}|{\bf&space;w})&space;=&space;\prod_{n=1}^{N}y_n^{t_n}(1-y_n)^{1-t_n}" title="p({\bf t}|{\bf w}) = \prod_{n=1}^{N}y_n^{t_n}(1-y_n)^{1-t_n}" />   
       
-   + 음의 로그우도
+      + 음의 로그우도
    
-      > <img src="https://latex.codecogs.com/gif.latex?E({\bf&space;w})=&space;-\ln{p({\bf&space;t}|{\bf&space;w})}&space;=&space;-&space;\sum_{n=1}^{N}\left&space;\{t_n\ln{y_n}&plus;(1-t_n)\ln(1-y_n)\right\}" title="E({\bf w})= -\ln{p({\bf t}|{\bf w})} = - \sum_{n=1}^{N}\left \{t_n\ln{y_n}+(1-t_n)\ln(1-y_n)\right\}" />   
+         > <img src="https://latex.codecogs.com/gif.latex?E({\bf&space;w})=&space;-\ln{p({\bf&space;t}|{\bf&space;w})}&space;=&space;-&space;\sum_{n=1}^{N}\left&space;\{t_n\ln{y_n}&plus;(1-t_n)\ln(1-y_n)\right\}" title="E({\bf w})= -\ln{p({\bf t}|{\bf w})} = - \sum_{n=1}^{N}\left \{t_n\ln{y_n}+(1-t_n)\ln(1-y_n)\right\}" />   
       
       
-      > 모수 추정을 위해 사용하며, 이는 **크로스 엔트로피 에러함수(cross entropy error function)** ❗
+         > 모수 추정을 위해 사용하며, 이는 **크로스 엔트로피 에러함수(cross entropy error function)** ❗
    
-   + **크로스 엔트로피(cross entropy error function)**    
+      + **크로스 엔트로피(cross entropy error function)**    
    
-      + 정보이론에서 <img src="https://latex.codecogs.com/gif.latex?H(p,q)&space;=&space;-\mathbb{E}_p[\ln&space;q]" title="H(p,q) = -\mathbb{E}_p[\ln q]" />   
+         + 정보이론에서 <img src="https://latex.codecogs.com/gif.latex?H(p,q)&space;=&space;-\mathbb{E}_p[\ln&space;q]" title="H(p,q) = -\mathbb{E}_p[\ln q]" />   
       
-         > 이산확률변수의 경우, <img src="https://latex.codecogs.com/gif.latex?H(p,q)&space;=&space;-\sum_{x}p(x)\ln&space;q(x)" title="H(p,q) = -\sum_{x}p(x)\ln q(x)" />   
+            > 이산확률변수의 경우, <img src="https://latex.codecogs.com/gif.latex?H(p,q)&space;=&space;-\sum_{x}p(x)\ln&space;q(x)" title="H(p,q) = -\sum_{x}p(x)\ln q(x)" />   
       
-      + 일반적으로 **크로스 엔트로피가 최소화**될 때, **두 확률분포의 차이가 최소화**  
+         + 일반적으로 **크로스 엔트로피가 최소화**될 때, **두 확률분포의 차이가 최소화**  
       
-         > 따라서, **에러함수 최소화 = 우도 최대화 = 목표 변수(분포)와 예측값 분포 차이 최소화** ❗   
+            > 따라서, **에러함수 최소화 = 우도 최대화 = 목표 변수(분포)와 예측값 분포 차이 최소화** ❗   
          
 
-         
+      + 에러함수 w의 gradient
+   
+          > <img src="https://latex.codecogs.com/gif.latex?\triangledown&space;E({\bf&space;w})&space;=&space;\sum_{n=1}^N&space;\triangledown&space;E_n({\bf&space;w})" title="\triangledown E({\bf w}) = \sum_{n=1}^N \triangledown E_n({\bf w})" />
+       
+          > 이때, <img src="https://latex.codecogs.com/gif.latex?E_n({\bf&space;w})=&space;-\left\{t_n\ln{y_n}&plus;(1-t_n)\ln(1-y_n)\right\}" title="E_n({\bf w})= -\left\{t_n\ln{y_n}+(1-t_n)\ln(1-y_n)\right\}" />으로 나타낼 수 있음.   
+       
+          > 따라서, <img src="https://latex.codecogs.com/gif.latex?\begin{align*}&space;\triangledown&space;E_n({\bf&space;w})&space;&=&space;\frac{\partial&space;E_n({\bf&space;w})}{\partial&space;y_n}\frac{\partial&space;y_n}{\partial&space;a_n}\triangledown&space;a_n\\&space;&=&space;\left\{&space;\frac{1-t_n}{1-y_n}&space;-&space;\frac{t_n}{y_n}\right\}&space;y_n(1-y_n)\phi_n\\&space;&=&space;(y_n&space;-&space;t_n)\phi_n&space;\end{align*}" title="\begin{align*} \triangledown E_n({\bf w}) &= \frac{\partial E_n({\bf w})}{\partial y_n}\frac{\partial y_n}{\partial a_n}\triangledown a_n\\ &= \left\{ \frac{1-t_n}{1-y_n} - \frac{t_n}{y_n}\right\} y_n(1-y_n)\phi_n\\ &= (y_n - t_n)\phi_n \end{align*}" />이므로   
+       
+          > 전체적인 에러 함수 w의 gradient는 다음과 같음.   
+       
+          > <img src="https://latex.codecogs.com/gif.latex?\triangledown&space;E({\bf&space;w})&space;=&space;\sum_{n=1}^N&space;(y_n&space;-&space;t_n)\phi_n" title="\triangledown E({\bf w}) = \sum_{n=1}^N (y_n - t_n)\phi_n" />   
+       
+
++ **다중 클래스 로지스틱 회귀(Multiclass logistic regression)**
+   
+   + 또는 소프트맥스 회귀(Softmax regression)   
+   
+   > <img src="https://latex.codecogs.com/gif.latex?p(C_k|\phi)&space;=&space;y_k(\phi)&space;=&space;\frac{\exp(a_k)}{\sum_j&space;\exp(a_j)}" title="p(C_k|\phi) = y_k(\phi) = \frac{\exp(a_k)}{\sum_j \exp(a_j)}" />   
+   
+   
 
 
 
