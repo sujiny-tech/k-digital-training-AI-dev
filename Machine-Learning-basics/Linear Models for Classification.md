@@ -335,6 +335,79 @@
 
 + 각 특성 <img src="https://latex.codecogs.com/gif.latex?x_i" title="x_i" />이 0 또는 1, 하나의 값만 가질 수 있는 경우
 
-... ing 
+   + 클래스가 주어졌을 때 특성들이 **조건부 독립(conditional independence)이라는 가정**을 할 경우 문제는 단순화됨! → **naive Bayes** 가정
+   
+     > <img src="https://latex.codecogs.com/gif.latex?p({\bf&space;x}|\mathcal{C}_k)&space;=&space;\prod_{i=1}^{D}\mu_{ki}^{x_i}(1-\mu_{ki})^{1-x_i}" title="p({\bf x}|\mathcal{C}_k) = \prod_{i=1}^{D}\mu_{ki}^{x_i}(1-\mu_{ki})^{1-x_i}" />   
+     
+     > 이때, <img src="https://latex.codecogs.com/gif.latex?\mu_{ki}=p(x_i=1|C_k)" title="\mu_{ki}=p(x_i=1|C_k)" />이며, 위 식을 k-class의 <img src="https://latex.codecogs.com/gif.latex?a_k" title="a_k" />에 대입하면 다음과 같음.   
+     
+     > <img src="https://latex.codecogs.com/gif.latex?a_k({\bf&space;x})=\ln&space;p({\bf&space;x}|\mathcal{C}_k)p(\mathcal{C}_k)" title="a_k({\bf x})=\ln p({\bf x}|\mathcal{C}_k)p(\mathcal{C}_k)" />   
+     
+     > <img src="https://latex.codecogs.com/gif.latex?a_k({\bf&space;x})=\ln&space;p({\bf&space;x}|\mathcal{C}_k)p(\mathcal{C}_k)=\sum_{i=1}^{D}\left\{x_i\ln&space;\mu_{ki}&plus;(1-x_i)\ln(1-\mu_{ki})\right\}&plus;\ln&space;p(\mathcal{C}_k)" title="a_k({\bf x})=\ln p({\bf x}|\mathcal{C}_k)p(\mathcal{C}_k)=\sum_{i=1}^{D}\left\{x_i\ln \mu_{ki}+(1-x_i)\ln(1-\mu_{ki})\right\}+\ln p(\mathcal{C}_k)" />   
+     
+     > <img src="https://latex.codecogs.com/gif.latex?a_k" title="a_k" /> 함수가 <img src="https://latex.codecogs.com/gif.latex?x_{k}" title="x_{k}" /> 함수에 대해 선형인 것을 확인할 수 있음. 
+     
+
+## 확률적 식별 모델 (Probabilistic discriminative model)
+
++ x가 주어졌을 때, 클래스의 확률을 x에 관한 함수로 가정하고, 파라미터를 바로 구하는 모델
+
++ **로지스틱 회귀(Logistic regression)**
+
+   + 2-class의 경우
+   
+      + 클래스 C1의 사후 확률 = 특성벡터 <img src="https://latex.codecogs.com/gif.latex?\phi" title="\phi" />의 선형함수가 logistic sigmoid 를 통과 함수   
+         
+         > <img src="https://latex.codecogs.com/gif.latex?p(C_1|\phi)=y(\phi)=\sigma({\bf&space;w}^T\phi)" title="p(C_1|\phi)=y(\phi)=\sigma({\bf w}^T\phi)" />   
+      
+         > 이때, 입력함수 x대신 비선형 기저함수 <img src="https://latex.codecogs.com/gif.latex?\phi(\mathbf{x})" title="\phi(\mathbf{x})" /> 사용함.
+      
+         > 위 식의 logistic sigmoid 함수 : <img src="https://latex.codecogs.com/gif.latex?\sigma(a)=\dfrac{1}{1&plus;\exp(-a)}" title="\sigma(a)=\dfrac{1}{1+\exp(-a)}" />   
+         
+      + 클래스 C2의 사후 확률은 다음과 같음.   
+      
+         > <img src="https://latex.codecogs.com/gif.latex?p(\mathcal{C}_2|\phi)&space;=&space;1&space;-&space;p(\mathcal{C}_1|\phi)" title="p(\mathcal{C}_2|\phi) = 1 - p(\mathcal{C}_1|\phi)" />   
+         
+      + <img src="https://latex.codecogs.com/gif.latex?\phi" title="\phi" />가 M차원 일 때, 구해야할 파라미터 w의 개수는 M
+         > 샌성모델의 경우에는, M(M+5)/2+1개의 파라미터 구해야함
+         
+         > 이에 반면, 로지스틱 회귀는 훨씬더 작은 M의 linear한 개수의 파라미터만 구해도 됨.   
+      
++ 최대우도해
+
+   + 데이터 셋 : <img src="https://latex.codecogs.com/gif.latex?\{\phi_n,&space;t_n\},&space;\textup{&space;for&space;}n=1,\ldots,N" title="\{\phi_n, t_n\}, \textup{ for }n=1,\ldots,N" />   
+   
+   + <img src="https://latex.codecogs.com/gif.latex?t_n&space;\in&space;\{0,&space;1\}" title="t_n \in \{0, 1\}" />   
+   
+   + <img src="https://latex.codecogs.com/gif.latex?{\bf&space;t}&space;=&space;(t_1,\ldots,t_N)^T" title="{\bf t} = (t_1,\ldots,t_N)^T" />   
+   
+   + <img src="https://latex.codecogs.com/gif.latex?\phi_n&space;=&space;\phi({\bf&space;x}_n)" title="\phi_n = \phi({\bf x}_n)" />   
+   
+   + <img src="https://latex.codecogs.com/gif.latex?y_n&space;=&space;p(\mathcal{C}_1|\phi_n)&space;=&space;\sigma({\bf&space;w}^T\phi_n)&space;\" title="y_n = p(\mathcal{C}_1|\phi_n) = \sigma({\bf w}^T\phi_n) \" />   
+   
+   + 우도함수
+      > <img src="https://latex.codecogs.com/gif.latex?p({\bf&space;t}|{\bf&space;w})&space;=&space;\prod_{n=1}^{N}y_n^{t_n}(1-y_n)^{1-t_n}" title="p({\bf t}|{\bf w}) = \prod_{n=1}^{N}y_n^{t_n}(1-y_n)^{1-t_n}" />   
+      
+   + 음의 로그우도
+   
+      > <img src="https://latex.codecogs.com/gif.latex?E({\bf&space;w})=&space;-\ln{p({\bf&space;t}|{\bf&space;w})}&space;=&space;-&space;\sum_{n=1}^{N}\left&space;\{t_n\ln{y_n}&plus;(1-t_n)\ln(1-y_n)\right\}" title="E({\bf w})= -\ln{p({\bf t}|{\bf w})} = - \sum_{n=1}^{N}\left \{t_n\ln{y_n}+(1-t_n)\ln(1-y_n)\right\}" />   
+      
+      
+      > 모수 추정을 위해 사용하며, 이는 **크로스 엔트로피 에러함수(cross entropy error function)** ❗
+   
+   + **크로스 엔트로피(cross entropy error function)**    
+   
+      + 정보이론에서 <img src="https://latex.codecogs.com/gif.latex?H(p,q)&space;=&space;-\mathbb{E}_p[\ln&space;q]" title="H(p,q) = -\mathbb{E}_p[\ln q]" />   
+      
+         > 이산확률변수의 경우, <img src="https://latex.codecogs.com/gif.latex?H(p,q)&space;=&space;-\sum_{x}p(x)\ln&space;q(x)" title="H(p,q) = -\sum_{x}p(x)\ln q(x)" />   
+      
+      + 일반적으로 **크로스 엔트로피가 최소화**될 때, **두 확률분포의 차이가 최소화**  
+      
+         > 따라서, **에러함수 최소화 = 우도 최대화 = 목표 변수(분포)와 예측값 분포 차이 최소화** ❗   
+         
+
+         
+
+
 
 #### [✨️ 공부하면서 참고한 사이트](http://norman3.github.io/prml/docs/chapter04/0)
