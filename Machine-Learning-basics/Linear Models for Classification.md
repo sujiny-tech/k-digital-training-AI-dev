@@ -419,14 +419,14 @@
 
 + **다중 클래스 로지스틱 회귀(Multiclass logistic regression)**
    
-   + 또는 소프트맥스 회귀(Softmax regression)   
+   + 또는 **소프트맥스 회귀(Softmax regression)** 라고 함.   
    
       > <img src="https://latex.codecogs.com/gif.latex?p(C_k|\phi)&space;=&space;y_k(\phi)&space;=&space;\frac{\exp(a_k)}{\sum_j&space;\exp(a_j)}" title="p(C_k|\phi) = y_k(\phi) = \frac{\exp(a_k)}{\sum_j \exp(a_j)}" />    
       
       > <img src="https://latex.codecogs.com/gif.latex?a_k&space;=&space;{\bf&space;w}_k^T&space;\phi" title="a_k = {\bf w}_k^T \phi" />   
       
-         + 샘플 x가 주어지면 소프트맥스 회귀 모델이 각 클래스에 대한 점수 계산
-         + 이에 소프트맥스 함수를 적용해서 각 클래스의 확률 추정, 확률이 가장 큰 클래스 선택(모든 확률의 합=1)
+      + 샘플 x가 주어지면 소프트맥스 회귀 모델이 각 클래스에 대한 점수 계산
+      + 이에 소프트맥스 함수를 적용해서 각 클래스의 확률 추정, 확률이 가장 큰 클래스 선택(모든 확률의 합=1)
    
    + 우도함수
       + 특성 벡터 <img src="https://latex.codecogs.com/gif.latex?\phi_n" title="\phi_n" />를 위한 목표벡터 <img src="https://latex.codecogs.com/gif.latex?\mathbf{t}_n" title="\mathbf{t}_n" />는 클래스에 해당하는 하나의 원소만 1(나머지 0)인 1-of-k 인코딩 방법으로 표현   
