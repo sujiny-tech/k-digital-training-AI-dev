@@ -421,10 +421,52 @@
    
    + 또는 소프트맥스 회귀(Softmax regression)   
    
-   > <img src="https://latex.codecogs.com/gif.latex?p(C_k|\phi)&space;=&space;y_k(\phi)&space;=&space;\frac{\exp(a_k)}{\sum_j&space;\exp(a_j)}" title="p(C_k|\phi) = y_k(\phi) = \frac{\exp(a_k)}{\sum_j \exp(a_j)}" />   
+      > <img src="https://latex.codecogs.com/gif.latex?p(C_k|\phi)&space;=&space;y_k(\phi)&space;=&space;\frac{\exp(a_k)}{\sum_j&space;\exp(a_j)}" title="p(C_k|\phi) = y_k(\phi) = \frac{\exp(a_k)}{\sum_j \exp(a_j)}" />    
+      
+      > <img src="https://latex.codecogs.com/gif.latex?a_k&space;=&space;{\bf&space;w}_k^T&space;\phi" title="a_k = {\bf w}_k^T \phi" />   
+      
+         + 샘플 x가 주어지면 소프트맥스 회귀 모델이 각 클래스에 대한 점수 계산
+         + 이에 소프트맥스 함수를 적용해서 각 클래스의 확률 추정, 확률이 가장 큰 클래스 선택(모든 확률의 합=1)
    
-   
+   + 우도함수
+      + 특성 벡터 <img src="https://latex.codecogs.com/gif.latex?\phi_n" title="\phi_n" />를 위한 목표벡터 <img src="https://latex.codecogs.com/gif.latex?\mathbf{t}_n" title="\mathbf{t}_n" />는 클래스에 해당하는 하나의 원소만 1(나머지 0)인 1-of-k 인코딩 방법으로 표현   
+      
+         > <img src="https://latex.codecogs.com/gif.latex?p({\bf&space;T}|{\bf&space;w}_1,...{\bf&space;w}_K)&space;=&space;\prod_{n=1}^{N}\prod_{k=1}^{K}&space;p(\mathcal{C}_k|\phi_n)^{t_{nk}}&space;=&space;\prod_{n=1}^{N}\prod_{k=1}^{K}y_{nk}^{t_{nk}}" title="p({\bf T}|{\bf w}_1,...{\bf w}_K) = \prod_{n=1}^{N}\prod_{k=1}^{K} p(\mathcal{C}_k|\phi_n)^{t_{nk}} = \prod_{n=1}^{N}\prod_{k=1}^{K}y_{nk}^{t_{nk}}" />   
+         
+         > <img src="https://latex.codecogs.com/gif.latex?y_{nk}&space;=&space;y_k(\phi_n)" title="y_{nk} = y_k(\phi_n)" />이며,
+         
+         > <img src="https://latex.codecogs.com/gif.latex?\bf&space;T" title="\bf T" /> : <img src="https://latex.codecogs.com/gif.latex?t_{nk}" title="t_{nk}" />를 원소로 갖는 N x K 크기의 행렬   
+         
+   + 음의 로그 우도
+      
+      > 위의 우도함수를 음의 로그를 취하면, 
+      
+      > <img src="https://latex.codecogs.com/gif.latex?E({\bf&space;w}_1,&space;...,&space;{\bf&space;w}_K)&space;=&space;-\ln&space;p({\bf&space;T}|{\bf&space;w}_1,&space;...,{\bf&space;w}_K)&space;=&space;-&space;\sum_{n=1}^{N}&space;\sum_{k=1}^{K}&space;t_{nk}\ln(y_{nk})" title="E({\bf w}_1, ..., {\bf w}_K) = -\ln p({\bf T}|{\bf w}_1, ...,{\bf w}_K) = - \sum_{n=1}^{N} \sum_{k=1}^{K} t_{nk}\ln(y_{nk})" />    
+      
+      + 에러함수 최소화 → 파라미터 구하기(<img src="https://latex.codecogs.com/gif.latex?\mathbf{w}_j" title="\mathbf{w}_j" />에 대한 gradient)   
+      
+         > 하나의 샘플에 대한 에러에 대해 아래와 같이 정의하면,
+         
+         > <img src="https://latex.codecogs.com/gif.latex?E_n({\bf&space;w}_1,\ldots,{\bf&space;w}_K)&space;=&space;-\sum_{k=1}^{K}&space;t_{nk}\ln(y_{nk})" title="E_n({\bf w}_1,\ldots,{\bf w}_K) = -\sum_{k=1}^{K} t_{nk}\ln(y_{nk})" />   
+         
+         > <img src="https://latex.codecogs.com/gif.latex?\mathbf{w}_j" title="\mathbf{w}_j" />에 대한 gradient   
+         
+         > <img src="https://latex.codecogs.com/gif.latex?\nabla_{&space;{\bf&space;w}_j&space;}E({\bf&space;w}_1,&space;...,{\bf&space;w}_K)&space;=&space;\sum_{n=1}^{N}\nabla_{&space;{\bf&space;w}_j&space;}E_n({\bf&space;w}_1,&space;...,{\bf&space;w}_K)" title="\nabla_{ {\bf w}_j }E({\bf w}_1, ...,{\bf w}_K) = \sum_{n=1}^{N}\nabla_{ {\bf w}_j }E_n({\bf w}_1, ...,{\bf w}_K)" />   
+         
+         
+         <details>
+         <summary>풀이는 다음과 같음</summary>   
+         <div markdown="1">  
+         
+         > <img src="https://latex.codecogs.com/gif.latex?\begin{align*}&space;\nabla_{&space;{\bf&space;w}_j&space;}E_n&space;&=&space;\frac{\partial&space;E_n}{\partial&space;a_{nj}}&space;\frac{\partial&space;a_{nj}}{\partial&space;{\bf&space;w}_j}\\&space;&=&space;\frac{\partial&space;E_n}{\partial&space;a_{nj}}\phi_n&space;&&space;\left&space;(\because&space;a_nj=\mathbf{w}^T_{nj}\phi_n&space;\right&space;)\\&space;&=&space;\sum_{k=1}^K&space;\left(&space;\frac{\partial&space;E_n}{\partial&space;y_{nk}}&space;\frac{\partial&space;y_{nk}}{\partial&space;a_{nj}}&space;\right)\phi_n\\&space;&=&space;\phi_n&space;\sum_{k=1}^K&space;\left\{&space;-\frac{t_{nk}}{y_{nk}}y_{nk}(I_{kj}-y_{nj})&space;\right\}\\&space;&=&space;\phi_n&space;\sum_{k=1}^K&space;t_{nk}(y_{nj}&space;-&space;I_{kj})\\&space;&=&space;\phi_n&space;\left(&space;y_{nj}\sum_{k=1}^K&space;t_{nk}&space;-&space;\sum_{k=1}^K&space;t_{nk}I_{kj}&space;\right)\\&space;&=&space;\phi_n&space;(y_{nj}&space;-&space;t_{nj})&space;\end{align*}" title="\begin{align*} \nabla_{ {\bf w}_j }E_n &= \frac{\partial E_n}{\partial a_{nj}} \frac{\partial a_{nj}}{\partial {\bf w}_j}\\ &= \frac{\partial E_n}{\partial a_{nj}}\phi_n & \left (\because a_nj=\mathbf{w}^T_{nj}\phi_n \right )\\ &= \sum_{k=1}^K \left( \frac{\partial E_n}{\partial y_{nk}} \frac{\partial y_{nk}}{\partial a_{nj}} \right)\phi_n\\ &= \phi_n \sum_{k=1}^K \left\{ -\frac{t_{nk}}{y_{nk}}y_{nk}(I_{kj}-y_{nj}) \right\}\\ &= \phi_n \sum_{k=1}^K t_{nk}(y_{nj} - I_{kj})\\ &= \phi_n \left( y_{nj}\sum_{k=1}^K t_{nk} - \sum_{k=1}^K t_{nk}I_{kj} \right)\\ &= \phi_n (y_{nj} - t_{nj}) \end{align*}" />
+      
 
+         </div>
+         </details>
+         
+         > 결과적으로, 다음과 같음 ❗
+         
+         > <img src="https://latex.codecogs.com/gif.latex?\nabla_{&space;{\bf&space;w}_j&space;}E({\bf&space;w}_1,&space;...,{\bf&space;w}_K)&space;=&space;\sum_{n=1}^{N}&space;(y_{nj}-t_{nj})\phi_n" title="\nabla_{ {\bf w}_j }E({\bf w}_1, ...,{\bf w}_K) = \sum_{n=1}^{N} (y_{nj}-t_{nj})\phi_n" />   
 
 
 #### [✨️ 공부하면서 참고한 사이트](http://norman3.github.io/prml/docs/chapter04/0)
