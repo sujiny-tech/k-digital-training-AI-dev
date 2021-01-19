@@ -90,6 +90,9 @@
 
 ### [5~6주차] 머신러닝 기초(Machine Learning basics)
 
+<details>
+<summary>자세히</summary>   
+<div markdown="1">   
    
 + [소개 및 핵심개념](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/Intro.md)
 + [확률이론(Probability Theory)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/Probability%20Theory.md)
@@ -101,3 +104,11 @@
 + [확률분포 II (Probability Distributions)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/Probability%20Distributions_II.md)
 + [선형 회귀(Linear Regression)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/Linear%20Models%20for%20Regression.md)
 + [선형 분류(Linear Classification)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/Linear%20Models%20for%20Classification.md)
+
+</div>
+</details>
+
+### [7주차] 딥러닝 (Deep Learning)
+
++ 신경망 기초
+
