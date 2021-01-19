@@ -49,6 +49,16 @@
          + 규제 : 모델에 제약을 가하는 것 (하이퍼파라미터 적절하게 선택)
       + 훈련 데이터 오류 수정 및 이상치 제거 등
    
+
+### 머신러닝 라이브러리 
+
+✔️ scikit-learn 
+> <img src="https://user-images.githubusercontent.com/72974863/105003233-bf2cf480-5a75-11eb-807c-beb0d049d995.png" width="70%" height="70%">   
+
+> [출처 : scikit-learn.org](https://scikit-learn.org/stable/tutorial/machine_learning_map/)   
+
+> 지도/비지도학습 모듈, 모델선택및 평가모듈, 데이터변환 및 데이터 로드 모듈, 계산 성능 향상을 위한 모듈
+
 ### 교재 소개
 ✨ Pattern Recognition and Machine Learning by Christopher Bishop   
 
