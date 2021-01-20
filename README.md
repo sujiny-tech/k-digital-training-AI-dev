@@ -1,6 +1,8 @@
-# K-Digital-Training-AI-dev
+# K-Digital-Training-AI-dev 
 > [K-Digital-Training] 인공지능 데브코스 : 2020. 11. 30 ~ ing   
 
+
+## 파이썬 및 인공지능 수학/데이터 처리   
 
 ### [1주차] 어서와! 자료구조와 알고리즘은 처음이지?   
 
@@ -88,6 +90,8 @@
 </details>
 
 
+## 머신러닝/딥러닝
+
 ### [5~6주차] 머신러닝 기초(Machine Learning basics)
 
 <details>
@@ -110,5 +114,6 @@
 
 ### [7주차] 딥러닝 (Deep Learning)
 
++ [머신러닝 & 수학 (정보이론, 최적화)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Deep-Learning/ML%20%26%20Mathematics%20.md)
 + 신경망 기초
 
