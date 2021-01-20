@@ -2,12 +2,10 @@
 > [K-Digital-Training] 인공지능 데브코스 : 2020. 11. 30 ~ ing   
 
 
-## 파이썬 및 인공지능 수학/데이터 처리   
-
-### [1주차] 어서와! 자료구조와 알고리즘은 처음이지?   
+## 파이썬 및 인공지능 수학/데이터 처리     
 
 <details>
-<summary>자세히</summary>   
+<summary><b>[1주차] 어서와! 자료구조와 알고리즘은 처음이지?</b></summary>   
 <div markdown="1">   
    
    
@@ -26,11 +24,10 @@
 
 </div>
 </details>
-
-### [2주차] 인공지능 수학   
+  
 
 <details>
-<summary>자세히</summary>   
+<summary><b>[2주차] 인공지능 수학</b></summary>   
 <div markdown="1">   
    
    
@@ -57,11 +54,10 @@
 </div>
 </details>
 
-
-### [3주차] Python 기반 데이터 처리(Numpy, Pandas, Matplotlib)   
+  
 
 <details>
-<summary>자세히</summary>   
+<summary><b>[3주차] Python 기반 데이터 처리(Numpy, Pandas, Matplotlib)</b></summary>   
 <div markdown="1">   
     
     
@@ -75,10 +71,9 @@
 </details>
 
 
-### [4주차] Python으로 웹 다루기
 
 <details>
-<summary>자세히</summary>   
+<summary><b>[4주차] Python으로 웹 다루기</b></summary>   
 <div markdown="1">   
     
 + [Flask - Web Application](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Web-Handling-with-Python/Flask.md)
@@ -92,10 +87,9 @@
 
 ## 머신러닝/딥러닝
 
-### [5~6주차] 머신러닝 기초(Machine Learning basics)
 
 <details>
-<summary>자세히</summary>   
+<summary><b>[5~6주차] 머신러닝 기초(Machine Learning basics)</b></summary>   
 <div markdown="1">   
    
 + [소개 및 핵심개념](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Machine-Learning-basics/Intro.md)
@@ -112,8 +106,13 @@
 </div>
 </details>
 
-### [7주차] 딥러닝 (Deep Learning)
+
+<details>
+<summary><b>[7주차] 딥러닝 (Deep Learning)</b></summary>   
+<div markdown="1">   
 
 + [머신러닝 & 수학 (정보이론, 최적화)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Deep-Learning/ML%20%26%20Mathematics%20.md)
 + 신경망 기초
 
+</div>
+</details>
