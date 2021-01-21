@@ -112,7 +112,8 @@
             + 학습을 진행할수록 갱신 강도가 약해짐. 학습이 진행됨에 따라 변화폭이 눈에 띄게 줄어 움직이지 않게 됨(이를 개선한 기법-RMSProp)
             
          + Adam : AdaGrad + Momentum
-            > hypter parameter : lr, beta1, beta2 (1,2차 모멘텀용 게수 default : 0.9, 0.999) 
+            > hypter parameter : lr, beta1, beta2 (1,2차 모멘텀용 게수 default : 0.9, 0.999)   
+            
             > beta1:momentum term / beta2:adaptive term
             
          </div>
