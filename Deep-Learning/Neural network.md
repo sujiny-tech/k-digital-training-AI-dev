@@ -91,9 +91,12 @@
 
 + **핵심 아이디어** ✨
    + **은닉층** (= 특징 추출기)
-      > 원래 특징 공간을 분류하는 데 훨씬 **유리한 새로운 특징 공간**으로 변환 ❗
-      > 은닉 노드가 너무 크면 과잉적합, 너무 작으면 과소적합 → 따라서 적절히 조절해줘야함 (hyper-parameter 최적화 필요) ⭐
-      > 현대 기계학습에서는 **특징학습**(feature learning or data-driven features)이라 부름
+      > 원래 특징 공간을 분류하는 데 훨씬 **유리한 새로운 특징 공간**으로 변환 ❗   
+      
+      > 은닉 노드가 너무 크면 과잉적합, 너무 작으면 과소적합 → 따라서 적절히 조절해줘야함 (hyper-parameter 최적화 필요) ⭐   
+      
+      > 현대 기계학습에서는 **특징학습**(feature learning or data-driven features)이라 부름   
+      
       
    + **시그모이드 활성함수** 도입
       > 퍼셉트론에서 경성(hard) 의사결정에 해당하는 계단함수를 활성함수로 사용하였음 ❗   
@@ -117,11 +120,25 @@
             
       > [그림 출처 & 참고하기 👍](http://www.aistudy.com/neural/MLP_kim.htm) 
       
-+ 구조
-   > <img src="https://user-images.githubusercontent.com/72974863/105579782-f419ae00-5dcb-11eb-943c-5c42f7b2080d.png">
++ 기본 구조 
+   + 범용적 근사 이론(universal approximation theorem)
+      + 하나의 은닉층은 함수의 근사를 표현
+      + 따라서, 다층 퍼셉트론도 **공간을 변환하는 근사함수**로 생각 ⭐
+      
+      + Hornik 주장[1989] - **은닉노드가 충분히 많다면**, 어떤 활성함수를 사용하든 표준 다층 퍼셉트론은 **어떤 함수**라도 원하는 정확도만큼 **근사화**할 수 있다고 주장 
+      
+   
+   + 얕은 은닉층의 구조
+      + 지수적으로 더 넓은 폭이 필요할수 있음
+      + 더 과잉적합 되기 쉬움 
+      + 따라서, 일반적으로 **깊은 은닉층의 구조**가 **좋은 성능**을 가짐 ⭐   
+      
+   
+   > <img src="https://user-images.githubusercontent.com/72974863/105579782-f419ae00-5dcb-11eb-943c-5c42f7b2080d.png">   
+   
    
    > [이미지 출처](https://zetawiki.com/wiki/%EB%8B%A4%EC%B8%B5_%ED%8D%BC%EC%85%89%ED%8A%B8%EB%A1%A0)
-    
+   
  
 + **활성함수**       
    + **활성함수**에 따른 **다층 퍼셉트론의 공간 분할 능력 변화** (경성 부분 변화) ⭐   
@@ -144,3 +161,21 @@
          
       + 심층학습 - ReLU(Rectified Linear Activation)
    
++ 다층 퍼셉트론 시각화
+   > [playground.tensorflow.org - 아주 좋은 사이트 👍](http://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.53349&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false)   
+   
++ 오류 역전파 알고리즘의 빠른 속도 ✨
+   + 오류역전파 : 전방 계산 대비 약 1.5~2배의 시간요소 (비교적 빠름) 
+      
+   + 오류 역전파를 **반복**하여 **점근적 시간 복잡도**는 **Θ((cp+dp))nq)**
+      > c : 분류 수, d : 특징 차원, p : 은닉층 차원, n : 훈련 집합 크기, q: epoch 수
+      
++ **성능 향상을 위한 경험의 중요성** 💫 
+   + 순수한 최적화 알고리즘으로는 높은 성능 불가능함.
+   
+   + 중요 쟁점 ⭐
+      + **아키텍처** : 은닉층과 은닉 노드 개수 정해야함.
+      + **초깃값** : 가중치 초기화 (일반적으로 난수 생성해서 사용하는데 이때 범위와 분포가 중요)
+      + **학습률** : adaptive하게 learning rate를 조절하는 방법도 사용하기도 함
+      + **활성함수** : 초창기 다층 퍼셉트론은 logistic sigmoid or tanh 사용하였지만, 은닉층 개수 증가에 따라 가중치 소멸과 같은 문제 발생. 따라서 깊은 신경망은 주로 ReLU 사용 (여러가지 ReLU 함수가 있음)  
+      
