@@ -110,5 +110,5 @@
 👉 <b>[7주차] 딥러닝 (Deep Learning)</b>   
 
 + [머신러닝 & 수학 (정보이론, 최적화)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Deep-Learning/ML%20%26%20Mathematics%20.md)
-+ [신경망 기초](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Deep-Learning/Neural%20network.md)
++ [인공신경망 & 퍼셉트론 & 다층 ](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Deep-Learning/Neural%20network.md)
 
