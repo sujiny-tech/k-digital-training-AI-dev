@@ -56,11 +56,7 @@
 
 + 퍼셉트론 학습 알고리즘
    + stochastic version
-      + 샘플 순서 섞고, 틀린 샘플 발생하면 즉시 갱신  
-      
-         > pseudo code 추가하기 📝 
+      + 샘플 순서 섞고, 틀린 샘플 발생하는 즉시 매개변수 갱신  
       
    + batch version
-      + batch로 확장해도 동일
-      
-         > pseudo code 추가하기 📝
+      + batch로 확장해도 동일(틀린샘플을 모두 모아 한꺼번에 매개변수 갱신)
