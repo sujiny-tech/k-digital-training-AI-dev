@@ -90,8 +90,10 @@
 + 쉽게 생각하면, **여러 퍼셉트론을 쌓은 것** 
 
 + **핵심 아이디어** ✨
-   + **은닉층**
+   + **은닉층** (= 특징 추출기)
       > 원래 특징 공간을 분류하는 데 훨씬 **유리한 새로운 특징 공간**으로 변환 ❗
+      > 은닉 노드가 너무 크면 과잉적합, 너무 작으면 과소적합 → 따라서 적절히 조절해줘야함 (hyper-parameter 최적화 필요) ⭐
+      > 현대 기계학습에서는 **특징학습**(feature learning or data-driven features)이라 부름
       
    + **시그모이드 활성함수** 도입
       > 퍼셉트론에서 경성(hard) 의사결정에 해당하는 계단함수를 활성함수로 사용하였음 ❗   
@@ -115,6 +117,12 @@
             
       > [그림 출처 & 참고하기 👍](http://www.aistudy.com/neural/MLP_kim.htm) 
       
++ 구조
+   > <img src="https://user-images.githubusercontent.com/72974863/105579782-f419ae00-5dcb-11eb-943c-5c42f7b2080d.png">
+   
+   > [이미지 출처](https://zetawiki.com/wiki/%EB%8B%A4%EC%B8%B5_%ED%8D%BC%EC%85%89%ED%8A%B8%EB%A1%A0)
+    
+ 
 + **활성함수**       
    + **활성함수**에 따른 **다층 퍼셉트론의 공간 분할 능력 변화** (경성 부분 변화) ⭐   
    
@@ -130,7 +138,8 @@
    + 활용 예 
       + 퍼셉트론 - 계단함수
       + 다층 퍼셉트론 - logistic sigmoid & tanh (logistic sigmoid 많이 사용)
-         > s자 모양의 넓은 포화곡선은 오류역전파(경사도 기반 학습)를 어렵게 함 💥
+         > s자 모양의 넓은 포화곡선은 오류역전파(경사도 기반 학습)를 어렵게 함 💥   
+         
          > 따라서, 깊은 신경망에서 ReLU 활용 ⭐   
          
       + 심층학습 - ReLU(Rectified Linear Activation)
