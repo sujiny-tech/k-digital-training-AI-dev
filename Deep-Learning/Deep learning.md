@@ -84,6 +84,7 @@
     
 ## 컨볼루션 (합성곱) 신경망 (convolutional neural network, CNN)
 + **영상 인식**에 많이 쓰임   
+   > 영상 분야에서 다양하게 활용 (분류 classification, 검출 detection, 검색 retrieval, 분할 segmentation) ✨
 
 + **컴퓨터 비전**의 어려운 점
    + **동일한 객체라도** 영상을 찍는 **카메라의 이동과 각도**에 따라 **모든 픽셀값이 변화**됨
@@ -93,11 +94,23 @@
    + **같은 종류 간의 변화**가 큼    
    
 + 컨볼루션 신경망
-   + 컨볼루션층(CONV)
+   + **컨볼루션층(CONV)**
       + 선형함수인 컨볼루션과 비선형 함수인 활성함수의 조합   
       
-   + 풀링층 (POOL)
+   + **풀링층(POOL)**
       + 컨볼루션의 얻어진 특징을 통계적으로 압축   
       
    + 전체 구조
-      > 
+      > <img src="https://user-images.githubusercontent.com/72974863/105667011-e70cd400-5f1d-11eb-9b4c-a80b33f4705b.png">   
+      
+      > [이미지 출처](https://en.wikipedia.org/wiki/Convolutional_neural_network)
+   
+   + DMLP vs CNN
+      + DMLP : 완전 연결 구조, 높은 복잡도, 학습 매우 느림, 과잉적합 우려
+      + CNN : 컨볼루션 연산을 이용한 **부분연결(희소 연결)** 구조, 복잡도 크게 낮춤, 컨볼루션 연산은 **좋은 특징 추출**   
+      
+      + CNN 특징 ✨
+         + **격자(grid) 구조를 갖는 데이터**에 적합
+            > 영상, 음성 등
+         + 수용장(receptive field)은 인간시각과 유사
+         + 가변 크기의 입력처리 가능
