@@ -84,10 +84,6 @@
     
     
 ## 컨볼루션 (합성곱) 신경망 (convolutional neural network, CNN)
-
-<details>
-<summary><b>심층학습 기초 II - CNN ❗</b></summary>   
-<div markdown="1">  
    
 + **영상 인식**에 많이 쓰임   
    > 영상 분야에서 다양하게 활용 (분류 classification, 검출 detection, 검색 retrieval, 분할 segmentation) ✨
@@ -234,19 +230,7 @@
             
       > 이에 비해, 컨볼루션층에서 보폭 조정하거나 풀링층에서 커널/보폭 조정으로 특징 맵 크기 조절 가능함   
 
-</div>
-</details>
 
-
-## CNN 사례 연구
-
-### AlexNet
-
-### VGGNet
-
-### GoogLeNet
-
-### ResNet
 - - - - - - - - - - - - - - -
 
 ## 💫 참고하기
