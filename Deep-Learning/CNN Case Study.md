@@ -17,6 +17,11 @@
          
 
 ## AlexNet
+
+<details>
+<summary><b> 자세히 👀️ </b></summary>   
+<div markdown="1">
+   
 + 구조
    + **컨볼루션층 5개, 완전연결층(FC) 3개**   
       > 8개 층에 290400-186624-64896-43264-4096-4096-1000개의 노드 배치
@@ -42,15 +47,39 @@
     
    + 내적 요인
       + 활성함수로 **ReLU** 사용
-      + **지역 반응 정규화(local response normalization) 기법** 적용
+      + **지역 반응 정규화(local response normalization) 기법** 적용   
+         > **feature map에서 위치가 비슷한 것끼리** 값이 너무 튀지않게 전체적으로 평균값을 맞춰주는 것   
+         
+         > 요즘에는 batch normalication 많이 사용
+         
       + 과잉적합 방지하는 여러 규제기법 적용
          > **데이터 확대**(cropping, mirroring으로 2048배 확대), **dropout**(fc층에서 사용)   
          
-   + 테스트단계에서 앙상블 적용
+   + 테스트 단계에서 앙상블 적용
       + 입력된 영상을 잘라내기와 반전으로 통해 증가된 영상들의 **예측 평균**을 최종 인식
       + **2~3%만큼 오류율 감소** 효과
+
+
+</div>
+</details>
+
+
+## VGGNet   
+
++ 핵심 아이디어
+   + **3x3 작은 커널** 사용   
+      > 이후 신경망 구조에 영향을 줌
+      > 큰 크기 커널은 여러개의 작은 크기 커널로 분해 가능(파라미터 수는 줄어들
+      
+   + 신경망을 **더 깊게** 만듦(신경망 깊이가 어떤 영향을 주는지 확인)
+   + **컨볼루션층 8~16개**를 두어 AlexNet의 5개에 비해 2~3배 깊어짐
    
-## VGGNet
+   + VGGNet16 (conv 13층 + fc 3층)   
+      > <img src="https://user-images.githubusercontent.com/72974863/105945595-ece2f080-60a8-11eb-8b6a-d4888b97e359.png">   
+      
+      > 출처 : https://neurohive.io/en/popular-networks/vgg16/
+
+   
 
 ## GoogLeNet
 
