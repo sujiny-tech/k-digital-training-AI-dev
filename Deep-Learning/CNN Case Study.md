@@ -195,7 +195,7 @@
 </details>
 
 - - - - - - - - - - - -
-### 참고 
-💫 [google inception 관련 - 다른 사람의 블로그 참고](https://norman3.github.io/papers/docs/google_inception.html)
+### 참고 💫 
++ [google inception 관련 - 다른 사람의 블로그 참고](https://norman3.github.io/papers/docs/google_inception.html)
  
-💫 [ResNet 관련 - 다른 사람 블로그 참고](https://hydragon-cv.info/entry/Deep-Residual-Learning-for-Image-Recognition)
++ [ResNet 관련 - 다른 사람 블로그 참고](https://hydragon-cv.info/entry/Deep-Residual-Learning-for-Image-Recognition)
