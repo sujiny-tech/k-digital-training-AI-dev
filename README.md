@@ -109,9 +109,10 @@
 
 👉 <b>[7~8주차] 딥러닝 (Deep Learning)</b>   
 
-+ [머신러닝 & 수학 (정보이론, 최적화)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Deep-Learning/ML%20%26%20Mathematics%20.md)
++ [머신러닝 & 수학](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Deep-Learning/ML%20%26%20Mathematics%20.md)
 + [인공신경망(ANN) & 퍼셉트론(Perceptron) & 다층 퍼셉트론(Multilayer Perceptron)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Deep-Learning/Neural%20network.md)
 + [오류 역전파 알고리즘(Backpropagation algorithm)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Deep-Learning/Backpropagation.md)
-+ [심층학습 기초](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Deep-Learning/Deep%20learning.md)
++ [딥러닝 기초](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Deep-Learning/Deep%20learning.md)
 + [컨볼루션 신경망(Convolutional Neural Network, CNN)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Deep-Learning/CNN.md)
 + [CNN 사례 연구(CNN Case Study)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Deep-Learning/CNN%20Case%20Study.md)
++ [최적화](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Deep-Learning/Optimization.md)
