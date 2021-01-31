@@ -115,4 +115,4 @@
 + [딥러닝 기초](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Deep-Learning/Deep%20learning.md)
 + [컨볼루션 신경망(Convolutional Neural Network, CNN)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Deep-Learning/CNN.md)
 + [CNN 사례 연구(CNN Case Study)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Deep-Learning/CNN%20Case%20Study.md)
-+ [최적화](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Deep-Learning/Optimization.md)
++ [최적화(Optimization)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Deep-Learning/Optimization.md)
