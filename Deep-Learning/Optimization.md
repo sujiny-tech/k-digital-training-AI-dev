@@ -229,7 +229,7 @@
          
 + 다양한 활성함수
 
-   > <img src="https://user-images.githubusercontent.com/72974863/106471282-cd9ef580-64e4-11eb-9e3b-a6ff47e2bee9.png">   
+   > <img src="https://user-images.githubusercontent.com/72974863/106471282-cd9ef580-64e4-11eb-9e3b-a6ff47e2bee9.png" width="70%" height="70%">   
    
    > [이미지 출처 : stanford univ CS231n ](https://www.youtube.com/watch?v=_JB0AO7QxSA&list=PLC1qU-LWwrF64f4QKQT-Vg5Wr4qEE1Zxk&index=7)
    
