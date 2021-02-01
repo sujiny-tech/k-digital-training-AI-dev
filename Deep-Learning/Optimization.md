@@ -192,4 +192,50 @@
 
 ### 5. 활성함수
 
+<details>
+<summary><b>자세히 👀</b></summary>   
+<div markdown="1"> 
+   
++ 선형 연산 결과인 활성값 z에 비선형 활성함수 <a href="https://www.codecogs.com/eqnedit.php?latex=\tau" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\tau" title="\tau" /></a>를 적용하는 과정     
+
+   <details>
+   <summary><b>신경망 노드의 연산</b></summary>   
+   <div markdown="1"> 
+   
+   > <img src="https://user-images.githubusercontent.com/72974863/106468404-35534180-64e1-11eb-8906-6b8ab256bdec.png" width="50%" height="50%">   
+   
+   > <a href="https://www.codecogs.com/eqnedit.php?latex=z=\mathbf{w}^T\tilde{\mathbf{x}}&plus;b" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z=\mathbf{w}^T\tilde{\mathbf{x}}&plus;b" title="z=\mathbf{w}^T\tilde{\mathbf{x}}+b" /></a>   
+   
+   > <a href="https://www.codecogs.com/eqnedit.php?latex=y=\tau&space;(z)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y=\tau&space;(z)" title="y=\tau (z)" /></a>   
+   
+   </div>
+   </details>
+
++ 활성함수 변천사
+   + 선형 → 계단(1950년대) → tanh(1980년대) → **ReLU(2000년경~현재)** ✨
+   
+   + sigmoid 계열 함수(tanh, logistic sigmoid..)는 활성값이 커지면 포화상태가 되며, 경사도가 0에 가까운 값을 출력함.
+      > **매개변수 갱신(학습)이 매우 느리게 됨(gradient vanishing)**
+   
++ **ReLU(Rectified Linear Unit) 활성함수**
+   + 경사도 포화(gradient saturation) 문제 해소   
+   
+   + 변형
+      + Leaky ReLU (보통 alpha=0.01)
+         > <a href="https://www.codecogs.com/eqnedit.php?latex=\textup{leaky&space;ReLU}(z)\begin{cases}&space;\textup{z}&space;&&space;\text{&space;if&space;}&space;\textup{z}\geq&space;0&space;\\&space;\alpha&space;\textup{z}&space;&&space;\text{&space;if&space;}&space;\textup{z}<0&space;\end{cases}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textup{leaky&space;ReLU}(z)\begin{cases}&space;\textup{z}&space;&&space;\text{&space;if&space;}&space;\textup{z}\geq&space;0&space;\\&space;\alpha&space;\textup{z}&space;&&space;\text{&space;if&space;}&space;\textup{z}<0&space;\end{cases}" title="\textup{leaky ReLU}(z)\begin{cases} \textup{z} & \text{ if } \textup{z}\geq 0 \\ \alpha \textup{z} & \text{ if } \textup{z}<0 \end{cases}" /></a>   
+         
+      + Parametric ReLU
+         + alpha를 학습으로 알아냄
+         
++ 다양한 활성함수
+
+   > <img src="https://user-images.githubusercontent.com/72974863/106471282-cd9ef580-64e4-11eb-9e3b-a6ff47e2bee9.png">   
+   
+   > [이미지 출처 : stanford univ CS231n ](https://www.youtube.com/watch?v=_JB0AO7QxSA&list=PLC1qU-LWwrF64f4QKQT-Vg5Wr4qEE1Zxk&index=7)
+   
+   
+</div>
+</details>
+   
+
 ### 6. 배치 정규화
