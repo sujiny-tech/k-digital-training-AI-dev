@@ -116,3 +116,4 @@
 + [컨볼루션 신경망(Convolutional Neural Network, CNN)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Deep-Learning/CNN.md)
 + [CNN 사례 연구(CNN Case Study)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Deep-Learning/CNN%20Case%20Study.md)
 + [최적화(Optimization)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Deep-Learning/Optimization.md)
++ [순환 신경망(Recurrent Neural Network, RNN)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Deep-Learning/RNN.md)
