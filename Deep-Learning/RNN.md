@@ -115,17 +115,40 @@
 + **차이점** : 은닉층이 **순환 연결(recurrent edge)** 를 가짐 ⭐
    > 시간성, 가변길이, 문맥 의존성 모두 처리 가능
 
-<img src="https://user-images.githubusercontent.com/72974863/106742058-da942400-665f-11eb-8673-0fcea1db4a58.png">   
++ 기본 구조
+   > <img src="https://user-images.githubusercontent.com/72974863/106742058-da942400-665f-11eb-8673-0fcea1db4a58.png">   
 
-[이미지 출처](https://ko.wikipedia.org/wiki/%EC%88%9C%ED%99%98_%EC%8B%A0%EA%B2%BD%EB%A7%9D)   
+   > [이미지 출처](https://ko.wikipedia.org/wiki/%EC%88%9C%ED%99%98_%EC%8B%A0%EA%B2%BD%EB%A7%9D)   
+
+   > 이전 은닉층의 영향을 받음 
+
++ 매개변수 공유
+   + 매 순간 같은 값을 공유함 (U, V, W)
+   + **장점**  
+      + 파라미터 수가 획기적으로 줄어듦 ❗
+      + 파라미터의 수가 특징 벡터의 길이에 무관 ❗
+      + 특징이 나타나는 순간이 뒤바뀌어도(문맥이 같지만 단어의 순서가 다르더라도) 같거나 유사한 출력을 만들 수 있음 ❗
+
++ 다양한 RNN 구조
+   > <img src="https://user-images.githubusercontent.com/72974863/107149161-798b8980-699a-11eb-94c4-5c0cc0469e8a.png">   
+   
+   + one to one : 가장 간단한 **Vanilla NN** 구조
+   + one to many : **Image Captioning** (image → sequence of words)
+   + many to one : **Sentiment Classification** (sequence of words → sentiment)
+   + many to many
+      + **Machine Translation** (sequence of words → sequence of words)
+      + **Video classification on frame level** 
+   
+
++ 순환 신경망 동작
+   + 과거의 정보를 기억하고 있음 (**문맥 의존성 측면에서 작동**)
 
 </div>
 </details>   
   
-
-ing... (31:19)  
-
+ing (1:02:00)
 
 ### 참고
 + [다른 사람의 블로그 ✨](https://yoonjinxd.github.io/deeplearning/2019/07/30/%EC%88%9C%EC%B0%A8%EC%A0%81-%EC%A0%95%EB%B3%B4%EB%A5%BC-%EB%8B%A4%EB%A3%A8%EB%8A%94-%EB%94%A5%EB%9F%AC%EB%8B%9D-%EB%AA%A8%EB%8D%B8%EB%93%A4.html)   
 
++ [CS230 유튜브 ✨](https://www.youtube.com/watch?v=6niqTuYFZLQ)   
