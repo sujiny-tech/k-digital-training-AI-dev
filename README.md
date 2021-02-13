@@ -106,9 +106,11 @@
 </div>
 </details>
 
-
-👉 <b>[7~8주차] 딥러닝 (Deep Learning)</b>   
-
+ 
+<details>
+<summary><b>[7~8주차] 딥러닝 (Deep Learning)</b></summary>   
+<div markdown="1"> 
+   
 + [머신러닝 & 수학](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Deep-Learning/ML%20%26%20Mathematics%20.md)
 + [인공신경망(ANN) & 퍼셉트론(Perceptron) & 다층 퍼셉트론(Multilayer Perceptron)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Deep-Learning/Neural%20network.md)
 + [오류 역전파 알고리즘(Backpropagation algorithm)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Deep-Learning/Backpropagation.md)
@@ -117,3 +119,8 @@
 + [CNN 사례 연구(CNN Case Study)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Deep-Learning/CNN%20Case%20Study.md)
 + [최적화(Optimization)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Deep-Learning/Optimization.md)
 + [순환 신경망(Recurrent Neural Network, RNN)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Deep-Learning/RNN.md)
+
+</div>
+</details>
+
+
