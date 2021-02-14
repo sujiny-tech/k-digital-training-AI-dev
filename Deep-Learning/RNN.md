@@ -151,7 +151,7 @@
    + 시간까지 Backpropagation 확장한 학습
    + [BPTT에 관한 블로그 참고하기 ✨](http://solarisailab.com/archives/1451)
 
-+ 양방향 RNN (Bidirectional RNN)
++ **양방향 RNN (Bidirectional RNN)**
    + 왼쪽→오른쪽으로 정보가 흐르는 단방향 RNN은 한계 존재 💥 
    + 기계 번역에서도 BRNN을 활용 ❗   
    
