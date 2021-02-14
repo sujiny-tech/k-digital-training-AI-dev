@@ -130,7 +130,7 @@
       + 특징이 나타나는 순간이 뒤바뀌어도(문맥이 같지만 단어의 순서가 다르더라도) 같거나 유사한 출력을 만들 수 있음 ❗
 
 + 다양한 RNN 구조
-   > <img src="https://user-images.githubusercontent.com/72974863/107149161-798b8980-699a-11eb-94c4-5c0cc0469e8a.png">   
+   > <img src="https://user-images.githubusercontent.com/72974863/107149161-798b8980-699a-11eb-94c4-5c0cc0469e8a.png" width="80%" height="80%">   
    
    + one to one : 가장 간단한 **Vanilla NN** 구조
    + one to many : **Image Captioning** (image → sequence of words)
@@ -142,12 +142,26 @@
 
 + 순환 신경망 동작
    + 과거의 정보를 기억하고 있음 (**문맥 의존성 측면에서 작동**)
+   
++ RNN과 DMLP의 차별성
+   + RNN : 샘플마다 은닉층 수 다름
+   + DMLP : 왼쪽에 input, 오른쪽에 output (**RNN은 매순간 입출력이 있으며, 가중치 공유함** ⭐)
 
++ RNN의 학습 알고리즘 = BPTT (Backpropagation Through Time)
+   + 시간까지 Backpropagation 확장한 학습
+   + [BPTT에 관한 블로그 참고하기 ✨](http://solarisailab.com/archives/1451)
+
++ 양방향 RNN (Bidirectional RNN)
+   + 왼쪽→오른쪽으로 정보가 흐르는 단방향 RNN은 한계 존재 💥 
+   + 기계 번역에서도 BRNN을 활용 ❗   
+   
+      > <img src="https://user-images.githubusercontent.com/72974863/107874849-e0abbf80-6eff-11eb-8cef-0ee0cc41b8be.png">   
+      
+      > [출처 - wiki](https://en.wikipedia.org/wiki/Bidirectional_recurrent_neural_networks)
+   
 </div>
 </details>   
-  
-ing (1:02:00)
-
+ 
 ### 참고
 + [다른 사람의 블로그 ✨](https://yoonjinxd.github.io/deeplearning/2019/07/30/%EC%88%9C%EC%B0%A8%EC%A0%81-%EC%A0%95%EB%B3%B4%EB%A5%BC-%EB%8B%A4%EB%A3%A8%EB%8A%94-%EB%94%A5%EB%9F%AC%EB%8B%9D-%EB%AA%A8%EB%8D%B8%EB%93%A4.html)   
 
