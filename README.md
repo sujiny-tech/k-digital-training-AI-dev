@@ -85,7 +85,7 @@
 </details>
 
 
-## 머신러닝/딥러닝
+## 머신러닝/딥러닝, CNN/RNN
 
 
 <details>
@@ -119,6 +119,54 @@
 + [CNN 사례 연구(CNN Case Study)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Deep-Learning/CNN%20Case%20Study.md)
 + [최적화(Optimization)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Deep-Learning/Optimization.md)
 + [순환 신경망(Recurrent Neural Network, RNN)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/Deep-Learning/RNN.md)
+
+</div>
+</details>
+
+
+
+
+## 빅데이터 플랫폼
+
+<details>
+<summary><b>[9주차] Spark</b></summary>   
+<div markdown="1"> 
+   
+
+</div>
+</details>
+
+
+## Visual recognition, NLP
+
+<details>
+<summary><b>[10주차] 자연어처리(NLP)</b></summary>   
+<div markdown="1"> 
+   
+
+</div>
+</details>
+
+
+
+<details>
+<summary><b>[11주차] Visual Recognition</b></summary>   
+<div markdown="1"> 
+   
++ Object Detection, Faster RCNN
++ Object Segmentation, YOLO, SSD 기반의 Object Detection
++ MaskRCNN, GAN(Generative Adversarial Networks), Style Transfer
+
+</div>
+</details>
+
+<details>
+<summary><b>[12주차] Recommendation system</b></summary>   
+<div markdown="1"> 
+   
++ Object Detection, Faster RCNN
++ Object Segmentation, YOLO, SSD 기반의 Object Detection
++ MaskRCNN, GAN(Generative Adversarial Networks), Style Transfer
 
 </div>
 </details>
