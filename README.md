@@ -163,10 +163,6 @@
 <details>
 <summary><b>[12주차] Recommendation system</b></summary>   
 <div markdown="1"> 
-   
-+ Object Detection, Faster RCNN
-+ Object Segmentation, YOLO, SSD 기반의 Object Detection
-+ MaskRCNN, GAN(Generative Adversarial Networks), Style Transfer
 
 </div>
 </details>
