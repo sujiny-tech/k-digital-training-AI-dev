@@ -153,9 +153,10 @@
 <summary><b>[11주차] Visual Recognition</b></summary>   
 <div markdown="1"> 
    
-+ Object Detection, Faster RCNN
-+ Object Segmentation, YOLO, SSD 기반의 Object Detection
-+ MaskRCNN, GAN(Generative Adversarial Networks), Style Transfer
++ [Semantic Segmentation](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/VisualRecognition/Semantic%20Segmentation.md)
++ [FCN(Fully Convolutional Network)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/VisualRecognition/FCN.md)
++ [GAN(Generative Adversarial Networks)-이전에 직접 돌려본 GAN 모델들](https://github.com/sujiny-tech/Generative-Models)
+
 
 </div>
 </details>
