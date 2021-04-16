@@ -1,5 +1,5 @@
 # K-Digital-Training-AI-dev 
-> [K-Digital-Training] 인공지능 데브코스 : 2020. 11. 30 ~ ing   
+> [K-Digital-Training] 인공지능 데브코스 : 2020. 11. 30 ~ 2021. 04. 03   
 
 
 ## 파이썬 및 인공지능 수학/데이터 처리     
