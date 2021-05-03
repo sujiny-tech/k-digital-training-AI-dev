@@ -19,6 +19,14 @@
 > ![image](https://user-images.githubusercontent.com/72974863/111017123-dc869b00-83f4-11eb-9628-7483e58c0188.png)   
 > 출처 : Mask-RCNN paper
 
+- - - - - - - - - - - - - - - - - - -
++ 프로젝트 관련해서 찾아본 자료들(Instance segmentation 모델들 등...) : [notion에 정리했던 글 ✨](https://www.notion.so/CAMO-b6867ed2891a426f9cc4a870b83abb98)       
+      
+      
+> ![image](https://user-images.githubusercontent.com/72974863/116871746-b55b8580-ac4f-11eb-986d-b5df6cfc56f6.png)     
+> [출처 : papaerswithcode Instance segmentation on COCO test-dev](https://paperswithcode.com/sota/instance-segmentation-on-coco)   
+
+
 💫 참고
 + [Mask-RCNN paper](https://arxiv.org/pdf/1703.06870.pdf)
 + [다른사람 블로그 참고하기](https://ganghee-lee.tistory.com/40)
