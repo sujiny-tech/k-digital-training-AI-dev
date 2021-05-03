@@ -155,6 +155,7 @@
    
 + [Semantic Segmentation](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/VisualRecognition/Semantic%20Segmentation.md)
 + [FCN(Fully Convolutional Network)](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/VisualRecognition/FCN.md)
++ [Mask-RCNN](https://github.com/sujiny-tech/k-digital-training-AI-dev/blob/main/VisualRecognition/Mask-RCNN.md)
 + [GAN(Generative Adversarial Networks)-이전에 직접 돌려본 GAN 모델들](https://github.com/sujiny-tech/Generative-Models)
 
 
